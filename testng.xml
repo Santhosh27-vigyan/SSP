@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<test name="TestUrlForValidLogin">
+<classes>
+  <class name="setUpAndTearDown.SetAndDown"/>
+  </classes>
+</test>
+  <test name="ValidLogin">
+  <groups>	
+  <run>
+  <exclude name="Captcha3"/>
+  <exclude name="Captcha2"/>
+  <exclude name="Captcha1"/>
+  <include name="Invalid"/>
+  <exclude name="Valid"/>
+  </run>
+  </groups>
+  <classes>
+  <class name="Login.LoginPageTests"/>
+  </classes>
+  </test>
+  <!-- <test name="TestUrlForInValidLogin">
+<classes>
+  <class name="setUpAndTearDown.SetAndDown"/>
+  </classes>
+</test>
+  <test name="InValidLogin">
+  <groups>	
+  <run>
+  <include name="Invalid"/>
+  </run>
+  </groups>
+  <classes>
+  <class name="Login.LoginPageTests"/>
+  </classes>
+  </test>-->
+</suite> <!-- Suite -->

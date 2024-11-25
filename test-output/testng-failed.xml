@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ValidLogin(failed)">
+    <groups>
+      <run>
+        <include name="Invalid"/>
+        <exclude name="Captcha3"/>
+        <exclude name="Captcha2"/>
+        <exclude name="Captcha1"/>
+        <exclude name="Valid"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Login.LoginPageTests">
+        <methods>
+          <include name="LoginWithInValidCredentails"/>
+        </methods>
+      </class> <!-- Login.LoginPageTests -->
+    </classes>
+  </test> <!-- ValidLogin(failed) -->
+</suite> <!-- Failed suite [Suite] -->
