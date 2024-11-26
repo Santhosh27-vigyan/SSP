@@ -3,33 +3,22 @@ package Login;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
-
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.time.Duration;
-import java.util.Properties;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import Resources.base;
 import setUpAndTearDown.SetAndDown;
+import utilities.ExcelUtils;
 
 public class LoginPageTests extends SetAndDown {
-
 	@Test(groups = "ValidUsername", priority = 1)
 	public void TestValidUserName() {
-
 		assertTrue(LPO.UsernameDisplayed().isDisplayed());
 		LPO.PassUsername().clear();
 		LPO.PassUsername().sendKeys(prop.getProperty("username"));
-
 	}
 
 	@Test(groups = "empty", priority = 1)
@@ -42,41 +31,38 @@ public class LoginPageTests extends SetAndDown {
 
 	@Test(groups = "ValidPasssword", priority = 2)
 	public void TestValidPassword() {
-
 		LPO.PassPassword().clear();
 		LPO.PassPassword().sendKeys(prop.getProperty("password"));
-
 	}
 
 	@Test(groups = "empty", priority = 2)
 	public void TestEmptyPassword() {
-
 		LPO.PassPassword().sendKeys(prop.getProperty("password"));
 		LPO.ClickOnLogin().click();
 		assertEquals(LPO.PasswordError().getText(), "Password is required!");
 	}
 
-	@Test(groups = "Valid", priority = 3)
-	public void LoginWithValidCredentails() {
+	@Test(groups = "LoginWithValidCredentails", priority = 3, dataProvider = "dataProvider")
+	public void LoginWithValidCredentails(String username, String Password) {
 		System.out.println(driver.getTitle());
 		assertTrue(LPO.UsernameDisplayed().isDisplayed());
 		LPO.PassUsername().clear();
-		LPO.PassUsername().sendKeys(prop.getProperty("username"));
+		LPO.PassUsername().sendKeys(username);
 		LPO.PassPassword().clear();
-		LPO.PassPassword().sendKeys(prop.getProperty("password"));
+		LPO.PassPassword().sendKeys(Password);
 		LPO.ClickOnLogin().click();
-
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
+		// wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud|Log
+		// In")));
 		assertEquals(driver.getTitle(), "Services");
-		driver.close();
-
+		// driver.close();
 	}
 
-	@Test(groups = "Invalid", priority = 3)
-	public void LoginWithInValidCredentails() {
-		LPO.PassUsername().sendKeys(prop.getProperty("username"));
-		LPO.PassPassword().sendKeys(prop.getProperty("password"));
+	@Test(groups = "LoginWithInValidCredentails", priority = 3, dataProvider = "dataProvider")
+	public void LoginWithInValidCredentails(String username, String Password) {
+		LPO.PassUsername().sendKeys(username);
+		LPO.PassPassword().sendKeys(Password);
 		LPO.ClickOnLogin().click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(
@@ -87,53 +73,51 @@ public class LoginPageTests extends SetAndDown {
 		wait.until(ExpectedConditions.visibilityOf(LPO.GetCaptchaText()));
 		assertTrue(LPO.GetCaptchaText().isDisplayed());
 		// driver.close();
-
 	}
 
-	@Test(groups = "Captcha1", priority = 3)
-	public void LoginWithvalidCredentialsUsingRightCaptcha() {
+	@Test(groups = "LoginWithvalidCredentialsUsingRightCaptcha", priority = 3, dataProvider = "dataProvider")
+	public void LoginWithvalidCredentialsUsingRightCaptcha(String Wrongusername, String WrongPassword,
+			String Rightusername, String RightPassword) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		LPO.PassUsername().sendKeys("abc");
-		LPO.PassPassword().sendKeys("abc");
+		LPO.PassUsername().sendKeys(Wrongusername);
+		LPO.PassPassword().sendKeys(WrongPassword);
 		LPO.ClickOnLogin().click();
-
 		wait.until(
 				ExpectedConditions.attributeContains(LPO.InvalidCredentialsErrorMessage(), "style", "display: block;"));
 		// assertEquals(LPO.InvalidCredentialsErrorMessage().getAttribute("style"),
 		// "display: block;");
 		assertEquals(LPO.InvalidCredentialsErrorMessage().getText().trim(), "Invalid Username or Password!");
+		wait.until(ExpectedConditions.visibilityOf(LPO.GetCaptchaText()));
 		assertTrue(LPO.GetCaptchaText().isDisplayed());
 		LPO.PassUsername().clear();
-		LPO.PassUsername().sendKeys(prop.getProperty("username"));
-		LPO.PassPassword().sendKeys(prop.getProperty("password"));
+		LPO.PassUsername().sendKeys(Rightusername);
+		LPO.PassPassword().sendKeys(RightPassword);
 		LPO.CaptchTextBox().sendKeys(LPO.GetCaptchaText().getText());
 		LPO.ClickOnLogin().click();
-
 		wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
 		assertEquals(driver.getTitle(), "Services");
 		// driver.close();
-
 	}
 
-	@Test(groups = "Captcha2", priority = 3)
-	public void LoginWithInvalidCredentialsUsingRightCaptcha() {
+	@Test(groups = "LoginWithInvalidCredentialsUsingRightCaptcha", priority = 3, dataProvider = "dataProvider")
+	public void LoginWithInvalidCredentialsUsingRightCaptcha(String Wrongusername, String WrongPassword,
+			String Rightusername, String RightPassword) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		LPO.PassUsername().sendKeys("abc");
-		LPO.PassPassword().sendKeys("abc");
+		LPO.PassUsername().sendKeys(Wrongusername);
+		LPO.PassPassword().sendKeys(WrongPassword);
 		LPO.ClickOnLogin().click();
-
 		wait.until(
 				ExpectedConditions.attributeContains(LPO.InvalidCredentialsErrorMessage(), "style", "display: block;"));
 		// assertEquals(LPO.InvalidCredentialsErrorMessage().getAttribute("style"),
 		// "display: block;");
 		assertEquals(LPO.InvalidCredentialsErrorMessage().getText().trim(), "Invalid Username or Password!");
+		wait.until(ExpectedConditions.visibilityOf(LPO.GetCaptchaText()));
 		assertTrue(LPO.GetCaptchaText().isDisplayed());
-
 		String FirstCaptcha = LPO.GetCaptchaText().getText();
 		// System.out.println(FirstCaptcha);
 		LPO.PassUsername().clear();
-		LPO.PassUsername().sendKeys(prop.getProperty("username"));
-		LPO.PassPassword().sendKeys(prop.getProperty("password"));
+		LPO.PassUsername().sendKeys(Rightusername);
+		LPO.PassPassword().sendKeys(RightPassword);
 		LPO.CaptchTextBox().sendKeys(LPO.GetCaptchaText().getText());
 		LPO.ClickOnLogin().click();
 		assertEquals(LPO.InvalidCredentialsErrorMessage().getText().trim(), "Invalid Username or Password!");
@@ -144,27 +128,27 @@ public class LoginPageTests extends SetAndDown {
 		// System.out.println(SecondCaptcha);
 		assertFalse(FirstCaptcha.equals(SecondCaptcha));
 		// driver.close();
-
 	}
 
-	@Test(groups = "Captcha3", priority = 3)
-	public void LoginWithvalidCredentialsUsingWrongCaptcha() {
+	@Test(groups = "LoginWithvalidCredentialsUsingWrongCaptcha", priority = 3, dataProvider = "dataProvider")
+	public void LoginWithvalidCredentialsUsingWrongCaptcha(String Wrongusername, String WrongPassword,
+			String Rightusername, String RightPassword) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		LPO.PassUsername().sendKeys("abc");
-		LPO.PassPassword().sendKeys("abc");
+		LPO.PassUsername().sendKeys(Wrongusername);
+		LPO.PassPassword().sendKeys(WrongPassword);
 		LPO.ClickOnLogin().click();
 		System.out.println("test");
-
 		wait.until(
 				ExpectedConditions.attributeContains(LPO.InvalidCredentialsErrorMessage(), "style", "display: block;"));
 		// assertEquals(LPO.InvalidCredentialsErrorMessage().getAttribute("style"),
 		// "display: block;");
 		assertEquals(LPO.InvalidCredentialsErrorMessage().getText().trim(), "Invalid Username or Password!");
+		wait.until(ExpectedConditions.visibilityOf(LPO.GetCaptchaText()));
 		assertTrue(LPO.GetCaptchaText().isDisplayed());
 		String FirstCaptcha = LPO.GetCaptchaText().getText();
 		LPO.PassUsername().clear();
-		LPO.PassUsername().sendKeys(prop.getProperty("username"));
-		LPO.PassPassword().sendKeys(prop.getProperty("password"));
+		LPO.PassUsername().sendKeys(Rightusername);
+		LPO.PassPassword().sendKeys(RightPassword);
 		LPO.CaptchTextBox().sendKeys("abcde");
 		LPO.ClickOnLogin().click();
 		wait.until(ExpectedConditions.attributeContains(LPO.InvalidCaptchaErrorMessage(), "style", "display: block;"));
@@ -176,6 +160,30 @@ public class LoginPageTests extends SetAndDown {
 		// System.out.println(SecondCaptcha);
 		assertFalse(FirstCaptcha.equals(SecondCaptcha));
 		// driver.close();
+	}
 
+	@DataProvider
+	public Object[][] dataProvider(Method method) throws IOException {
+		if (method.getName().equals("LoginWithValidCredentails")) {
+			return ExcelUtils.GetExcelData(System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Data.xlsx",
+					"Valid");
+		}
+		if (method.getName().equals("LoginWithInValidCredentails")) {
+			return ExcelUtils.GetExcelData(System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Data.xlsx",
+					"Invalid");
+		}
+		if (method.getName().equals("LoginWithvalidCredentialsUsingRightCaptcha")) {
+			return ExcelUtils.GetExcelData(System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Data.xlsx",
+					"ValidCredAndCaptcha");
+		}
+		if (method.getName().equals("LoginWithInvalidCredentialsUsingRightCaptcha")) {
+			return ExcelUtils.GetExcelData(System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Data.xlsx",
+					"InvalidCredAndValidCaptcha");
+		}
+		if (method.getName().equals("LoginWithvalidCredentialsUsingWrongCaptcha")) {
+			return ExcelUtils.GetExcelData(System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Data.xlsx",
+					"ValidCredAndInValidCaptcha");
+		}
+		return null;
 	}
 }

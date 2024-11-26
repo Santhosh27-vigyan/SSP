@@ -1,6 +1,6 @@
-# Created at 2024-11-25T15:25:03.662
+# Created at 2024-11-26T12:58:52.917
 java.util.regex.PatternSyntaxException: Illegal repetition near index 3
-\${GroupName}
+\${groupNames}
    ^
 	at java.base/java.util.regex.Pattern.error(Pattern.java:2028)
 	at java.base/java.util.regex.Pattern.closure(Pattern.java:3309)

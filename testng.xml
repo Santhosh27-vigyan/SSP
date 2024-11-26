@@ -9,11 +9,11 @@
   <test name="ValidLogin">
   <groups>	
   <run>
-  <exclude name="Captcha3"/>
-  <exclude name="Captcha2"/>
-  <exclude name="Captcha1"/>
-  <include name="Invalid"/>
-  <exclude name="Valid"/>
+  <exclude name="LoginWithvalidCredentialsUsingWrongCaptcha"/>
+  <exclude name="LoginWithInvalidCredentialsUsingRightCaptcha"/>
+  <exclude name="LoginWithvalidCredentialsUsingRightCaptcha"/>
+  <exclude name="LoginWithInValidCredentails"/>
+  <include name="LoginWithValidCredentails"/>
   </run>
   </groups>
   <classes>

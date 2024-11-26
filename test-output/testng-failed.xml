@@ -4,17 +4,17 @@
   <test thread-count="5" name="ValidLogin(failed)">
     <groups>
       <run>
-        <include name="Invalid"/>
-        <exclude name="Captcha3"/>
-        <exclude name="Captcha2"/>
-        <exclude name="Captcha1"/>
-        <exclude name="Valid"/>
+        <include name="LoginWithInValidCredentails"/>
+        <exclude name="LoginWithvalidCredentialsUsingWrongCaptcha"/>
+        <exclude name="LoginWithInvalidCredentialsUsingRightCaptcha"/>
+        <exclude name="LoginWithvalidCredentialsUsingRightCaptcha"/>
+        <exclude name="LoginWithValidCredentails"/>
       </run>
     </groups>
     <classes>
       <class name="Login.LoginPageTests">
         <methods>
-          <include name="LoginWithInValidCredentails"/>
+          <include name="LoginWithInValidCredentails" invocation-numbers="0"/>
         </methods>
       </class> <!-- Login.LoginPageTests -->
     </classes>

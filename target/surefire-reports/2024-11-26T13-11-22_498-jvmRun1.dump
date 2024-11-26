@@ -1,7 +1,7 @@
-# Created at 2024-11-25T15:13:41.751
-java.util.regex.PatternSyntaxException: Illegal repetition near index 3
-\${groupName}
-   ^
+# Created at 2024-11-26T13:11:23.927
+java.util.regex.PatternSyntaxException: Illegal repetition near index 2
+@{includeGroups}
+  ^
 	at java.base/java.util.regex.Pattern.error(Pattern.java:2028)
 	at java.base/java.util.regex.Pattern.closure(Pattern.java:3309)
 	at java.base/java.util.regex.Pattern.sequence(Pattern.java:2214)
