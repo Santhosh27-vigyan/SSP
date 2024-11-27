@@ -20,10 +20,6 @@ public class LoginPageObjects {
 		PageFactory.initElements(driver, this);
 		
 	}
-	@FindBy(xpath = "//*[@id='showDetails']")
-	private WebElement certification;
-	@FindBy(css = "#spoiler > p.url-section-falsepositive > a")
-	private WebElement certification2;
 	@FindBy(xpath = "//label[@for='username']")
 	private WebElement UsernameDisplay;
 	@FindBy(id = "username")
@@ -46,24 +42,22 @@ public class LoginPageObjects {
 	private WebElement CaptchaTextbox;
 	@FindBy(xpath = "//div[contains(@class,'invalid-captcha')]")
 	private WebElement InvalidCaptchaerror;
-	public void cert() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
-		long startTime = System.currentTimeMillis();
-		
-		try {
-			wait.until(ExpectedConditions.visibilityOf(certification));
-			clicks();
-		} catch (TimeoutException e) {
-			long endTime = System.currentTimeMillis();
-			System.out.println("Exception caught after: " + (endTime - startTime) + " ms");
-		}
-		}
-	
-	public void clicks()
-	{
-		certification.click();
-		certification2.click();
-	}
+	@FindBy(id = "logincheck")
+	private WebElement TermsOfService;
+	@FindBy(linkText = "Forgot Your Password ?")
+	private WebElement ForgotPasswordLink;
+	@FindBy(id = "email")
+	private WebElement PasswordResetEmailTextBox;
+	@FindBy(xpath = "//button[text()='Send Link']")
+	private WebElement PasswordResetSendLinkButton;
+	@FindBy(xpath = "//button[text()='Cancel']")
+	private WebElement PasswordResetCancelButton;
+	@FindBy(id = "email-error")
+	private WebElement EmptyEmailIdError;
+	@FindBy(xpath = "//div[contains(@class,'invalid-email-message')]")
+	private WebElement InvalidEmailerror;
+	@FindBy(xpath = "//div[contains(@class,'bg-success')]")
+	private WebElement SuccessfullMessage;
 	public WebElement UsernameDisplayed()
 	{
 		wait.until(ExpectedConditions.visibilityOf(UsernameDisplay));
@@ -107,5 +101,37 @@ public class LoginPageObjects {
 	public WebElement InvalidCaptchaErrorMessage()
 	{
 		return InvalidCaptchaerror;
+	}
+	public WebElement TermsOfServiceCheckBox()
+	{
+		return TermsOfService;
+	}
+	public WebElement ClickOnForgotPasswordLink()
+	{
+		return ForgotPasswordLink;
+	}
+	public WebElement PasswordReserEmail()
+	{
+		return PasswordResetEmailTextBox;
+	}
+	public WebElement PasswordResetSendLinkButton()
+	{
+		return PasswordResetSendLinkButton;
+	}
+	public WebElement PasswordResetCancelButton()
+	{
+		return PasswordResetCancelButton;
+	}
+	public WebElement EmptyEmailAddressError()
+	{
+		return EmptyEmailIdError;
+	}
+	public WebElement InvalidEmailErrorMessage()
+	{
+		return InvalidEmailerror;
+	}
+	public WebElement PasswordrestLinkSuccessfullySentMessage()
+	{
+		return SuccessfullMessage;
 	}
 }

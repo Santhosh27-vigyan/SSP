@@ -1,30 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-26T14:55:32 IST" name="Suite" finished-at="2024-11-26T14:55:40 IST" duration-ms="8310">
+  <suite started-at="2024-11-27T19:13:01 IST" name="Suite" finished-at="2024-11-27T19:14:42 IST" duration-ms="100172">
     <groups>
-      <group name="LoginWithValidCredentails">
-        <method signature="LoginPageTests.LoginWithValidCredentails(java.lang.String,java.lang.String)[pri:3, instance:Login.LoginPageTests@1ff4931d]" name="LoginWithValidCredentails" class="Login.LoginPageTests"/>
-      </group> <!-- LoginWithValidCredentails -->
     </groups>
-    <test started-at="2024-11-26T14:55:32 IST" name="TestUrlForValidLogin" finished-at="2024-11-26T14:55:34 IST" duration-ms="2565">
-      <class name="setUpAndTearDown.SetAndDown">
-        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@5b7a5baa]" started-at="2024-11-26T14:55:32 IST" name="TestOpenLoginPage" finished-at="2024-11-26T14:55:34 IST" duration-ms="2496" status="PASS">
+    <test started-at="2024-11-27T19:13:01 IST" name="TestLoginAllTestCases" finished-at="2024-11-27T19:14:42 IST" duration-ms="100172">
+      <class name="allLoginTests.ExecuteAllLoginTestAtOnce">
+        <test-method signature="TestValidUserName(java.lang.String)[pri:1, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:02 IST" name="TestValidUserName" finished-at="2024-11-27T19:13:08 IST" duration-ms="6255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginPageObjects]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestOpenLoginPage -->
-      </class> <!-- setUpAndTearDown.SetAndDown -->
-    </test> <!-- TestUrlForValidLogin -->
-    <test started-at="2024-11-26T14:55:34 IST" name="ValidLogin" finished-at="2024-11-26T14:55:40 IST" duration-ms="5650">
-      <class name="setUpAndTearDown.SetAndDown">
-        <test-method is-config="true" signature="DriverIntilization()[pri:0, instance:setUpAndTearDown.SetAndDown@5b7a5baa]" started-at="2024-11-26T14:55:28 IST" name="DriverIntilization" finished-at="2024-11-26T14:55:32 IST" duration-ms="3188" status="PASS">
+        </test-method> <!-- TestValidUserName -->
+        <test-method signature="TestEmptyUserName()[pri:2, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:08 IST" name="TestEmptyUserName" finished-at="2024-11-27T19:13:13 IST" duration-ms="5328" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DriverIntilization -->
-      </class> <!-- setUpAndTearDown.SetAndDown -->
-      <class name="Login.LoginPageTests">
-        <test-method signature="LoginWithValidCredentails(java.lang.String,java.lang.String)[pri:3, instance:Login.LoginPageTests@1ff4931d]" started-at="2024-11-26T14:55:35 IST" name="LoginWithValidCredentails" data-provider="dataProvider" finished-at="2024-11-26T14:55:40 IST" duration-ms="4593" status="PASS">
+        </test-method> <!-- TestEmptyUserName -->
+        <test-method signature="TestValidPassword()[pri:3, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:13 IST" name="TestValidPassword" finished-at="2024-11-27T19:13:19 IST" duration-ms="5470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestValidPassword -->
+        <test-method signature="TestEmptyPassword()[pri:4, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:19 IST" name="TestEmptyPassword" finished-at="2024-11-27T19:13:24 IST" duration-ms="5366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestEmptyPassword -->
+        <test-method signature="TestLoginWithInValidCredentails(java.lang.String,java.lang.String)[pri:5, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:25 IST" name="TestLoginWithInValidCredentails" data-provider="dataProvider" finished-at="2024-11-27T19:13:33 IST" duration-ms="7598" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[adas]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[asdasd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLoginWithInValidCredentails -->
+        <test-method signature="TestLoginWithValidCredentails(java.lang.String,java.lang.String)[pri:6, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:33 IST" name="TestLoginWithValidCredentails" data-provider="dataProvider" finished-at="2024-11-27T19:13:41 IST" duration-ms="8176" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,8 +61,110 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginWithValidCredentails -->
-      </class> <!-- Login.LoginPageTests -->
-    </test> <!-- ValidLogin -->
+        </test-method> <!-- TestLoginWithValidCredentails -->
+        <test-method signature="TestLoginWithInvalidCredentialsUsingRightCaptcha(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:41 IST" name="TestLoginWithInvalidCredentialsUsingRightCaptcha" data-provider="dataProvider" finished-at="2024-11-27T19:13:48 IST" duration-ms="7439" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sfsfsdfsd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdfsdf]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sdfsdf]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sdfdsf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLoginWithInvalidCredentialsUsingRightCaptcha -->
+        <test-method signature="TestLoginWithvalidCredentialsUsingRightCaptcha(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:8, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:48 IST" name="TestLoginWithvalidCredentialsUsingRightCaptcha" data-provider="dataProvider" finished-at="2024-11-27T19:13:57 IST" duration-ms="8046" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sfsfsdfsd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdfsdf]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test1@vipl.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ipmcloud@200#]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLoginWithvalidCredentialsUsingRightCaptcha -->
+        <test-method signature="TestLoginWithvalidCredentialsUsingWrongCaptcha(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:9, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:13:57 IST" name="TestLoginWithvalidCredentialsUsingWrongCaptcha" data-provider="dataProvider" finished-at="2024-11-27T19:14:04 IST" duration-ms="7700" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sfsfsdfsd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sdfsdf]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test1@vipl.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ipmcloud@200#]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLoginWithvalidCredentialsUsingWrongCaptcha -->
+        <test-method signature="TestTermsOfServiceCheckBox()[pri:10, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:14:04 IST" name="TestTermsOfServiceCheckBox" finished-at="2024-11-27T19:14:09 IST" duration-ms="4940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestTermsOfServiceCheckBox -->
+        <test-method signature="TestForgotPasswordLink()[pri:11, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:14:09 IST" name="TestForgotPasswordLink" finished-at="2024-11-27T19:14:15 IST" duration-ms="5316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestForgotPasswordLink -->
+        <test-method signature="TestPasswordResetUsingEmptyEmail()[pri:12, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:14:15 IST" name="TestPasswordResetUsingEmptyEmail" finished-at="2024-11-27T19:14:20 IST" duration-ms="5314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPasswordResetUsingEmptyEmail -->
+        <test-method signature="TestPasswordResetUsingWrongEmail()[pri:13, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:14:20 IST" name="TestPasswordResetUsingWrongEmail" finished-at="2024-11-27T19:14:26 IST" duration-ms="6119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPasswordResetUsingWrongEmail -->
+        <test-method signature="TestPasswordResetUsingRightEmail()[pri:14, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:14:26 IST" name="TestPasswordResetUsingRightEmail" finished-at="2024-11-27T19:14:36 IST" duration-ms="9997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPasswordResetUsingRightEmail -->
+        <test-method signature="TestPasswordResetCancelButton()[pri:15, instance:allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307]" started-at="2024-11-27T19:14:36 IST" name="TestPasswordResetCancelButton" finished-at="2024-11-27T19:14:42 IST" duration-ms="5601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPasswordResetCancelButton -->
+      </class> <!-- allLoginTests.ExecuteAllLoginTestAtOnce -->
+    </test> <!-- TestLoginAllTestCases -->
   </suite> <!-- Suite -->
 </testng-results>

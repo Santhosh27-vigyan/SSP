@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <parameter name="ClassName" value="LoginPageObjects" />
+	<test name="TestUrlForValidLogin">
+		<classes>
+			<class name="setUpAndTearDown.SetAndDown" />
+		</classes>
+	</test>
+	<test name="LoginTestScenario">
+		<groups>
+			<run>
+				<exclude name="TestValidUserName" />
+				<exclude name="TestEmptyUserName" />
+				<exclude name="TestValidPassword" />
+				<exclude name="TestEmptyPassword" />
+				<exclude name="TestTermsOfServiceCheckBox" />
+				<exclude name="TestLoginWithvalidCredentialsUsingWrongCaptcha" />
+				<exclude name="TestLoginWithInvalidCredentialsUsingRightCaptcha" />
+				<exclude name="TestLoginWithvalidCredentialsUsingRightCaptcha" />
+				<include name="TestLoginWithValidCredentails" />
+				<exclude name="TestLoginWithInValidCredentails" />
+				<exclude name="TestForgotPasswordLink" />
+				<exclude name="TestPasswordResetUsingEmptyEmail" />
+				<exclude name="TestPasswordResetUsingWrongEmail" />
+				<exclude name="TestPasswordResetUsingRightEmail" />
+				<exclude name="TestPasswordResetCancelButton" />
+			</run>
+		</groups>
+		<classes>
+			<class name="Login.LoginPageTests" />
+		</classes>
+	</test>
+	<!-- <test name="TestUrlForInValidLogin">
+<classes>
+  <class name="setUpAndTearDown.SetAndDown"/>
+  </classes>
+</test>
+  <test name="InValidLogin">
+  <groups>	
+  <run>
+  <include name="Invalid"/>
+  </run>
+  </groups>
+  <classes>
+  <class name="Login.LoginPageTests"/>
+  </classes>
+  </test>-->
+</suite> <!--
+Suite -->

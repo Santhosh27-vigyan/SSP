@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ValidLogin(failed)">
-    <groups>
-      <run>
-        <include name="LoginWithInValidCredentails"/>
-        <exclude name="LoginWithvalidCredentialsUsingWrongCaptcha"/>
-        <exclude name="LoginWithInvalidCredentialsUsingRightCaptcha"/>
-        <exclude name="LoginWithvalidCredentialsUsingRightCaptcha"/>
-        <exclude name="LoginWithValidCredentails"/>
-      </run>
-    </groups>
+  <parameter name="ClassName" value="LoginPageObjects"/>
+  <test thread-count="5" name="TestLoginAllTestCases(failed)">
     <classes>
-      <class name="Login.LoginPageTests">
+      <class name="allLoginTests.ExecuteAllLoginTestAtOnce">
         <methods>
-          <include name="LoginWithInValidCredentails" invocation-numbers="0"/>
+          <include name="TestLoginWithValidCredentails"/>
+          <include name="TestLoginWithvalidCredentialsUsingWrongCaptcha"/>
+          <include name="TestLoginWithvalidCredentialsUsingRightCaptcha"/>
+          <include name="TestLoginWithInValidCredentails"/>
+          <include name="TestLoginWithInvalidCredentialsUsingRightCaptcha"/>
         </methods>
-      </class> <!-- Login.LoginPageTests -->
+      </class> <!-- allLoginTests.ExecuteAllLoginTestAtOnce -->
     </classes>
-  </test> <!-- ValidLogin(failed) -->
+  </test> <!-- TestLoginAllTestCases(failed) -->
 </suite> <!-- Failed suite [Suite] -->
