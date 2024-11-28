@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="ClassName" value="LoginPageObjects"/>
-  <test thread-count="5" name="TestLoginAllTestCases(failed)">
+  <parameter name="ClassName" value="CreateResourcePageObjects"/>
+  <test thread-count="5" name="CreateResourcePageTests(failed)">
+    <groups>
+      <run>
+        <include name="CertAndLogin"/>
+        <include name="TestViewReource"/>
+        <exclude name="TestCollapseButton"/>
+        <exclude name="TestManageOption"/>
+        <exclude name="TestDashboardOption"/>
+        <exclude name="TestFeedbackOption"/>
+        <exclude name="TestHelpIcon"/>
+        <exclude name="TestprofileAndSettingsOption"/>
+        <exclude name="TestSearchBox"/>
+        <exclude name="TestSearchIconWithResourceNotInTheList"/>
+        <exclude name="TestSearchIconWithResourceInTheList"/>
+        <exclude name="TestSearchIconWithPartialResourceNameInTheList"/>
+        <exclude name="TestCreateReource"/>
+      </run>
+    </groups>
     <classes>
-      <class name="allLoginTests.ExecuteAllLoginTestAtOnce">
+      <class name="createResource.CreateResourcePageTests">
         <methods>
-          <include name="TestLoginWithValidCredentails"/>
-          <include name="TestLoginWithvalidCredentialsUsingWrongCaptcha"/>
-          <include name="TestLoginWithvalidCredentialsUsingRightCaptcha"/>
-          <include name="TestLoginWithInValidCredentails"/>
-          <include name="TestLoginWithInvalidCredentialsUsingRightCaptcha"/>
+          <include name="CertAndLogin"/>
+          <include name="TestViewReource" invocation-numbers="0"/>
         </methods>
-      </class> <!-- allLoginTests.ExecuteAllLoginTestAtOnce -->
+      </class> <!-- createResource.CreateResourcePageTests -->
     </classes>
-  </test> <!-- TestLoginAllTestCases(failed) -->
+  </test> <!-- CreateResourcePageTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

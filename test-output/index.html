@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,17 +50,17 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\santosh\Downloads\SSP\LoginAllTestCases.xml</span>
+                    <span>C:\Users\santosh\Downloads\SSP\CreateResourcePage.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="createResource.CreateResourcePageTests" class="method navigator-link" hash-for-method="CertAndLogin">CertAndLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="createResource.CreateResourcePageTests" class="method navigator-link" hash-for-method="TestViewReource(Linux CLI)">TestViewReource(Linux CLI)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,77 +122,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestEmptyPassword">TestEmptyPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestEmptyUserName">TestEmptyUserName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestForgotPasswordLink">TestForgotPasswordLink</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestLoginWithInValidCredentails(adas, asdasd)">TestLoginWithInValidCredentails(adas, asdasd)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestLoginWithInvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, sdfsdf, sdfdsf)">TestLoginWithInvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, sdfsdf, sdfdsf)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestLoginWithValidCredentails(test1@vipl.com, ipmcloud@200#)">TestLoginWithValidCredentails(test1@vipl.com, ipmcloud@200#)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestLoginWithvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)">TestLoginWithvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestLoginWithvalidCredentialsUsingWrongCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)">TestLoginWithvalidCredentialsUsingWrongCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestPasswordResetCancelButton">TestPasswordResetCancelButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestPasswordResetUsingEmptyEmail">TestPasswordResetUsingEmptyEmail</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestPasswordResetUsingRightEmail">TestPasswordResetUsingRightEmail</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestPasswordResetUsingWrongEmail">TestPasswordResetUsingWrongEmail</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestTermsOfServiceCheckBox">TestTermsOfServiceCheckBox</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestValidPassword">TestValidPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="allLoginTests.ExecuteAllLoginTestAtOnce" class="method navigator-link" hash-for-method="TestValidUserName(LoginPageObjects)">TestValidUserName(LoginPageObjects)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="setUpAndTearDown.SetAndDown" class="method navigator-link" hash-for-method="TestOpenLoginPage">TestOpenLoginPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -188,121 +137,101 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">allLoginTests.ExecuteAllLoginTestAtOnce</span>
+              <img src="failed.png"/>
+              <span class="class-name">createResource.CreateResourcePageTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestEmptyPassword">
-                  </a> <!-- TestEmptyPassword -->
-                  <span class="method-name">TestEmptyPassword</span>
+                  <a name="CertAndLogin">
+                  </a> <!-- CertAndLogin -->
+                  <span class="method-name">CertAndLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3af804badd355863dce1199e39201c56, findElement {using=xpath, value=//label[@for=&apos;username&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53517/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3af804badd355863dce1199e39201c56
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4220)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
+	at java.base/java.lang.String.valueOf(String.java:4220)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
+	at Login.LoginPageObjects.UsernameDisplayed(LoginPageObjects.java:63)
+	at Login.LoginPageTests.TestLoginWithValidCredentails(LoginPageTests.java:51)
+	at createResource.CreateResourcePageTests.CertAndLogin(CreateResourcePageTests.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TestEmptyUserName">
-                  </a> <!-- TestEmptyUserName -->
-                  <span class="method-name">TestEmptyUserName</span>
+                  <a name="TestViewReource(Linux CLI)">
+                  </a> <!-- TestViewReource(Linux CLI) -->
+                  <span class="method-name">TestViewReource</span>
+                  <span class="parameters">(Linux CLI)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3af804badd355863dce1199e39201c56, findElements {using=xpath, value=//h5[@class=&apos;mt-3&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53517/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3af804badd355863dce1199e39201c56
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.size(Unknown Source)
+	at createResource.CreateResourcePageObjects.ClickOnView(CreateResourcePageObjects.java:144)
+	at createResource.CreateResourcePageTests.TestViewReource(CreateResourcePageTests.java:157)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">setUpAndTearDown.SetAndDown</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestForgotPasswordLink">
-                  </a> <!-- TestForgotPasswordLink -->
-                  <span class="method-name">TestForgotPasswordLink</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestLoginWithInValidCredentails(adas, asdasd)">
-                  </a> <!-- TestLoginWithInValidCredentails(adas, asdasd) -->
-                  <span class="method-name">TestLoginWithInValidCredentails</span>
-                  <span class="parameters">(adas,asdasd)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestLoginWithInvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, sdfsdf, sdfdsf)">
-                  </a> <!-- TestLoginWithInvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, sdfsdf, sdfdsf) -->
-                  <span class="method-name">TestLoginWithInvalidCredentialsUsingRightCaptcha</span>
-                  <span class="parameters">(sfsfsdfsd,sdfsdf,sdfsdf,sdfdsf)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestLoginWithValidCredentails(test1@vipl.com, ipmcloud@200#)">
-                  </a> <!-- TestLoginWithValidCredentails(test1@vipl.com, ipmcloud@200#) -->
-                  <span class="method-name">TestLoginWithValidCredentails</span>
-                  <span class="parameters">(test1@vipl.com,ipmcloud@200#)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestLoginWithvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)">
-                  </a> <!-- TestLoginWithvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#) -->
-                  <span class="method-name">TestLoginWithvalidCredentialsUsingRightCaptcha</span>
-                  <span class="parameters">(sfsfsdfsd,sdfsdf,test1@vipl.com,ipmcloud@200#)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestLoginWithvalidCredentialsUsingWrongCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)">
-                  </a> <!-- TestLoginWithvalidCredentialsUsingWrongCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#) -->
-                  <span class="method-name">TestLoginWithvalidCredentialsUsingWrongCaptcha</span>
-                  <span class="parameters">(sfsfsdfsd,sdfsdf,test1@vipl.com,ipmcloud@200#)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestPasswordResetCancelButton">
-                  </a> <!-- TestPasswordResetCancelButton -->
-                  <span class="method-name">TestPasswordResetCancelButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestPasswordResetUsingEmptyEmail">
-                  </a> <!-- TestPasswordResetUsingEmptyEmail -->
-                  <span class="method-name">TestPasswordResetUsingEmptyEmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestPasswordResetUsingRightEmail">
-                  </a> <!-- TestPasswordResetUsingRightEmail -->
-                  <span class="method-name">TestPasswordResetUsingRightEmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestPasswordResetUsingWrongEmail">
-                  </a> <!-- TestPasswordResetUsingWrongEmail -->
-                  <span class="method-name">TestPasswordResetUsingWrongEmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestTermsOfServiceCheckBox">
-                  </a> <!-- TestTermsOfServiceCheckBox -->
-                  <span class="method-name">TestTermsOfServiceCheckBox</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestValidPassword">
-                  </a> <!-- TestValidPassword -->
-                  <span class="method-name">TestValidPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TestValidUserName(LoginPageObjects)">
-                  </a> <!-- TestValidUserName(LoginPageObjects) -->
-                  <span class="method-name">TestValidUserName</span>
-                  <span class="parameters">(LoginPageObjects)</span>
+                  <a name="TestOpenLoginPage">
+                  </a> <!-- TestOpenLoginPage -->
+                  <span class="method-name">TestOpenLoginPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -310,19 +239,41 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\santosh\Downloads\SSP\LoginAllTestCases.xml</span>
+            <span class="header-content">C:\Users\santosh\Downloads\SSP\CreateResourcePage.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;ClassName&quot; value=&quot;LoginPageObjects&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;TestLoginAllTestCases&quot;&gt;
+  &lt;parameter name=&quot;ClassName&quot; value=&quot;CreateResourcePageObjects&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TestUrlForValidLogin&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;allLoginTests.ExecuteAllLoginTestAtOnce&quot;/&gt;
+      &lt;class name=&quot;setUpAndTearDown.SetAndDown&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TestLoginAllTestCases --&gt;
+  &lt;/test&gt; &lt;!-- TestUrlForValidLogin --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;CreateResourcePageTests&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;CertAndLogin&quot;/&gt;
+        &lt;include name=&quot;TestViewReource&quot;/&gt;
+        &lt;exclude name=&quot;TestCollapseButton&quot;/&gt;
+        &lt;exclude name=&quot;TestManageOption&quot;/&gt;
+        &lt;exclude name=&quot;TestDashboardOption&quot;/&gt;
+        &lt;exclude name=&quot;TestFeedbackOption&quot;/&gt;
+        &lt;exclude name=&quot;TestHelpIcon&quot;/&gt;
+        &lt;exclude name=&quot;TestprofileAndSettingsOption&quot;/&gt;
+        &lt;exclude name=&quot;TestSearchBox&quot;/&gt;
+        &lt;exclude name=&quot;TestSearchIconWithResourceNotInTheList&quot;/&gt;
+        &lt;exclude name=&quot;TestSearchIconWithResourceInTheList&quot;/&gt;
+        &lt;exclude name=&quot;TestSearchIconWithPartialResourceNameInTheList&quot;/&gt;
+        &lt;exclude name=&quot;TestCreateReource&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;createResource.CreateResourcePageTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CreateResourcePageTests --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -334,7 +285,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TestLoginAllTestCases (1 class)</span>
+                <span class="test-name">TestUrlForValidLogin (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CreateResourcePageTests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -344,6 +298,22 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">CertAndLogin</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">CertAndLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">TestViewReource</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TestViewReource</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -360,67 +330,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(15);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestPasswordResetUsingRightEmail')
-data.setCell(0, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(0, 3, 9997);
+data.setCell(0, 1, 'TestOpenLoginPage')
+data.setCell(0, 2, 'setUpAndTearDown.SetAndDown')
+data.setCell(0, 3, 73371);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TestLoginWithValidCredentails')
-data.setCell(1, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(1, 3, 8176);
+data.setCell(1, 1, 'CertAndLogin')
+data.setCell(1, 2, 'createResource.CreateResourcePageTests')
+data.setCell(1, 3, 30185);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TestLoginWithvalidCredentialsUsingRightCaptcha')
-data.setCell(2, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(2, 3, 8046);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TestLoginWithvalidCredentialsUsingWrongCaptcha')
-data.setCell(3, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(3, 3, 7700);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TestLoginWithInValidCredentails')
-data.setCell(4, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(4, 3, 7598);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TestLoginWithInvalidCredentialsUsingRightCaptcha')
-data.setCell(5, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(5, 3, 7439);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TestValidUserName')
-data.setCell(6, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(6, 3, 6255);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TestPasswordResetUsingWrongEmail')
-data.setCell(7, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(7, 3, 6119);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TestPasswordResetCancelButton')
-data.setCell(8, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(8, 3, 5601);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TestValidPassword')
-data.setCell(9, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(9, 3, 5470);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TestEmptyPassword')
-data.setCell(10, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(10, 3, 5366);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'TestEmptyUserName')
-data.setCell(11, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(11, 3, 5328);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'TestForgotPasswordLink')
-data.setCell(12, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(12, 3, 5316);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'TestPasswordResetUsingEmptyEmail')
-data.setCell(13, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(13, 3, 5314);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'TestTermsOfServiceCheckBox')
-data.setCell(14, 2, 'allLoginTests.ExecuteAllLoginTestAtOnce')
-data.setCell(14, 3, 4940);
+data.setCell(2, 1, 'TestViewReource')
+data.setCell(2, 2, 'createResource.CreateResourcePageTests')
+data.setCell(2, 3, 5);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -440,9 +362,38 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">12 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">createResource.CreateResourcePageTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TestHelpIcon</span>
+                <br/>
+                <span class="ignored-method-name">TestSearchIconWithPartialResourceNameInTheList</span>
+                <br/>
+                <span class="ignored-method-name">TestCreateReource</span>
+                <br/>
+                <span class="ignored-method-name">TestFeedbackOption</span>
+                <br/>
+                <span class="ignored-method-name">TestprofileAndSettingsOption</span>
+                <br/>
+                <span class="ignored-method-name">TestOpenLoginPage</span>
+                <br/>
+                <span class="ignored-method-name">TestDashboardOption</span>
+                <br/>
+                <span class="ignored-method-name">TestManageOption</span>
+                <br/>
+                <span class="ignored-method-name">TestCollapseButton</span>
+                <br/>
+                <span class="ignored-method-name">TestSearchIconWithResourceNotInTheList</span>
+                <br/>
+                <span class="ignored-method-name">TestSearchBox</span>
+                <br/>
+                <span class="ignored-method-name">TestSearchIconWithResourceInTheList</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -451,67 +402,37 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">allLoginTests.ExecuteAllLoginTestAtOnce</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">TestValidUserName(LoginPageObjects)</span>
+              <div class="chronological-class-name">setUpAndTearDown.SetAndDown</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">DriverIntilization(CreateResourcePageObjects)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">TestOpenLoginPage</span>
+                <span class="method-start">2865 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">createResource.CreateResourcePageTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CertAndLogin</span>
+                <span class="method-start">76324 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TestEmptyUserName</span>
-                <span class="method-start">6265 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TestViewReource(Linux CLI)</span>
+                <span class="method-start">107525 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestValidPassword</span>
-                <span class="method-start">11596 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestEmptyPassword</span>
-                <span class="method-start">17070 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestLoginWithInValidCredentails(adas, asdasd)</span>
-                <span class="method-start">23471 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestLoginWithValidCredentails(test1@vipl.com, ipmcloud@200#)</span>
-                <span class="method-start">31151 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestLoginWithInvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, sdfsdf, sdfdsf)</span>
-                <span class="method-start">39466 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestLoginWithvalidCredentialsUsingRightCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)</span>
-                <span class="method-start">46971 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestLoginWithvalidCredentialsUsingWrongCaptcha(sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#)</span>
-                <span class="method-start">55090 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestTermsOfServiceCheckBox</span>
-                <span class="method-start">62792 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestForgotPasswordLink</span>
-                <span class="method-start">67738 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestPasswordResetUsingEmptyEmail</span>
-                <span class="method-start">73061 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestPasswordResetUsingWrongEmail</span>
-                <span class="method-start">78377 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestPasswordResetUsingRightEmail</span>
-                <span class="method-start">84498 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TestPasswordResetCancelButton</span>
-                <span class="method-start">94497 ms</span>
-              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">setUpAndTearDown.SetAndDown</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">107571 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

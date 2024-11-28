@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="ClassName" value="CreateResourcePageObjects" />
+	<test name="TestUrlForValidLogin">
+		<classes>
+			<class name="setUpAndTearDown.SetAndDown" />
+		</classes>
+	</test>
+	<test name="CreateResourcePageTests">
+		<groups>
+			<run>
+				<include name="CertAndLogin" />
+				<exclude name="TestCollapseButton" />
+				<exclude name="TestManageOption" />
+				<exclude name="TestDashboardOption"/>
+				<exclude name="TestFeedbackOption"/>
+				<exclude name="TestHelpIcon"/>
+				<exclude name="TestprofileAndSettingsOption"/>
+				<exclude name="TestSearchBox"/>
+				<exclude name="TestSearchIconWithResourceNotInTheList"/>
+				<exclude name="TestSearchIconWithResourceInTheList"/>
+				<exclude name="TestSearchIconWithPartialResourceNameInTheList"/>
+				<exclude name="TestCreateReource"/>
+				<include name="TestViewReource"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="createResource.CreateResourcePageTests" />
+		</classes>
+	</test>
+</suite> 

@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import Login.LoginPageObjects;
 import Resources.Base1;
 import certification.CertificationHandle;
+import createResource.CreateResourcePageObjects;
 
 public class SetAndDown extends Base1 {
 	public static WebDriver driver;
@@ -21,6 +22,7 @@ public class SetAndDown extends Base1 {
 	public static FileInputStream fis;
 	public static LoginPageObjects LPO;
 	public static CertificationHandle Ch;
+	public static CreateResourcePageObjects CRPO;
 	@Parameters("ClassName")
 	@BeforeSuite
 	public void DriverIntilization(String ClassName) throws IOException {
@@ -29,8 +31,9 @@ public class SetAndDown extends Base1 {
 		prop.load(fis);
 		driver = InitializeDriver();
 		System.out.println(ClassName);
-		if(ClassName.equalsIgnoreCase("LoginPageObjects"))
 		LPO = new LoginPageObjects(driver);
+		if(ClassName.equalsIgnoreCase("CreateResourcePageObjects"))
+			CRPO=new CreateResourcePageObjects(driver);
 		Ch=new CertificationHandle(driver);
 		driver.manage().window().maximize();
 	}
