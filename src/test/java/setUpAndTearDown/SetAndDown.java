@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import Login.LoginPageObjects;
 import Resources.Base1;
 import certification.CertificationHandle;
+import create.CreatePageObject;
 import createResource.CreateResourcePageObjects;
 
 public class SetAndDown extends Base1 {
@@ -23,6 +24,7 @@ public class SetAndDown extends Base1 {
 	public static LoginPageObjects LPO;
 	public static CertificationHandle Ch;
 	public static CreateResourcePageObjects CRPO;
+	public static CreatePageObject CPO;
 	@Parameters("ClassName")
 	@BeforeSuite
 	public void DriverIntilization(String ClassName) throws IOException {
@@ -30,10 +32,11 @@ public class SetAndDown extends Base1 {
 		fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		driver = InitializeDriver();
-		System.out.println(ClassName);
+	//	System.out.println(ClassName);
 		LPO = new LoginPageObjects(driver);
-		if(ClassName.equalsIgnoreCase("CreateResourcePageObjects"))
-			CRPO=new CreateResourcePageObjects(driver);
+		CRPO=new CreateResourcePageObjects(driver);
+		if(ClassName.equalsIgnoreCase("CreatePageObjects"))
+			CPO=new CreatePageObject(driver);
 		Ch=new CertificationHandle(driver);
 		driver.manage().window().maximize();
 	}

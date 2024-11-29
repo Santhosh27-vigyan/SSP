@@ -47,7 +47,7 @@ public class LoginPageTests extends SetAndDown {
 	@Test(groups = "TestLoginWithValidCredentails", dataProvider = "dataProvider")
 	public void TestLoginWithValidCredentails(String username, String Password) {
 		
-		System.out.println(driver.getTitle());
+		//System.out.println(driver.getTitle());
 		assertTrue(LPO.UsernameDisplayed().isDisplayed());
 		LPO.PassUsername().clear();
 		LPO.PassUsername().sendKeys(username);
@@ -58,12 +58,13 @@ public class LoginPageTests extends SetAndDown {
 		LPO.ClickOnLogin().click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
-			wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
+			//wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
+			 wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud | Log In")));
+			 wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud")));
 		} catch (Exception e) {
 		}
 		assertEquals(driver.getTitle(), "Services");
-		// wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud|Log
-		// In")));
+		
 		// driver.close();
 	}
 
@@ -115,7 +116,9 @@ public class LoginPageTests extends SetAndDown {
 			LPO.TermsOfServiceCheckBox().click();
 		LPO.ClickOnLogin().click();
 		try {
-			wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
+			//wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
+			wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud | Log In")));
+			 wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud")));
 		} catch (Exception e) {
 		}
 		assertEquals(driver.getTitle(), "Services");
@@ -142,7 +145,7 @@ public class LoginPageTests extends SetAndDown {
 		}
 		assertTrue(LPO.GetCaptchaText().isDisplayed());
 		String FirstCaptcha = LPO.GetCaptchaText().getText();
-		 System.out.println(FirstCaptcha);
+		// System.out.println(FirstCaptcha);
 		LPO.PassUsername().clear();
 		LPO.PassUsername().sendKeys(Rightusername);
 		LPO.PassPassword().sendKeys(RightPassword);
@@ -158,7 +161,7 @@ public class LoginPageTests extends SetAndDown {
 		} catch (Exception e) {
 		}
 		String SecondCaptcha = LPO.GetCaptchaText().getText();
-		 System.out.println(SecondCaptcha);
+		// System.out.println(SecondCaptcha);
 		assertFalse(FirstCaptcha.equals(SecondCaptcha), "Captch should be refreshed");
 		// driver.close();
 	}

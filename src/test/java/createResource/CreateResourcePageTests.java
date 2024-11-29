@@ -6,16 +6,11 @@ import static org.testng.Assert.assertTrue;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import Login.LoginPageObjects;
 import Login.LoginPageTests;
-import certification.CertificationHandle;
 import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
 
@@ -105,7 +100,6 @@ public class CreateResourcePageTests extends SetAndDown {
 
 	@Test(groups = "TestSearchIconWithResourceNotInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithResourceNotInTheList(String TextToSearch) {
-
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
 		TestSearchBox(TextToSearch);
 		CRPO.SearchIcon().click();
@@ -115,7 +109,6 @@ public class CreateResourcePageTests extends SetAndDown {
 
 	@Test(groups = "TestSearchIconWithResourceInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithResourceInTheList(String TextToSearch) {
-
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
 		TestSearchBox(TextToSearch);
 		CRPO.SearchIcon().click();
@@ -126,7 +119,6 @@ public class CreateResourcePageTests extends SetAndDown {
 
 	@Test(groups = "TestSearchIconWithPartialResourceNameInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithPartialResourceNameInTheList(String TextToSearch) {
-
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
 		TestSearchBox(TextToSearch);
 		CRPO.SearchIcon().click();
@@ -136,12 +128,10 @@ public class CreateResourcePageTests extends SetAndDown {
 			assertTrue(CRPO.FilteredResources().get(i).getText().contains(TextToSearch),
 					"Resource name does not contain the Partial String");
 		}
-
 	}
-	
-	@Test(groups = "TestCreateReource",priority = 2,dataProvider = "dataProvider")
-	public void TestCreateReource(String ResourceName)
-	{
+
+	@Test(groups = "TestCreateReource", priority = 2, dataProvider = "dataProvider")
+	public void TestCreateReource(String ResourceName) {
 		CRPO.ClickOnCreate(ResourceName);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
@@ -149,11 +139,12 @@ public class CreateResourcePageTests extends SetAndDown {
 		} catch (Exception e) {
 		}
 		assertEquals(driver.getTitle(), "IPM+ Cloud");
-		assertTrue(CRPO.FormTitle().getText().contains(ResourceName),"Form is not opened for Given Resourcename "+ResourceName);
+		assertTrue(CRPO.FormTitle().getText().contains(ResourceName),
+				"Form is not opened for Given Resourcename " + ResourceName);
 	}
-	@Test(groups = "TestViewReource",priority = 2,dataProvider = "dataProvider")
-	public void TestViewReource(String ResourceName)
-	{
+
+	@Test(groups = "TestViewReource", priority = 2, dataProvider = "dataProvider")
+	public void TestViewReource(String ResourceName) {
 		CRPO.ClickOnView(ResourceName);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
@@ -161,8 +152,15 @@ public class CreateResourcePageTests extends SetAndDown {
 		} catch (Exception e) {
 		}
 		assertEquals(driver.getTitle(), "Virtual Machines");
-		CRPO.CheckResourceType(ResourceName);
-		
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		for (int i = 0; i < CRPO.CheckResourceType().size(); i++) {
+			assertTrue(CRPO.CheckResourceType().get(i).getText().equals(ResourceName),
+					"Table Showing the Details of the resources Types other the " + ResourceName);
+		}
 	}
 
 	@DataProvider
@@ -209,5 +207,4 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		return null;
 	}
-
 }

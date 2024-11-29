@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="ClassName" value="CreatePageObjects" />
+	<test name="TestUrlForValidLogin">
+		<classes>
+			<class name="setUpAndTearDown.SetAndDown" />
+		</classes>
+	</test>
+	<test name="CreatePageTests">
+		<groups>
+			<run>
+				<include name="CertAndLogin" />
+				<include name="ClickOnCreateReource"/>
+				<include name="TestLocationDropdown"/>
+				<include name="TestProjectNameDropdown"/>
+				<include name="TestStoragePathDropdown"/>
+				<include name="TestOSDropdown"/>
+				<include name="TestIOPSDropdown"/>
+				<!-- TestHorizontalSwitchOn and TestHorizontalSwitchOff both should run together to test horizontal switch-->
+				<include name="TestHorizontalSwitchOn"/>
+				<include name="TestHorizontalSwitchOff"/>
+				<!-- TestVerticalSwitchOn and TestVerticalSwitchOff both should run together to test Vertical switch-->
+				<include name="TestVerticalSwitchOn"/>
+				<include name="TestVerticalSwitchOff"/>
+				<!-- =====================================================================================================-->
+				<include name="TestSavedTemplatesRadioButton"/>
+				<include name="TestCustomRadioButton"/>
+				<include name="TestLowerThreshold"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="create.CreatePageTests" />
+		</classes>
+	</test>
+</suite> 

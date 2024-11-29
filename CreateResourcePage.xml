@@ -20,9 +20,9 @@
 				<exclude name="TestSearchBox"/>
 				<exclude name="TestSearchIconWithResourceNotInTheList"/>
 				<exclude name="TestSearchIconWithResourceInTheList"/>
-				<exclude name="TestSearchIconWithPartialResourceNameInTheList"/>
+				<include name="TestSearchIconWithPartialResourceNameInTheList"/>
 				<exclude name="TestCreateReource"/>
-				<include name="TestViewReource"/>
+				<exclude name="TestViewReource"/>
 			</run>
 		</groups>
 		<classes>

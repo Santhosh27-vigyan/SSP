@@ -1,75 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+<testng-results ignored="0" total="15" passed="1" failed="1" skipped="13">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-28T18:36:47 IST" name="Suite" finished-at="2024-11-28T18:38:31 IST" duration-ms="104724">
+  <suite started-at="2024-11-29T18:26:12 IST" name="Suite" finished-at="2024-11-29T18:26:45 IST" duration-ms="33032">
     <groups>
-      <group name="TestViewReource">
-        <method signature="CreateResourcePageTests.TestViewReource(java.lang.String)[pri:2, instance:createResource.CreateResourcePageTests@247bddad]" name="TestViewReource" class="createResource.CreateResourcePageTests"/>
-      </group> <!-- TestViewReource -->
+      <group name="TestHorizontalSwitchOff">
+        <method signature="CreatePageTests.TestHorizontalSwitchOff()[pri:9, instance:create.CreatePageTests@38afe297]" name="TestHorizontalSwitchOff" class="create.CreatePageTests"/>
+      </group> <!-- TestHorizontalSwitchOff -->
       <group name="CertAndLogin">
-        <method signature="CreateResourcePageTests.CertAndLogin()[pri:1, instance:createResource.CreateResourcePageTests@247bddad]" name="CertAndLogin" class="createResource.CreateResourcePageTests"/>
+        <method signature="CreatePageTests.CertAndLogin()[pri:1, instance:create.CreatePageTests@38afe297]" name="CertAndLogin" class="create.CreatePageTests"/>
       </group> <!-- CertAndLogin -->
+      <group name="TestVerticalSwitchOff">
+        <method signature="CreatePageTests.TestVerticalSwitchOff()[pri:11, instance:create.CreatePageTests@38afe297]" name="TestVerticalSwitchOff" class="create.CreatePageTests"/>
+      </group> <!-- TestVerticalSwitchOff -->
+      <group name="TestLowerThreshold">
+        <method signature="CreatePageTests.TestLowerThreshold(java.lang.String)[pri:14, instance:create.CreatePageTests@38afe297]" name="TestLowerThreshold" class="create.CreatePageTests"/>
+      </group> <!-- TestLowerThreshold -->
+      <group name="TestIOPSDropdown">
+        <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@38afe297]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestIOPSDropdown -->
+      <group name="TestSavedTemplatesRadioButton">
+        <method signature="CreatePageTests.TestSavedTemplatesRadioButton()[pri:12, instance:create.CreatePageTests@38afe297]" name="TestSavedTemplatesRadioButton" class="create.CreatePageTests"/>
+      </group> <!-- TestSavedTemplatesRadioButton -->
+      <group name="TestStoragePathDropdown">
+        <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@38afe297]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestStoragePathDropdown -->
+      <group name="TestLocationDropdown">
+        <method signature="CreatePageTests.TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@38afe297]" name="TestLocationDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestLocationDropdown -->
+      <group name="ClickOnCreateReource">
+        <method signature="CreatePageTests.ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@38afe297]" name="ClickOnCreateReource" class="create.CreatePageTests"/>
+      </group> <!-- ClickOnCreateReource -->
+      <group name="TestProjectNameDropdown">
+        <method signature="CreatePageTests.TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@38afe297]" name="TestProjectNameDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestProjectNameDropdown -->
+      <group name="TestVerticalSwitchOn">
+        <method signature="CreatePageTests.TestVerticalSwitchOn()[pri:10, instance:create.CreatePageTests@38afe297]" name="TestVerticalSwitchOn" class="create.CreatePageTests"/>
+      </group> <!-- TestVerticalSwitchOn -->
+      <group name="TestHorizontalSwitchOn">
+        <method signature="CreatePageTests.TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@38afe297]" name="TestHorizontalSwitchOn" class="create.CreatePageTests"/>
+      </group> <!-- TestHorizontalSwitchOn -->
+      <group name="TestCustomRadioButton">
+        <method signature="CreatePageTests.TestCustomRadioButton()[pri:13, instance:create.CreatePageTests@38afe297]" name="TestCustomRadioButton" class="create.CreatePageTests"/>
+      </group> <!-- TestCustomRadioButton -->
+      <group name="TestOSDropdown">
+        <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@38afe297]" name="TestOSDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestOSDropdown -->
     </groups>
-    <test started-at="2024-11-28T18:36:47 IST" name="TestUrlForValidLogin" finished-at="2024-11-28T18:38:00 IST" duration-ms="73435">
+    <test started-at="2024-11-29T18:26:12 IST" name="TestUrlForValidLogin" finished-at="2024-11-29T18:26:35 IST" duration-ms="22270">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-11-28T18:36:47 IST" name="TestOpenLoginPage" finished-at="2024-11-28T18:38:00 IST" duration-ms="73371" status="PASS">
+        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-11-29T18:26:12 IST" name="TestOpenLoginPage" finished-at="2024-11-29T18:26:35 IST" duration-ms="22215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOpenLoginPage -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
     </test> <!-- TestUrlForValidLogin -->
-    <test started-at="2024-11-28T18:38:00 IST" name="CreateResourcePageTests" finished-at="2024-11-28T18:38:31 IST" duration-ms="31216">
-      <class name="createResource.CreateResourcePageTests">
-        <test-method signature="CertAndLogin()[pri:1, instance:createResource.CreateResourcePageTests@247bddad]" started-at="2024-11-28T18:38:00 IST" name="CertAndLogin" finished-at="2024-11-28T18:38:30 IST" duration-ms="30185" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+    <test started-at="2024-11-29T18:26:35 IST" name="CreatePageTests" finished-at="2024-11-29T18:26:45 IST" duration-ms="10693">
+      <class name="create.CreatePageTests">
+        <test-method signature="CertAndLogin()[pri:1, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:35 IST" name="CertAndLogin" finished-at="2024-11-29T18:26:45 IST" duration-ms="10588" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.86)
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3af804badd355863dce1199e39201c56, findElement {using=xpath, value=//label[@for='username']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53517/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3af804badd355863dce1199e39201c56]]>
+              <![CDATA[expected [Services] but found [IPM+ Cloud | Log In]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.86)
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3af804badd355863dce1199e39201c56, findElement {using=xpath, value=//label[@for='username']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53517/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3af804badd355863dce1199e39201c56
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy14.toString(Unknown Source)
-at java.base/java.lang.String.valueOf(String.java:4220)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
-at java.base/java.lang.String.valueOf(String.java:4220)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-at Login.LoginPageObjects.UsernameDisplayed(LoginPageObjects.java:63)
-at Login.LoginPageTests.TestLoginWithValidCredentails(LoginPageTests.java:51)
-at createResource.CreateResourcePageTests.CertAndLogin(CreateResourcePageTests.java:26)
+              <![CDATA[java.lang.AssertionError: expected [Services] but found [IPM+ Cloud | Log In]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at Login.LoginPageTests.TestLoginWithValidCredentails(LoginPageTests.java:66)
+at create.CreatePageTests.CertAndLogin(CreatePageTests.java:31)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,71 +102,20 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CertAndLogin -->
-        <test-method signature="TestViewReource(java.lang.String)[pri:2, instance:createResource.CreateResourcePageTests@247bddad]" started-at="2024-11-28T18:38:31 IST" name="TestViewReource" data-provider="dataProvider" finished-at="2024-11-28T18:38:31 IST" duration-ms="5" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linux CLI]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method signature="ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="ClickOnCreateReource" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.CertAndLogin" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.86)
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3af804badd355863dce1199e39201c56, findElements {using=xpath, value=//h5[@class='mt-3']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53517/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3af804badd355863dce1199e39201c56]]>
+              <![CDATA[Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@38afe297]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.86)
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3af804badd355863dce1199e39201c56, findElements {using=xpath, value=//h5[@class='mt-3']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53517/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3af804badd355863dce1199e39201c56
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
-at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
-at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
-at jdk.proxy2/jdk.proxy2.$Proxy15.size(Unknown Source)
-at createResource.CreateResourcePageObjects.ClickOnView(CreateResourcePageObjects.java:144)
-at createResource.CreateResourcePageTests.TestViewReource(CreateResourcePageTests.java:157)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
@@ -185,28 +136,436 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestViewReource -->
-      </class> <!-- createResource.CreateResourcePageTests -->
+        </test-method> <!-- ClickOnCreateReource -->
+        <test-method signature="TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestLocationDropdown" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLocationDropdown -->
+        <test-method signature="TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestProjectNameDropdown" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestProjectNameDropdown -->
+        <test-method signature="TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestStoragePathDropdown" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestStoragePathDropdown -->
+        <test-method signature="TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestOSDropdown" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestOSDropdown -->
+        <test-method signature="TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestIOPSDropdown" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestIOPSDropdown -->
+        <test-method signature="TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestHorizontalSwitchOn" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestHorizontalSwitchOn -->
+        <test-method signature="TestHorizontalSwitchOff()[pri:9, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestHorizontalSwitchOff" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestHorizontalSwitchOff() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOff() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestHorizontalSwitchOff -->
+        <test-method signature="TestVerticalSwitchOn()[pri:10, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestVerticalSwitchOn" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestVerticalSwitchOn() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVerticalSwitchOn() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestVerticalSwitchOn -->
+        <test-method signature="TestVerticalSwitchOff()[pri:11, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestVerticalSwitchOff" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="3" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestVerticalSwitchOff() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVerticalSwitchOff() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestVerticalSwitchOff -->
+        <test-method signature="TestSavedTemplatesRadioButton()[pri:12, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestSavedTemplatesRadioButton" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestSavedTemplatesRadioButton() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestSavedTemplatesRadioButton() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSavedTemplatesRadioButton -->
+        <test-method signature="TestCustomRadioButton()[pri:13, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestCustomRadioButton" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestCustomRadioButton() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestCustomRadioButton() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCustomRadioButton -->
+        <test-method signature="TestLowerThreshold(java.lang.String)[pri:14, instance:create.CreatePageTests@38afe297]" started-at="2024-11-29T18:26:45 IST" name="TestLowerThreshold" finished-at="2024-11-29T18:26:45 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@38afe297 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@38afe297]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLowerThreshold -->
+      </class> <!-- create.CreatePageTests -->
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-11-28T18:36:44 IST" name="DriverIntilization" finished-at="2024-11-28T18:36:47 IST" duration-ms="2810" status="PASS">
+        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-11-29T18:26:10 IST" name="DriverIntilization" finished-at="2024-11-29T18:26:12 IST" duration-ms="2690" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[CreateResourcePageObjects]]>
+                <![CDATA[CreatePageObjects]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverIntilization -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-11-28T18:38:31 IST" name="TearDown" finished-at="2024-11-28T18:38:31 IST" duration-ms="154" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-11-29T18:26:45 IST" name="TearDown" finished-at="2024-11-29T18:26:46 IST" duration-ms="379" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
-    </test> <!-- CreateResourcePageTests -->
+    </test> <!-- CreatePageTests -->
   </suite> <!-- Suite -->
 </testng-results>

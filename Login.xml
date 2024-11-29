@@ -17,8 +17,8 @@
 				<exclude name="TestTermsOfServiceCheckBox" />
 				<exclude name="TestLoginWithvalidCredentialsUsingWrongCaptcha" />
 				<exclude name="TestLoginWithInvalidCredentialsUsingRightCaptcha" />
-				<exclude name="TestLoginWithvalidCredentialsUsingRightCaptcha" />
-				<include name="TestLoginWithValidCredentails" />
+				<include name="TestLoginWithvalidCredentialsUsingRightCaptcha" />
+				<exclude name="TestLoginWithValidCredentails" />
 				<exclude name="TestLoginWithInValidCredentails" />
 				<exclude name="TestForgotPasswordLink" />
 				<exclude name="TestPasswordResetUsingEmptyEmail" />

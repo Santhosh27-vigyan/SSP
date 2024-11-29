@@ -1,8 +1,6 @@
 package createResource;
-
 import java.time.Duration;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 public class CreateResourcePageObjects {
 	public WebDriver driver;
 	private WebDriverWait wait;
@@ -22,7 +19,6 @@ public class CreateResourcePageObjects {
 		js=(JavascriptExecutor)driver;
 		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
-		
 	}
 	@FindBy(id = "create_resource_menu")
 	private WebElement ResourceManagement;
@@ -66,8 +62,6 @@ public class CreateResourcePageObjects {
 	{
 		return CollapseButton;
 	}
-	
-	
 	public WebElement ManageOption()
 	{
 		return ManageOption;
@@ -121,7 +115,6 @@ public class CreateResourcePageObjects {
 				break;
 			}
 		}
-		
 		try {
 			CreateButton.click();
 		} catch (Exception e) {
@@ -133,7 +126,6 @@ public class CreateResourcePageObjects {
 				e1.printStackTrace();
 			}
 		}
-		
 	}
 	public WebElement FormTitle()
 	{
@@ -148,7 +140,6 @@ public class CreateResourcePageObjects {
 				break;
 			}
 		}
-		
 		try {
 			ViewButton.click();
 		} catch (Exception e) {
@@ -160,31 +151,19 @@ public class CreateResourcePageObjects {
 				e1.printStackTrace();
 			}
 		}
-		
 	}
-	public void CheckResourceType(String ResourceName)
+	public List<WebElement> CheckResourceType()
 	{
-		
+		List<WebElement> ResourceTypes = null;
 	main:	for (int i = 0; i < TableHeaderNames.size(); i++) {
 			//System.out.println(TableHeaderNames.get(i).getText());
 			if(TableHeaderNames.get(i).getText().equalsIgnoreCase("Resource Type"))
 			{
-				
 				int num=i+1;
-				List<WebElement> ResourceTypes = driver.findElements(By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td["+num+"]"));
-				//wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td["+num+"]"), 0));
-				
-				//System.out.println(VMNames.size());
-				//wait.until(ExpectedConditions.visibilityOfAllElements(VMNames));
-				
-				for (int j = 0; j < ResourceTypes.size(); j++) {
-					System.out.println(ResourceTypes.size());
-				}
+				 ResourceTypes = driver.findElements(By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td["+num+"]"));
 				break main;
 			}
-				
 		}
-		
-		
+	return ResourceTypes;
 	}
 }

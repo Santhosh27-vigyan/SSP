@@ -33,7 +33,7 @@ public class CertificationHandle {
 			clicks();
 		} catch (TimeoutException e) {
 			long endTime = System.currentTimeMillis();
-			System.out.println("Exception caught after: " + (endTime - startTime) + " ms");
+			//System.out.println("Exception caught after: " + (endTime - startTime) + " ms");
 		}
 		}
 	

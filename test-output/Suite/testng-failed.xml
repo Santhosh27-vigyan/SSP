@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="ClassName" value="CreateResourcePageObjects"/>
-  <test thread-count="5" name="CreateResourcePageTests(failed)">
+  <parameter name="ClassName" value="CreatePageObjects"/>
+  <test thread-count="5" name="CreatePageTests(failed)">
     <groups>
       <run>
         <include name="CertAndLogin"/>
-        <include name="TestViewReource"/>
-        <exclude name="TestCollapseButton"/>
-        <exclude name="TestManageOption"/>
-        <exclude name="TestDashboardOption"/>
-        <exclude name="TestFeedbackOption"/>
-        <exclude name="TestHelpIcon"/>
-        <exclude name="TestprofileAndSettingsOption"/>
-        <exclude name="TestSearchBox"/>
-        <exclude name="TestSearchIconWithResourceNotInTheList"/>
-        <exclude name="TestSearchIconWithResourceInTheList"/>
-        <exclude name="TestSearchIconWithPartialResourceNameInTheList"/>
-        <exclude name="TestCreateReource"/>
+        <include name="ClickOnCreateReource"/>
+        <include name="TestLocationDropdown"/>
+        <include name="TestProjectNameDropdown"/>
+        <include name="TestStoragePathDropdown"/>
+        <include name="TestOSDropdown"/>
+        <include name="TestIOPSDropdown"/>
+        <include name="TestHorizontalSwitchOn"/>
+        <include name="TestHorizontalSwitchOff"/>
+        <include name="TestVerticalSwitchOn"/>
+        <include name="TestVerticalSwitchOff"/>
+        <include name="TestSavedTemplatesRadioButton"/>
+        <include name="TestCustomRadioButton"/>
+        <include name="TestLowerThreshold"/>
       </run>
     </groups>
     <classes>
-      <class name="createResource.CreateResourcePageTests">
+      <class name="create.CreatePageTests">
         <methods>
+          <include name="TestHorizontalSwitchOn"/>
+          <include name="TestOSDropdown"/>
+          <include name="TestCustomRadioButton"/>
+          <include name="TestProjectNameDropdown"/>
+          <include name="TestVerticalSwitchOn"/>
+          <include name="ClickOnCreateReource"/>
+          <include name="TestLocationDropdown"/>
+          <include name="TestSavedTemplatesRadioButton"/>
+          <include name="TestStoragePathDropdown"/>
+          <include name="TestIOPSDropdown"/>
           <include name="CertAndLogin"/>
-          <include name="TestViewReource" invocation-numbers="0"/>
+          <include name="TestHorizontalSwitchOff"/>
+          <include name="TestLowerThreshold"/>
+          <include name="TestVerticalSwitchOff"/>
         </methods>
-      </class> <!-- createResource.CreateResourcePageTests -->
+      </class> <!-- create.CreatePageTests -->
     </classes>
-  </test> <!-- CreateResourcePageTests(failed) -->
+  </test> <!-- CreatePageTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->
