@@ -9,8 +9,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
-
 import Login.LoginPageObjects;
 import Resources.Base1;
 import certification.CertificationHandle;
@@ -25,6 +23,7 @@ public class SetAndDown extends Base1 {
 	public static CertificationHandle Ch;
 	public static CreateResourcePageObjects CRPO;
 	public static CreatePageObject CPO;
+
 	@Parameters("ClassName")
 	@BeforeSuite
 	public void DriverIntilization(String ClassName) throws IOException {
@@ -32,26 +31,26 @@ public class SetAndDown extends Base1 {
 		fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		driver = InitializeDriver();
-	//	System.out.println(ClassName);
+		// System.out.println(ClassName);
 		LPO = new LoginPageObjects(driver);
-		CRPO=new CreateResourcePageObjects(driver);
-		if(ClassName.equalsIgnoreCase("CreatePageObjects"))
-			CPO=new CreatePageObject(driver);
-		Ch=new CertificationHandle(driver);
+		CRPO = new CreateResourcePageObjects(driver);
+		if (ClassName.equalsIgnoreCase("CreatePageObjects"))
+			CPO = new CreatePageObject(driver);
+		Ch = new CertificationHandle(driver);
 		driver.manage().window().maximize();
 	}
 
 	@Test(priority = 1)
 	public void TestOpenLoginPage() {
 		driver.get(prop.getProperty("url"));
-		//LPO.cert();
+		// LPO.cert();
 		Ch.cert();
 	}
+
 	@AfterSuite
-	public void TearDown()
-	{
+	public void TearDown() {
 		if (driver != null) {
-	        driver.quit(); // Cleanly close the session
-	    }
+			driver.quit(); // Cleanly close the session
+		}
 	}
 }

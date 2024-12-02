@@ -13,13 +13,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginPageObjects {
 	public WebDriver driver;
 	private WebDriverWait wait;
-	public LoginPageObjects(WebDriver driver)
-	{
-		this.driver=driver;
-		wait=new WebDriverWait(driver, Duration.ofSeconds(30));
+
+	public LoginPageObjects(WebDriver driver) {
+		this.driver = driver;
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
-		
+
 	}
+
 	@FindBy(xpath = "//label[@for='username']")
 	private WebElement UsernameDisplay;
 	@FindBy(id = "username")
@@ -58,80 +59,81 @@ public class LoginPageObjects {
 	private WebElement InvalidEmailerror;
 	@FindBy(xpath = "//div[contains(@class,'bg-success')]")
 	private WebElement SuccessfullMessage;
-	public WebElement UsernameDisplayed()
-	{
+
+	public WebElement UsernameDisplayed() {
 		wait.until(ExpectedConditions.visibilityOf(UsernameDisplay));
 		return UsernameDisplay;
 	}
+
 	public WebElement PassUsername() {
 		return Username;
 	}
-	public WebElement UserNameError()
-	{
+
+	public WebElement UserNameError() {
 		return UserNameerror;
 	}
-	public WebElement PassPassword()
-	{
+
+	public WebElement PassPassword() {
 		return Password;
 	}
-	public WebElement PasswordError()
-	{
+
+	public WebElement PasswordError() {
 		return Passworderror;
 	}
-	public WebElement ClickOnLogin()
-	{
+
+	public WebElement ClickOnLogin() {
 		return Login;
 	}
-	public WebElement InvalidCredentialsErrorMessage()
-	{
+
+	public WebElement InvalidCredentialsErrorMessage() {
 		return InvalidCredentialserror;
 	}
-	public WebElement DashboardPageWebElement()
-	{
+
+	public WebElement DashboardPageWebElement() {
 		return DashboardPageElement;
 	}
-	public WebElement GetCaptchaText()
-	{
+
+	public WebElement GetCaptchaText() {
 		return CaptchaText;
 	}
-	public WebElement CaptchTextBox()
-	{
+
+	public WebElement CaptchTextBox() {
 		return CaptchaTextbox;
 	}
-	public WebElement InvalidCaptchaErrorMessage()
-	{
+
+	public WebElement InvalidCaptchaErrorMessage() {
 		return InvalidCaptchaerror;
 	}
-	public WebElement TermsOfServiceCheckBox()
-	{
+
+	public WebElement TermsOfServiceCheckBox() {
 		return TermsOfService;
 	}
-	public WebElement ClickOnForgotPasswordLink()
-	{
+
+	public WebElement ClickOnForgotPasswordLink() {
 		return ForgotPasswordLink;
 	}
-	public WebElement PasswordReserEmail()
-	{
+
+	public WebElement PasswordReserEmail() {
 		return PasswordResetEmailTextBox;
 	}
-	public WebElement PasswordResetSendLinkButton()
-	{
+
+	public WebElement PasswordResetSendLinkButton() {
 		return PasswordResetSendLinkButton;
 	}
-	public WebElement PasswordResetCancelButton()
-	{
+
+	public WebElement PasswordResetCancelButton() {
 		return PasswordResetCancelButton;
 	}
-	public WebElement EmptyEmailAddressError()
-	{
+
+	public WebElement EmptyEmailAddressError() {
 		return EmptyEmailIdError;
 	}
-	public WebElement InvalidEmailErrorMessage()
-	{
+
+	public WebElement InvalidEmailErrorMessage() {
 		return InvalidEmailerror;
 	}
-	public WebElement PasswordrestLinkSuccessfullySentMessage()
-	{
+
+	public WebElement PasswordrestLinkSuccessfullySentMessage() {
 		return SuccessfullMessage;
 	}
 }

@@ -15,7 +15,7 @@ import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
 
 public class LoginPageTests extends SetAndDown {
-	
+
 	@Test(groups = "TestValidUserName")
 	public void TestValidUserName() {
 		assertTrue(LPO.UsernameDisplayed().isDisplayed());
@@ -46,8 +46,8 @@ public class LoginPageTests extends SetAndDown {
 
 	@Test(groups = "TestLoginWithValidCredentails", dataProvider = "dataProvider")
 	public void TestLoginWithValidCredentails(String username, String Password) {
-		
-		//System.out.println(driver.getTitle());
+
+		// System.out.println(driver.getTitle());
 		assertTrue(LPO.UsernameDisplayed().isDisplayed());
 		LPO.PassUsername().clear();
 		LPO.PassUsername().sendKeys(username);
@@ -58,13 +58,13 @@ public class LoginPageTests extends SetAndDown {
 		LPO.ClickOnLogin().click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
-			//wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
-			 wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud | Log In")));
-			 wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud")));
+			// wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
+			wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud | Log In")));
+			wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud")));
 		} catch (Exception e) {
 		}
 		assertEquals(driver.getTitle(), "Services");
-		
+
 		// driver.close();
 	}
 
@@ -116,9 +116,9 @@ public class LoginPageTests extends SetAndDown {
 			LPO.TermsOfServiceCheckBox().click();
 		LPO.ClickOnLogin().click();
 		try {
-			//wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
+			// wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
 			wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud | Log In")));
-			 wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud")));
+			wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud")));
 		} catch (Exception e) {
 		}
 		assertEquals(driver.getTitle(), "Services");

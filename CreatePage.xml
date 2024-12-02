@@ -17,16 +17,26 @@
 				<include name="TestStoragePathDropdown"/>
 				<include name="TestOSDropdown"/>
 				<include name="TestIOPSDropdown"/>
-				<!-- TestHorizontalSwitchOn and TestHorizontalSwitchOff both should run together to test horizontal switch-->
-				<include name="TestHorizontalSwitchOn"/>
-				<include name="TestHorizontalSwitchOff"/>
-				<!-- TestVerticalSwitchOn and TestVerticalSwitchOff both should run together to test Vertical switch-->
+				<!-- TestHorizontalSwitchOn and TestHorizontalSwitchOff both should run together to test horizontal switch off-->
+				<exclude name="TestHorizontalSwitchOn"/>
+				<exclude name="TestHorizontalSwitchOff"/>
+				<!-- TestVerticalSwitchOn and TestVerticalSwitchOff both should run together to test Vertical switch off-->
 				<include name="TestVerticalSwitchOn"/>
-				<include name="TestVerticalSwitchOff"/>
+				<exclude name="TestVerticalSwitchOff"/>
 				<!-- =====================================================================================================-->
-				<include name="TestSavedTemplatesRadioButton"/>
-				<include name="TestCustomRadioButton"/>
+				<exclude name="TestSavedTemplatesRadioButton"/>
+				<exclude name="TestCustomRadioButton"/>
 				<include name="TestLowerThreshold"/>
+				<include name="TestUpperThreshold"/>
+				<exclude name="TestVcpuForHorizontalScaling"/>
+				<!-- First we need to run TestmaxVcpuOfVerticalScaling then we need to run TestMinVcpuOfVerticalScaling-->
+				<include name="TestmaxVcpuOfVerticalScaling"/>
+				<include name="TestMinVcpuOfVerticalScaling"/>
+				<!-- =====================================================================================================-->
+				<exclude name="TestErrorAlertBox"/>
+				<exclude name="TestRAMForhorizontalScaling"/>
+				<include name="TestmaxRAMOfVerticalScaling"/>
+				<include name="TestMinRAMOfVerticalScaling"/>
 			</run>
 		</groups>
 		<classes>

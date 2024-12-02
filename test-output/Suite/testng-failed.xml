@@ -12,32 +12,40 @@
         <include name="TestStoragePathDropdown"/>
         <include name="TestOSDropdown"/>
         <include name="TestIOPSDropdown"/>
-        <include name="TestHorizontalSwitchOn"/>
-        <include name="TestHorizontalSwitchOff"/>
         <include name="TestVerticalSwitchOn"/>
-        <include name="TestVerticalSwitchOff"/>
-        <include name="TestSavedTemplatesRadioButton"/>
-        <include name="TestCustomRadioButton"/>
         <include name="TestLowerThreshold"/>
+        <include name="TestUpperThreshold"/>
+        <include name="TestmaxVcpuOfVerticalScaling"/>
+        <include name="TestMinVcpuOfVerticalScaling"/>
+        <include name="TestmaxRAMOfVerticalScaling"/>
+        <include name="TestMinRAMOfVerticalScaling"/>
+        <exclude name="TestHorizontalSwitchOn"/>
+        <exclude name="TestHorizontalSwitchOff"/>
+        <exclude name="TestVerticalSwitchOff"/>
+        <exclude name="TestSavedTemplatesRadioButton"/>
+        <exclude name="TestCustomRadioButton"/>
+        <exclude name="TestVcpuForHorizontalScaling"/>
+        <exclude name="TestErrorAlertBox"/>
+        <exclude name="TestRAMForhorizontalScaling"/>
       </run>
     </groups>
     <classes>
       <class name="create.CreatePageTests">
         <methods>
-          <include name="TestHorizontalSwitchOn"/>
+          <include name="TestMinRAMOfVerticalScaling"/>
+          <include name="TestUpperThreshold"/>
           <include name="TestOSDropdown"/>
-          <include name="TestCustomRadioButton"/>
           <include name="TestProjectNameDropdown"/>
+          <include name="TestmaxVcpuOfVerticalScaling"/>
           <include name="TestVerticalSwitchOn"/>
           <include name="ClickOnCreateReource"/>
           <include name="TestLocationDropdown"/>
-          <include name="TestSavedTemplatesRadioButton"/>
+          <include name="TestMinVcpuOfVerticalScaling"/>
           <include name="TestStoragePathDropdown"/>
-          <include name="TestIOPSDropdown"/>
+          <include name="TestmaxRAMOfVerticalScaling"/>
           <include name="CertAndLogin"/>
-          <include name="TestHorizontalSwitchOff"/>
+          <include name="TestIOPSDropdown"/>
           <include name="TestLowerThreshold"/>
-          <include name="TestVerticalSwitchOff"/>
         </methods>
       </class> <!-- create.CreatePageTests -->
     </classes>
