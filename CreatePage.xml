@@ -10,6 +10,8 @@
 	<test name="CreatePageTests">
 		<groups>
 			<run>
+			<!--
+				==========================Provision==========================================================-->
 				<include name="CertAndLogin" />
 				<include name="ClickOnCreateReource" />
 				<include name="TestLocationDropdown" />
@@ -70,11 +72,19 @@
 				<exclude name="TestTemplateCheckBoxUnChecked" />
 				<!--=====================================================================================-->
 				<include name="TestMaxGroupCount" />
-				<!--==========================END==========================================-->
+				<!--==========================Select Additional Options==========================================-->
 				<include name="TestVMBackupSwitchOff"/>
 				<include name="TestVMBackupSwitchOn"/>
+				<!--=======To check Retention period dropdown iclude TestBackUpFrequencyDropdown also==========-->
 				<include name="TestBackUpFrequencyDropdown"/>
 				<include name="TestRetentionPeriodDropdown"/>
+				<!--======================================================================-->
+				<exclude name="TestSIEMSwitchOn"/>
+				<exclude name="TestSIEMSwitchOff"/>
+				<include name="TestSIEMDropdown"/>
+				<!--======================Finalize And Create===============================-->
+				<include name="TestVLANDropdown"/>
+				
 
 			</run>
 		</groups>

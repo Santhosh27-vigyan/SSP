@@ -25,6 +25,8 @@
         <include name="TestVMBackupSwitchOn"/>
         <include name="TestBackUpFrequencyDropdown"/>
         <include name="TestRetentionPeriodDropdown"/>
+        <include name="TestSIEMDropdown"/>
+        <include name="TestVLANDropdown"/>
         <exclude name="TestHorizontalSwitchOff"/>
         <exclude name="TestVerticalSwitchOn"/>
         <exclude name="TestVerticalSwitchOff"/>
@@ -40,14 +42,35 @@
         <exclude name="TestDiskForVerticalScaling"/>
         <exclude name="TestLoadBalancerOff"/>
         <exclude name="TestTemplateCheckBoxUnChecked"/>
+        <exclude name="TestSIEMSwitchOn"/>
+        <exclude name="TestSIEMSwitchOff"/>
       </run>
     </groups>
     <classes>
       <class name="create.CreatePageTests">
         <methods>
+          <include name="TestSIEMDropdown"/>
+          <include name="TestTemplateCheckBoxChecked"/>
+          <include name="TestVMBackupSwitchOff"/>
+          <include name="TestHorizontalSwitchOn"/>
+          <include name="TestDiskForHorizontalScaling"/>
+          <include name="TestRetentionPeriodDropdown"/>
+          <include name="TestUpperThreshold"/>
+          <include name="TestMaxGroupCount"/>
+          <include name="TestLoadBalancerOn"/>
+          <include name="TestOSDropdown"/>
+          <include name="TestVLANDropdown"/>
+          <include name="TestVcpuForHorizontalScaling"/>
+          <include name="TestProjectNameDropdown"/>
           <include name="ClickOnCreateReource"/>
-          <include name="TestRetentionPeriodDropdown" invocation-numbers="0"/>
+          <include name="TestRAMForhorizontalScaling"/>
+          <include name="TestVMBackupSwitchOn"/>
+          <include name="TestLocationDropdown"/>
+          <include name="TestStoragePathDropdown"/>
+          <include name="TestBackUpFrequencyDropdown"/>
           <include name="CertAndLogin"/>
+          <include name="TestIOPSDropdown"/>
+          <include name="TestLowerThreshold"/>
         </methods>
       </class> <!-- create.CreatePageTests -->
     </classes>

@@ -602,15 +602,92 @@ public class CreatePageTests extends SetAndDown {
 	@Test(groups = "TestRetentionPeriodDropdown", priority = 35,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestRetentionPeriodDropdown(String RetentionPeriodValue)
 	{
-		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", CPO.VMBackUpLabel());
 		if(!CPO.BackUpfrequencyLabel().isDisplayed())
 			js.executeScript("arguments[0].click();", CPO.VMBackupButton());
+		
+		try {
+			wait.until(new ExpectedCondition<Boolean>() {
+				public Boolean apply(WebDriver driver) {
+					return CPO.RetentionPeriodOptions().getOptions().stream().anyMatch(option -> option.getText().contains(RetentionPeriodValue));
+				}
+			});
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		assertTrue(CPO.RetentionPeriodOptions().getOptions().stream().anyMatch(option -> option.getText().contains(RetentionPeriodValue)),
 				"Given Value " + RetentionPeriodValue + " is not available in the dropdown");
 		CPO.RetentionPeriodOptions().selectByVisibleText(RetentionPeriodValue);
 		assertEquals(CPO.RetentionPeriodOptions().getFirstSelectedOption().getText(), RetentionPeriodValue);
+	}
+	@Test(groups = "TestSIEMSwitchOn", priority = 36, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestSIEMSwitchOn()
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		if(CPO.SIEMDivClass().getAttribute("style").contains("none"))
+		{
+			js.executeScript("arguments[0].click();", CPO.SIEMSwitch());
+			if (CPO.SIEMErrorMessage().getAttribute("style").contains("inline"))
+				throw new Error(CPO.SIEMErrorMessage().getText());
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		else
+			System.out.println("SIEM Option is already turned on");
+	}
+	@Test(groups = "TestSIEMSwitchOff", priority = 37, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestSIEMSwitchOff()
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		if(!CPO.SIEMDivClass().getAttribute("style").contains("none"))
+		{
+			js.executeScript("arguments[0].click();", CPO.SIEMSwitch());
+			if (CPO.SIEMErrorMessage().getAttribute("style").contains("inline"))
+				throw new Error(CPO.SIEMErrorMessage().getText());
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		else
+			System.out.println("SIEM Option is already turned off");
+	}
+	@Test(groups = "TestSIEMDropdown", priority = 38,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestSIEMDropdown(String SIEMName)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		TestSIEMSwitchOn();
+		assertTrue(CPO.SIEMVmList().getOptions().stream().anyMatch(option -> option.getText().contains(SIEMName)),
+				"Given Value " + SIEMName + " is not available in the dropdown");
+		CPO.SIEMVmList().selectByVisibleText(SIEMName);
+		assertEquals(CPO.SIEMVmList().getFirstSelectedOption().getText(), SIEMName);
+	}
+	@Test(groups = "TestVLANDropdown", priority = 39,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestVLANDropdown(String VLANName)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		String Message;
+		assertTrue(CPO.VlanOptions().getOptions().stream().anyMatch(option -> option.getText().contains(VLANName)),
+				"Given Value " + VLANName + " is not available in the dropdown");
+		CPO.VlanOptions().selectByVisibleText(VLANName);
+		try {
+			wait.until(ExpectedConditions.visibilityOf(CPO.Alert()));
+			Message = CPO.AlertMessage().getText();
+			CPO.AlertOkButton().click();
+			assertEquals(Message,"Note: This VLAN is fully utilized. Select a different VLAN or contact Admin for additional VLAN requirement.");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		assertEquals(CPO.VlanOptions().getFirstSelectedOption().getText(), VLANName);
 	}
 	public void CustomeWait() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -739,6 +816,17 @@ public class CreatePageTests extends SetAndDown {
 					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
 					"RetentionPeriodValue");
 		}
+		if (method.getName().equals("TestSIEMDropdown")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
+					"SIEMName");
+		}
+		if (method.getName().equals("TestVLANDropdown")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
+					"VLANName");
+		}
+		
 		
 		return null;
 	}

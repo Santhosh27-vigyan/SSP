@@ -1,6 +1,7 @@
 package create;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -155,6 +156,12 @@ public class CreatePageObject {
 	private WebElement SIEMVmList;
 	@FindBy(xpath = "//div[@class='siem-vm-list']")
 	private WebElement SIEMDivClass;
+	@FindBy(id = "vlanname")
+	private WebElement VlanOptions;
+	@FindBy(xpath = "//input[contains(@id,'new') and contains(@name,'new')]")
+	private List<WebElement> VmNameTextBox;
+	@FindBy(xpath = "//input[contains(@id,'new')]/following-sibling::span[contains(@class,'availability-status') and contains(@class,'available')]")
+	private List<WebElement> AvailabityMessage;
 	public Select SelectLocation() {
 		wait.until(ExpectedConditions.elementToBeClickable(LocationOptions));
 		return new Select(LocationOptions);
@@ -396,4 +403,25 @@ public class CreatePageObject {
 	{
 		return new Select(RetentionPeriodOptions) ;
 	}
+	public WebElement SIEMDivClass()
+	{
+		return SIEMDivClass;
+	}
+	public WebElement SIEMSwitch()
+	{
+		return SIEMSwitch;
+	}
+	public WebElement SIEMErrorMessage()
+	{
+		return SIEMErrorMessage;
+	}
+	public Select SIEMVmList()
+	{
+		return new Select(SIEMVmList);
+	}
+	public Select VlanOptions()
+	{
+		return new Select(VlanOptions);
+	}
+	
 }
