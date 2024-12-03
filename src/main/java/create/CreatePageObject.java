@@ -47,6 +47,8 @@ public class CreatePageObject {
 	private WebElement CustomRadioButton;
 	@FindBy(id = "vm_size_type_favorite_template")
 	private WebElement SavedTemplatesRadioButton;
+	@FindBy(id = "vm-favorite-size-selector")
+	private WebElement SavedTemplates;
 	@FindBy(className = "vm-custom-size-selector-outer-div")
 	private WebElement CustomSizeSelectorDiv;
 	@FindBy(xpath = "//div[@class='form-group row vm-favorite-size-selector-outer-div']")
@@ -107,6 +109,52 @@ public class CreatePageObject {
 	private WebElement VerticalScalingRamValueMin;
 	@FindBy(xpath = "//label[@for='ram_range_1']/parent::div //span[@class='irs-max']")
 	private WebElement VerticalScalingRamValueMax;
+	@FindBy(xpath = "//label[@for='auto_target_disk_size']")
+	private WebElement DiskLable;
+	@FindBy(xpath = "//label[@for='target_disk_size']/parent::div //span[@class='irs-handle single']")
+	private WebElement DiskSizeScalingButton;
+	@FindBy(xpath = "//label[@for='auto_target_disk_size']/parent::div //span[@class='irs-handle single']")
+	private WebElement VerticalScalingDiskSizeScalingButton;
+	@FindBy(xpath = "//label[@for='target_disk_size']/parent::div //span[@class='irs-single']")
+	private WebElement DiskSizeValue;
+	@FindBy(xpath = "//label[@for='target_disk_size']/parent::div //span[@class='irs-min']")
+	private WebElement DiskSizeValueMin;
+	@FindBy(xpath = "//label[@for='target_disk_size']/parent::div //span[@class='irs-max']")
+	private WebElement DiskSizeValueMax;
+	@FindBy(xpath = "//label[@for='auto_target_disk_size']/parent::div //span[@class='irs-single']")
+	private WebElement VerticalScalingDiskSizeValue;
+	@FindBy(xpath = "//label[@for='auto_target_disk_size']/parent::div //span[@class='irs-min']")
+	private WebElement VerticalScalingDiskSizeValueMin;
+	@FindBy(xpath = "//label[@for='auto_target_disk_size']/parent::div //span[@class='irs-max']")
+	private WebElement VerticalScalingDiskSizeValueMax;
+	@FindBy(xpath = "//span[@class='availability-status-resource']")
+	private WebElement InsufficienterrorMessage;
+	@FindBy(id = "vmHzSwitchesLB")
+	private WebElement LoadBalancerButton;
+	@FindBy(xpath = "//label[@for='favorite_checkbox']")
+	private WebElement TemplateCheckBox;
+	@FindBy(id = "decrease1")
+	private WebElement decreaseButton;
+	@FindBy(id = "increase1")
+	private WebElement IncreaseButton;
+	@FindBy(xpath = "//h4[text()='VM Backup ']")
+	private WebElement VMBackUpLabel;
+	@FindBy(xpath = "//label[@for='vm_backup_interval']")
+	private WebElement BackUpfrequencyLabel;
+	@FindBy(id = "vmBackupSwitches")
+	private WebElement VMBackupButton;
+	@FindBy(id = "vm_backup_interval")
+	private WebElement BackUpFrequencyOptions;
+	@FindBy(id = "retention")
+	private WebElement RetentionPeriodOptions;
+	@FindBy(id = "SIEMcustomSwitches")
+	private WebElement SIEMSwitch;
+	@FindBy(className = "availability-status-siem")
+	private WebElement SIEMErrorMessage;
+	@FindBy(id = "siem-vm-list")
+	private WebElement SIEMVmList;
+	@FindBy(xpath = "//div[@class='siem-vm-list']")
+	private WebElement SIEMDivClass;
 	public Select SelectLocation() {
 		wait.until(ExpectedConditions.elementToBeClickable(LocationOptions));
 		return new Select(LocationOptions);
@@ -155,6 +203,10 @@ public class CreatePageObject {
 
 	public WebElement SavedTemplatesRadioButton() {
 		return SavedTemplatesRadioButton;
+	}
+	public Select SavedTemplates()
+	{
+		return new Select(SavedTemplates);
 	}
 
 	public WebElement CustomSelectorDiv() {
@@ -268,5 +320,80 @@ public class CreatePageObject {
 	{
 		return VerticalScalingRamFromValue;
 	}
-	
+	public WebElement DiskSizeScalingButton()
+	{
+		return DiskSizeScalingButton;
+	}
+	public WebElement DiskSizeValueMin()
+	{
+		return DiskSizeValueMin;
+	}
+	public WebElement DiskSizeValueMax()
+	{
+		return DiskSizeValueMax;
+	}
+	public WebElement DiskSizeValue()
+	{
+		return DiskSizeValue;
+	}
+	public WebElement InsufficienterrorMessage()
+	{
+		return InsufficienterrorMessage;
+	}
+	public WebElement DiskLable()
+	{
+		return DiskLable;
+	}
+	public WebElement VerticalScalingDiskSizeValueMin()
+	{
+		return VerticalScalingDiskSizeValueMin;
+	}
+	public WebElement VerticalScalingDiskSizeValueMax()
+	{
+		return VerticalScalingDiskSizeValueMax;
+	}
+	public WebElement VerticalScalingDiskSizeValue()
+	{
+		return VerticalScalingDiskSizeValue;
+	}
+	public WebElement VerticalScalingDiskSizeScalingButton()
+	{
+		return VerticalScalingDiskSizeScalingButton;
+	}
+	public WebElement LoadBalancerButton()
+	{
+		return LoadBalancerButton;
+	}
+	public WebElement TemplateCheckBox()
+	{
+		return TemplateCheckBox;
+	}
+	public WebElement decreaseButton()
+	{
+		return decreaseButton;
+	}
+	public WebElement IncreaseButton()
+	{
+		return IncreaseButton;
+	}
+	public WebElement BackUpfrequencyLabel()
+	{
+		return BackUpfrequencyLabel;
+	}
+	public WebElement VMBackupButton()
+	{
+		return VMBackupButton;
+	}
+	public Select BackUpFrequencyOptions()
+	{
+		return new Select(BackUpFrequencyOptions);
+	}
+	public WebElement VMBackUpLabel()
+	{
+		return VMBackUpLabel;
+	}
+	public Select RetentionPeriodOptions()
+	{
+		return new Select(RetentionPeriodOptions) ;
+	}
 }

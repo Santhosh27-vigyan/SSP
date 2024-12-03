@@ -12,40 +12,42 @@
         <include name="TestStoragePathDropdown"/>
         <include name="TestOSDropdown"/>
         <include name="TestIOPSDropdown"/>
-        <include name="TestVerticalSwitchOn"/>
+        <include name="TestHorizontalSwitchOn"/>
         <include name="TestLowerThreshold"/>
         <include name="TestUpperThreshold"/>
-        <include name="TestmaxVcpuOfVerticalScaling"/>
-        <include name="TestMinVcpuOfVerticalScaling"/>
-        <include name="TestmaxRAMOfVerticalScaling"/>
-        <include name="TestMinRAMOfVerticalScaling"/>
-        <exclude name="TestHorizontalSwitchOn"/>
+        <include name="TestVcpuForHorizontalScaling"/>
+        <include name="TestRAMForhorizontalScaling"/>
+        <include name="TestDiskForHorizontalScaling"/>
+        <include name="TestLoadBalancerOn"/>
+        <include name="TestTemplateCheckBoxChecked"/>
+        <include name="TestMaxGroupCount"/>
+        <include name="TestVMBackupSwitchOff"/>
+        <include name="TestVMBackupSwitchOn"/>
+        <include name="TestBackUpFrequencyDropdown"/>
+        <include name="TestRetentionPeriodDropdown"/>
         <exclude name="TestHorizontalSwitchOff"/>
+        <exclude name="TestVerticalSwitchOn"/>
         <exclude name="TestVerticalSwitchOff"/>
         <exclude name="TestSavedTemplatesRadioButton"/>
+        <exclude name="TestSavedTemplatesDropDown"/>
         <exclude name="TestCustomRadioButton"/>
-        <exclude name="TestVcpuForHorizontalScaling"/>
-        <exclude name="TestErrorAlertBox"/>
-        <exclude name="TestRAMForhorizontalScaling"/>
+        <exclude name="TestmaxVcpuOfVerticalScaling"/>
+        <exclude name="TestMinVcpuOfVerticalScaling"/>
+        <exclude name="TestErrorAlertBoxOfVcpu"/>
+        <exclude name="TestmaxRAMOfVerticalScaling"/>
+        <exclude name="TestMinRAMOfVerticalScaling"/>
+        <exclude name="TestErrorAlertBoxOfRAM"/>
+        <exclude name="TestDiskForVerticalScaling"/>
+        <exclude name="TestLoadBalancerOff"/>
+        <exclude name="TestTemplateCheckBoxUnChecked"/>
       </run>
     </groups>
     <classes>
       <class name="create.CreatePageTests">
         <methods>
-          <include name="TestMinRAMOfVerticalScaling"/>
-          <include name="TestUpperThreshold"/>
-          <include name="TestOSDropdown"/>
-          <include name="TestProjectNameDropdown"/>
-          <include name="TestmaxVcpuOfVerticalScaling"/>
-          <include name="TestVerticalSwitchOn"/>
           <include name="ClickOnCreateReource"/>
-          <include name="TestLocationDropdown"/>
-          <include name="TestMinVcpuOfVerticalScaling"/>
-          <include name="TestStoragePathDropdown"/>
-          <include name="TestmaxRAMOfVerticalScaling"/>
+          <include name="TestRetentionPeriodDropdown" invocation-numbers="0"/>
           <include name="CertAndLogin"/>
-          <include name="TestIOPSDropdown"/>
-          <include name="TestLowerThreshold"/>
         </methods>
       </class> <!-- create.CreatePageTests -->
     </classes>

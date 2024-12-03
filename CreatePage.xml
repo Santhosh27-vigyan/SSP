@@ -11,32 +11,71 @@
 		<groups>
 			<run>
 				<include name="CertAndLogin" />
-				<include name="ClickOnCreateReource"/>
-				<include name="TestLocationDropdown"/>
-				<include name="TestProjectNameDropdown"/>
-				<include name="TestStoragePathDropdown"/>
-				<include name="TestOSDropdown"/>
-				<include name="TestIOPSDropdown"/>
-				<!-- TestHorizontalSwitchOn and TestHorizontalSwitchOff both should run together to test horizontal switch off-->
-				<exclude name="TestHorizontalSwitchOn"/>
-				<exclude name="TestHorizontalSwitchOff"/>
-				<!-- TestVerticalSwitchOn and TestVerticalSwitchOff both should run together to test Vertical switch off-->
-				<include name="TestVerticalSwitchOn"/>
-				<exclude name="TestVerticalSwitchOff"/>
-				<!-- =====================================================================================================-->
-				<exclude name="TestSavedTemplatesRadioButton"/>
-				<exclude name="TestCustomRadioButton"/>
-				<include name="TestLowerThreshold"/>
-				<include name="TestUpperThreshold"/>
-				<exclude name="TestVcpuForHorizontalScaling"/>
-				<!-- First we need to run TestmaxVcpuOfVerticalScaling then we need to run TestMinVcpuOfVerticalScaling-->
-				<include name="TestmaxVcpuOfVerticalScaling"/>
-				<include name="TestMinVcpuOfVerticalScaling"/>
-				<!-- =====================================================================================================-->
-				<exclude name="TestErrorAlertBox"/>
-				<exclude name="TestRAMForhorizontalScaling"/>
-				<include name="TestmaxRAMOfVerticalScaling"/>
-				<include name="TestMinRAMOfVerticalScaling"/>
+				<include name="ClickOnCreateReource" />
+				<include name="TestLocationDropdown" />
+				<include name="TestProjectNameDropdown" />
+				<include name="TestStoragePathDropdown" />
+				<include name="TestOSDropdown" />
+				<include name="TestIOPSDropdown" />
+				<!--
+				=====================================================================================================-->
+				<!-- TestHorizontalSwitchOn and TestHorizontalSwitchOff both
+				should run together to test horizontal switch off-->
+				<include name="TestHorizontalSwitchOn" />
+				<exclude name="TestHorizontalSwitchOff" />
+				<!-- TestVerticalSwitchOn and TestVerticalSwitchOff both should
+				run together to test Vertical switch off-->
+				<exclude name="TestVerticalSwitchOn" />
+				<exclude name="TestVerticalSwitchOff" />
+				<!--
+				=====================================================================================================-->
+				<exclude name="TestSavedTemplatesRadioButton" />
+				<exclude name="TestSavedTemplatesDropDown"/>
+				<exclude name="TestCustomRadioButton" />
+				<!--
+				=====================================================================================================-->
+				<include name="TestLowerThreshold" />
+				<include name="TestUpperThreshold" />
+				<!--
+				=====================================================================================================-->
+				<include name="TestVcpuForHorizontalScaling" />
+				<!-- First we need to run TestmaxVcpuOfVerticalScaling then we
+				need to run TestMinVcpuOfVerticalScaling-->
+				<exclude name="TestmaxVcpuOfVerticalScaling" />
+				<exclude name="TestMinVcpuOfVerticalScaling" />
+				<exclude name="TestErrorAlertBoxOfVcpu" />
+				<!--
+				=====================================================================================================-->
+				<include name="TestRAMForhorizontalScaling" />
+				<!-- First we need to run TestmaxRAMOfVerticalScaling then we
+				need to run TestMinRAMOfVerticalScaling-->
+				<exclude name="TestmaxRAMOfVerticalScaling" />
+				<exclude name="TestMinRAMOfVerticalScaling" />
+				<exclude name="TestErrorAlertBoxOfRAM" />
+				<!--
+				=====================================================================================================-->
+				<include name="TestDiskForHorizontalScaling" />
+				<exclude name="TestDiskForVerticalScaling" />
+				<!--From TestLoadBalancerOn TO TestMaxGroupCount you should use only when horizontal scaling is selected -->
+				<!-- don't use TestLoadBalancerOn and TestLoadBalancerOff at the
+				same time  -->
+				<!--==========================Start==========================================-->
+				<include name="TestLoadBalancerOn" />
+				<exclude name="TestLoadBalancerOff" />
+				<!-- don't use TestTemplateCheckBoxChecked and
+				TestTemplateCheckBoxUnChecked at the same time and this can be
+				used even when both horizontal ans vertical scaling is not
+				selected-->
+				<include name="TestTemplateCheckBoxChecked" />
+				<exclude name="TestTemplateCheckBoxUnChecked" />
+				<!--=====================================================================================-->
+				<include name="TestMaxGroupCount" />
+				<!--==========================END==========================================-->
+				<include name="TestVMBackupSwitchOff"/>
+				<include name="TestVMBackupSwitchOn"/>
+				<include name="TestBackUpFrequencyDropdown"/>
+				<include name="TestRetentionPeriodDropdown"/>
+
 			</run>
 		</groups>
 		<classes>
