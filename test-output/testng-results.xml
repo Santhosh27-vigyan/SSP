@@ -1,87 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="23" passed="1" failed="1" skipped="21">
+<testng-results ignored="0" total="30" passed="1" failed="1" skipped="28">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-03T19:02:17 IST" name="Suite" finished-at="2024-12-03T19:02:32 IST" duration-ms="15097">
+  <suite started-at="2024-12-04T18:42:03 IST" name="Suite" finished-at="2024-12-04T18:42:18 IST" duration-ms="14617">
     <groups>
+      <group name="Vertical">
+        <method signature="CreatePageTests.TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@75db5df9]" name="TestLocationDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@75db5df9]" name="TestProjectNameDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@75db5df9]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@75db5df9]" name="TestOSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@75db5df9]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@75db5df9]" name="TestLowerThreshold" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@75db5df9]" name="TestUpperThreshold" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@75db5df9]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@75db5df9]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@75db5df9]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@75db5df9]" name="TestSIEMSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@75db5df9]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@75db5df9]" name="TestVLANDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@75db5df9]" name="TestSaveRolesButtonInAssignRolesModal" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsInTheForm" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsAfterSubmit" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
+      </group> <!-- Vertical -->
+      <group name="TestVMNameTextBoxForHorizontal">
+        <method signature="CreatePageTests.TestVMNameTextBoxForHorizontal(java.lang.String)[pri:41, instance:create.CreatePageTests@75db5df9]" name="TestVMNameTextBoxForHorizontal" class="create.CreatePageTests"/>
+      </group> <!-- TestVMNameTextBoxForHorizontal -->
+      <group name="TestCreateButtontocheckErrorsAfterSubmit">
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsAfterSubmit" class="create.CreatePageTests"/>
+      </group> <!-- TestCreateButtontocheckErrorsAfterSubmit -->
+      <group name="TestSaveRolesButtonInAssignRolesModal">
+        <method signature="CreatePageTests.TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@75db5df9]" name="TestSaveRolesButtonInAssignRolesModal" class="create.CreatePageTests"/>
+      </group> <!-- TestSaveRolesButtonInAssignRolesModal -->
+      <group name="Horizontal">
+        <method signature="CreatePageTests.TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@75db5df9]" name="TestLocationDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@75db5df9]" name="TestProjectNameDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@75db5df9]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@75db5df9]" name="TestOSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@75db5df9]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@75db5df9]" name="TestHorizontalSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@75db5df9]" name="TestLowerThreshold" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@75db5df9]" name="TestUpperThreshold" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@75db5df9]" name="TestVcpuForHorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@75db5df9]" name="TestRAMForhorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@75db5df9]" name="TestDiskForHorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@75db5df9]" name="TestLoadBalancerOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@75db5df9]" name="TestTemplateCheckBoxChecked" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@75db5df9]" name="TestMaxGroupCount" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@75db5df9]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@75db5df9]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@75db5df9]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@75db5df9]" name="TestSIEMSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@75db5df9]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@75db5df9]" name="TestVLANDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVMNameTextBoxForHorizontal(java.lang.String)[pri:41, instance:create.CreatePageTests@75db5df9]" name="TestVMNameTextBoxForHorizontal" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@75db5df9]" name="TestSaveRolesButtonInAssignRolesModal" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsInTheForm" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsAfterSubmit" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
+      </group> <!-- Horizontal -->
+      <group name="TestProjectNameDropdown">
+        <method signature="CreatePageTests.TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@75db5df9]" name="TestProjectNameDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestProjectNameDropdown -->
+      <group name="TestAssignRemoteUserModal">
+        <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
+      </group> <!-- TestAssignRemoteUserModal -->
+      <group name="TestVcpuForHorizontalScaling">
+        <method signature="CreatePageTests.TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@75db5df9]" name="TestVcpuForHorizontalScaling" class="create.CreatePageTests"/>
+      </group> <!-- TestVcpuForHorizontalScaling -->
+      <group name="TestCreateButtontocheckSuccessMessageAfterSubmit">
+        <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
+      </group> <!-- TestCreateButtontocheckSuccessMessageAfterSubmit -->
+      <group name="TestCreateButtontocheckErrorsInTheForm">
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsInTheForm" class="create.CreatePageTests"/>
+      </group> <!-- TestCreateButtontocheckErrorsInTheForm -->
+      <group name="TestSIEMDropdown">
+        <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@75db5df9]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestSIEMDropdown -->
+      <group name="TestVLANDropdown">
+        <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@75db5df9]" name="TestVLANDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestVLANDropdown -->
+      <group name="TestTemplateCheckBoxChecked">
+        <method signature="CreatePageTests.TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@75db5df9]" name="TestTemplateCheckBoxChecked" class="create.CreatePageTests"/>
+      </group> <!-- TestTemplateCheckBoxChecked -->
+      <group name="TestOSDropdown">
+        <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@75db5df9]" name="TestOSDropdown" class="create.CreatePageTests"/>
+      </group> <!-- TestOSDropdown -->
+      <group name="TestSIEMSwitchOn">
+        <method signature="CreatePageTests.TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@75db5df9]" name="TestSIEMSwitchOn" class="create.CreatePageTests"/>
+      </group> <!-- TestSIEMSwitchOn -->
       <group name="TestBackUpFrequencyDropdown">
-        <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@3c3d9b6b]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@75db5df9]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestBackUpFrequencyDropdown -->
+      <group name="TestAssignRemoteUserButton">
+        <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
+      </group> <!-- TestAssignRemoteUserButton -->
       <group name="CertAndLogin">
-        <method signature="CreatePageTests.CertAndLogin()[pri:1, instance:create.CreatePageTests@3c3d9b6b]" name="CertAndLogin" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.CertAndLogin()[pri:1, instance:create.CreatePageTests@75db5df9]" name="CertAndLogin" class="create.CreatePageTests"/>
       </group> <!-- CertAndLogin -->
       <group name="TestLowerThreshold">
-        <method signature="CreatePageTests.TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@3c3d9b6b]" name="TestLowerThreshold" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@75db5df9]" name="TestLowerThreshold" class="create.CreatePageTests"/>
       </group> <!-- TestLowerThreshold -->
       <group name="TestVMBackupSwitchOn">
-        <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@3c3d9b6b]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@75db5df9]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
       </group> <!-- TestVMBackupSwitchOn -->
       <group name="TestIOPSDropdown">
-        <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@3c3d9b6b]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@75db5df9]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestIOPSDropdown -->
       <group name="TestRAMForhorizontalScaling">
-        <method signature="CreatePageTests.TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@3c3d9b6b]" name="TestRAMForhorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@75db5df9]" name="TestRAMForhorizontalScaling" class="create.CreatePageTests"/>
       </group> <!-- TestRAMForhorizontalScaling -->
       <group name="TestStoragePathDropdown">
-        <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@3c3d9b6b]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@75db5df9]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestStoragePathDropdown -->
       <group name="TestLocationDropdown">
-        <method signature="CreatePageTests.TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@3c3d9b6b]" name="TestLocationDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@75db5df9]" name="TestLocationDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestLocationDropdown -->
       <group name="ClickOnCreateReource">
-        <method signature="CreatePageTests.ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@3c3d9b6b]" name="ClickOnCreateReource" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@75db5df9]" name="ClickOnCreateReource" class="create.CreatePageTests"/>
       </group> <!-- ClickOnCreateReource -->
-      <group name="TestProjectNameDropdown">
-        <method signature="CreatePageTests.TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@3c3d9b6b]" name="TestProjectNameDropdown" class="create.CreatePageTests"/>
-      </group> <!-- TestProjectNameDropdown -->
-      <group name="TestVcpuForHorizontalScaling">
-        <method signature="CreatePageTests.TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@3c3d9b6b]" name="TestVcpuForHorizontalScaling" class="create.CreatePageTests"/>
-      </group> <!-- TestVcpuForHorizontalScaling -->
-      <group name="TestSIEMDropdown">
-        <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@3c3d9b6b]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
-      </group> <!-- TestSIEMDropdown -->
       <group name="TestRetentionPeriodDropdown">
-        <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@3c3d9b6b]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@75db5df9]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestRetentionPeriodDropdown -->
       <group name="TestHorizontalSwitchOn">
-        <method signature="CreatePageTests.TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@3c3d9b6b]" name="TestHorizontalSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@75db5df9]" name="TestHorizontalSwitchOn" class="create.CreatePageTests"/>
       </group> <!-- TestHorizontalSwitchOn -->
       <group name="TestDiskForHorizontalScaling">
-        <method signature="CreatePageTests.TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@3c3d9b6b]" name="TestDiskForHorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@75db5df9]" name="TestDiskForHorizontalScaling" class="create.CreatePageTests"/>
       </group> <!-- TestDiskForHorizontalScaling -->
-      <group name="TestVLANDropdown">
-        <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@3c3d9b6b]" name="TestVLANDropdown" class="create.CreatePageTests"/>
-      </group> <!-- TestVLANDropdown -->
-      <group name="TestVMBackupSwitchOff">
-        <method signature="CreatePageTests.TestVMBackupSwitchOff()[pri:32, instance:create.CreatePageTests@3c3d9b6b]" name="TestVMBackupSwitchOff" class="create.CreatePageTests"/>
-      </group> <!-- TestVMBackupSwitchOff -->
-      <group name="TestTemplateCheckBoxChecked">
-        <method signature="CreatePageTests.TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@3c3d9b6b]" name="TestTemplateCheckBoxChecked" class="create.CreatePageTests"/>
-      </group> <!-- TestTemplateCheckBoxChecked -->
       <group name="TestUpperThreshold">
-        <method signature="CreatePageTests.TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@3c3d9b6b]" name="TestUpperThreshold" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@75db5df9]" name="TestUpperThreshold" class="create.CreatePageTests"/>
       </group> <!-- TestUpperThreshold -->
+      <group name="None">
+        <method signature="CreatePageTests.TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@75db5df9]" name="TestLocationDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@75db5df9]" name="TestProjectNameDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@75db5df9]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@75db5df9]" name="TestOSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@75db5df9]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@75db5df9]" name="TestVcpuForHorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@75db5df9]" name="TestRAMForhorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@75db5df9]" name="TestDiskForHorizontalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@75db5df9]" name="TestTemplateCheckBoxChecked" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@75db5df9]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@75db5df9]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@75db5df9]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@75db5df9]" name="TestSIEMSwitchOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@75db5df9]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@75db5df9]" name="TestVLANDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@75db5df9]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@75db5df9]" name="TestSaveRolesButtonInAssignRolesModal" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsInTheForm" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckErrorsAfterSubmit" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@75db5df9]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
+      </group> <!-- None -->
       <group name="TestMaxGroupCount">
-        <method signature="CreatePageTests.TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@3c3d9b6b]" name="TestMaxGroupCount" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@75db5df9]" name="TestMaxGroupCount" class="create.CreatePageTests"/>
       </group> <!-- TestMaxGroupCount -->
       <group name="TestLoadBalancerOn">
-        <method signature="CreatePageTests.TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@3c3d9b6b]" name="TestLoadBalancerOn" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@75db5df9]" name="TestLoadBalancerOn" class="create.CreatePageTests"/>
       </group> <!-- TestLoadBalancerOn -->
-      <group name="TestOSDropdown">
-        <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@3c3d9b6b]" name="TestOSDropdown" class="create.CreatePageTests"/>
-      </group> <!-- TestOSDropdown -->
     </groups>
-    <test started-at="2024-12-03T19:02:17 IST" name="TestUrlForValidLogin" finished-at="2024-12-03T19:02:20 IST" duration-ms="3618">
+    <test started-at="2024-12-04T18:42:03 IST" name="TestUrlForValidLogin" finished-at="2024-12-04T18:42:06 IST" duration-ms="3088">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-12-03T19:02:17 IST" name="TestOpenLoginPage" finished-at="2024-12-03T19:02:20 IST" duration-ms="3560" status="PASS">
+        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-12-04T18:42:03 IST" name="TestOpenLoginPage" finished-at="2024-12-04T18:42:06 IST" duration-ms="3024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOpenLoginPage -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
     </test> <!-- TestUrlForValidLogin -->
-    <test started-at="2024-12-03T19:02:20 IST" name="CreatePageTests" finished-at="2024-12-03T19:02:32 IST" duration-ms="11405">
+    <test started-at="2024-12-04T18:42:06 IST" name="CreatePageTests" finished-at="2024-12-04T18:42:18 IST" duration-ms="11434">
       <class name="create.CreatePageTests">
-        <test-method signature="CertAndLogin()[pri:1, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:20 IST" name="CertAndLogin" finished-at="2024-12-03T19:02:32 IST" duration-ms="11229" status="FAIL">
+        <test-method signature="CertAndLogin()[pri:1, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:06 IST" name="CertAndLogin" finished-at="2024-12-04T18:42:17 IST" duration-ms="11248" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Services] but found [IPM+ Cloud | Log In]]]>
@@ -95,7 +189,7 @@ at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
 at Login.LoginPageTests.TestLoginWithValidCredentails(LoginPageTests.java:66)
-at create.CreatePageTests.CertAndLogin(CreatePageTests.java:34)
+at create.CreatePageTests.CertAndLogin(CreatePageTests.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,15 +224,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CertAndLogin -->
-        <test-method signature="ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="ClickOnCreateReource" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.CertAndLogin" duration-ms="1" status="SKIP">
+        <test-method signature="ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="ClickOnCreateReource" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.CertAndLogin" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -164,15 +258,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickOnCreateReource -->
-        <test-method signature="TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestLocationDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestLocationDropdown" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -198,15 +292,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestLocationDropdown -->
-        <test-method signature="TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestProjectNameDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestProjectNameDropdown" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -232,15 +326,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestProjectNameDropdown -->
-        <test-method signature="TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestStoragePathDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestStoragePathDropdown" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -266,15 +360,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestStoragePathDropdown -->
-        <test-method signature="TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestOSDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestOSDropdown" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -300,15 +394,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOSDropdown -->
-        <test-method signature="TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestIOPSDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestIOPSDropdown" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -334,15 +428,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestIOPSDropdown -->
-        <test-method signature="TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestHorizontalSwitchOn" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestHorizontalSwitchOn" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -368,15 +462,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestHorizontalSwitchOn -->
-        <test-method signature="TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestLowerThreshold" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestLowerThreshold" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -402,15 +496,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestLowerThreshold -->
-        <test-method signature="TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestUpperThreshold" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:17 IST" name="TestUpperThreshold" finished-at="2024-12-04T18:42:17 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -436,15 +530,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestUpperThreshold -->
-        <test-method signature="TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestVcpuForHorizontalScaling" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestVcpuForHorizontalScaling" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -470,15 +564,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestVcpuForHorizontalScaling -->
-        <test-method signature="TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestRAMForhorizontalScaling" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestRAMForhorizontalScaling" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -504,15 +598,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestRAMForhorizontalScaling -->
-        <test-method signature="TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestDiskForHorizontalScaling" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestDiskForHorizontalScaling" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -538,15 +632,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestDiskForHorizontalScaling -->
-        <test-method signature="TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestLoadBalancerOn" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestLoadBalancerOn" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -572,15 +666,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestLoadBalancerOn -->
-        <test-method signature="TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestTemplateCheckBoxChecked" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1" status="SKIP">
+        <test-method signature="TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestTemplateCheckBoxChecked" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -606,15 +700,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestTemplateCheckBoxChecked -->
-        <test-method signature="TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestMaxGroupCount" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1" status="SKIP">
+        <test-method signature="TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestMaxGroupCount" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -640,49 +734,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestMaxGroupCount -->
-        <test-method signature="TestVMBackupSwitchOff()[pri:32, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestVMBackupSwitchOff" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestVMBackupSwitchOn" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestVMBackupSwitchOff() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOff() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestVMBackupSwitchOff -->
-        <test-method signature="TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestVMBackupSwitchOn" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -708,15 +768,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestVMBackupSwitchOn -->
-        <test-method signature="TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestBackUpFrequencyDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestBackUpFrequencyDropdown" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -742,15 +802,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestBackUpFrequencyDropdown -->
-        <test-method signature="TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestRetentionPeriodDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestRetentionPeriodDropdown" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -776,15 +836,49 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestRetentionPeriodDropdown -->
-        <test-method signature="TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestSIEMDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestSIEMSwitchOn" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestSIEMSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestSIEMSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSIEMSwitchOn -->
+        <test-method signature="TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestSIEMDropdown" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -810,15 +904,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSIEMDropdown -->
-        <test-method signature="TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@3c3d9b6b]" started-at="2024-12-03T19:02:32 IST" name="TestVLANDropdown" finished-at="2024-12-03T19:02:32 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+        <test-method signature="TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestVLANDropdown" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]]]>
+              <![CDATA[Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -844,9 +938,247 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestVLANDropdown -->
+        <test-method signature="TestVMNameTextBoxForHorizontal(java.lang.String)[pri:41, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestVMNameTextBoxForHorizontal" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestVMNameTextBoxForHorizontal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestVMNameTextBoxForHorizontal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestVMNameTextBoxForHorizontal -->
+        <test-method signature="TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestAssignRemoteUserButton" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestAssignRemoteUserButton() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestAssignRemoteUserButton() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestAssignRemoteUserButton -->
+        <test-method signature="TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestAssignRemoteUserModal" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestAssignRemoteUserModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestAssignRemoteUserModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestAssignRemoteUserModal -->
+        <test-method signature="TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestSaveRolesButtonInAssignRolesModal" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestSaveRolesButtonInAssignRolesModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestSaveRolesButtonInAssignRolesModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSaveRolesButtonInAssignRolesModal -->
+        <test-method signature="TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestCreateButtontocheckErrorsInTheForm" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCreateButtontocheckErrorsInTheForm -->
+        <test-method signature="TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestCreateButtontocheckErrorsAfterSubmit" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCreateButtontocheckErrorsAfterSubmit -->
+        <test-method signature="TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@75db5df9]" started-at="2024-12-04T18:42:18 IST" name="TestCreateButtontocheckSuccessMessageAfterSubmit" finished-at="2024-12-04T18:42:18 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCreateButtontocheckSuccessMessageAfterSubmit -->
       </class> <!-- create.CreatePageTests -->
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-12-03T19:02:14 IST" name="DriverIntilization" finished-at="2024-12-03T19:02:17 IST" duration-ms="2708" status="PASS">
+        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-12-04T18:42:00 IST" name="DriverIntilization" finished-at="2024-12-04T18:42:03 IST" duration-ms="2616" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -857,7 +1189,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverIntilization -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-12-03T19:02:32 IST" name="TearDown" finished-at="2024-12-03T19:02:32 IST" duration-ms="308" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@c730b35]" started-at="2024-12-04T18:42:18 IST" name="TearDown" finished-at="2024-12-04T18:42:18 IST" duration-ms="542" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

@@ -55,15 +55,15 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>CreatePageTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/21</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/28</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 03 19:02:20 IST 2024</td>
+<td>Started on:</td><td>Wed Dec 04 18:42:06 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11405 ms)</td>
+<tr><td>Total time:</td><td>11 seconds (11434 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td>TestBackUpFrequencyDropdown CertAndLogin TestLowerThreshold TestVMBackupSwitchOn TestIOPSDropdown TestRAMForhorizontalScaling TestLocationDropdown TestStoragePathDropdown ClickOnCreateReource TestProjectNameDropdown TestVcpuForHorizontalScaling TestRetentionPeriodDropdown TestSIEMDropdown TestHorizontalSwitchOn TestDiskForHorizontalScaling TestUpperThreshold TestTemplateCheckBoxChecked TestVMBackupSwitchOff TestVLANDropdown TestOSDropdown TestLoadBalancerOn TestMaxGroupCount </td>
+<td>Included groups:</td><td>Horizontal CertAndLogin ClickOnCreateReource </td>
 </tr><tr>
-<td>Excluded groups:</td><td>TestSIEMSwitchOn TestmaxRAMOfVerticalScaling TestHorizontalSwitchOff TestVerticalSwitchOff TestErrorAlertBoxOfRAM TestMinVcpuOfVerticalScaling TestErrorAlertBoxOfVcpu TestSavedTemplatesRadioButton TestLoadBalancerOff TestMinRAMOfVerticalScaling TestDiskForVerticalScaling TestTemplateCheckBoxUnChecked TestVerticalSwitchOn TestSavedTemplatesDropDown TestmaxVcpuOfVerticalScaling TestSIEMSwitchOff TestCustomRadioButton </td>
+<td>Excluded groups:</td><td></td>
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
@@ -79,10 +79,10 @@ function toggleAllBoxes() {
 <td title='create.CreatePageTests.CertAndLogin()'><b>CertAndLogin</b><br>Test class: create.CreatePageTests</td>
 <td><div><pre>java.lang.AssertionError: expected [Services] but found [IPM+ Cloud | Log In]
 	at Login.LoginPageTests.TestLoginWithValidCredentails(LoginPageTests.java:66)
-	at create.CreatePageTests.CertAndLogin(CreatePageTests.java:34)
+	at create.CreatePageTests.CertAndLogin(CreatePageTests.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace720770771", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace720770771'><pre>java.lang.AssertionError: expected [Services] but found [IPM+ Cloud | Log In]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2114629072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2114629072'><pre>java.lang.AssertionError: expected [Services] but found [IPM+ Cloud | Log In]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -90,7 +90,7 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
 	at Login.LoginPageTests.TestLoginWithValidCredentails(LoginPageTests.java:66)
-	at create.CreatePageTests.CertAndLogin(CreatePageTests.java:34)
+	at create.CreatePageTests.CertAndLogin(CreatePageTests.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,7 +121,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>11</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -132,43 +132,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='create.CreatePageTests.TestLowerThreshold()'><b>TestLowerThreshold</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1746578747", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1746578747'><pre>java.lang.Throwable: Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestSIEMDropdown()'><b>TestSIEMDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td title='create.CreatePageTests.TestTemplateCheckBoxChecked()'><b>TestTemplateCheckBoxChecked</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace600017090", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace600017090'><pre>java.lang.Throwable: Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<div class='stack-trace' id='stack-trace600017090'><pre>java.lang.Throwable: Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -190,165 +160,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestDiskForHorizontalScaling()'><b>TestDiskForHorizontalScaling</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1454870101", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1454870101'><pre>java.lang.Throwable: Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestUpperThreshold()'><b>TestUpperThreshold</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace606593028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace606593028'><pre>java.lang.Throwable: Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestVcpuForHorizontalScaling()'><b>TestVcpuForHorizontalScaling</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1676888944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1676888944'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestLoadBalancerOn()'><b>TestLoadBalancerOn</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace709439274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace709439274'><pre>java.lang.Throwable: Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestRetentionPeriodDropdown()'><b>TestRetentionPeriodDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace744316958", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace744316958'><pre>java.lang.Throwable: Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
 <td title='create.CreatePageTests.TestStoragePathDropdown()'><b>TestStoragePathDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2010070923", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2010070923'><pre>java.lang.Throwable: Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1676888944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1676888944'><pre>java.lang.Throwable: Method create.CreatePageTests.TestStoragePathDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -370,15 +190,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
-<td title='create.CreatePageTests.TestLocationDropdown()'><b>TestLocationDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td title='create.CreatePageTests.TestLoadBalancerOn()'><b>TestLoadBalancerOn</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace458998685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace458998685'><pre>java.lang.Throwable: Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace744316958", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace744316958'><pre>java.lang.Throwable: Method create.CreatePageTests.TestLoadBalancerOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -400,195 +220,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestRAMForhorizontalScaling()'><b>TestRAMForhorizontalScaling</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace458817438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace458817438'><pre>java.lang.Throwable: Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestHorizontalSwitchOn()'><b>TestHorizontalSwitchOn</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace214320652", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace214320652'><pre>java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestIOPSDropdown()'><b>TestIOPSDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace752011518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace752011518'><pre>java.lang.Throwable: Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestVMBackupSwitchOn()'><b>TestVMBackupSwitchOn</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace762509150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace762509150'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestMaxGroupCount()'><b>TestMaxGroupCount</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1091781053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1091781053'><pre>java.lang.Throwable: Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestBackUpFrequencyDropdown()'><b>TestBackUpFrequencyDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1520491508", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1520491508'><pre>java.lang.Throwable: Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
 <td title='create.CreatePageTests.TestOSDropdown()'><b>TestOSDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace566891420", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace566891420'><pre>java.lang.Throwable: Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace458817438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace458817438'><pre>java.lang.Throwable: Method create.CreatePageTests.TestOSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -610,15 +250,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
-<td title='create.CreatePageTests.ClickOnCreateReource()'><b>ClickOnCreateReource</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@3c3d9b6b]
+<td title='create.CreatePageTests.TestBackUpFrequencyDropdown()'><b>TestBackUpFrequencyDropdown</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace537536188", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace537536188'><pre>java.lang.Throwable: Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@3c3d9b6b]
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1516417700", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1516417700'><pre>java.lang.Throwable: Method create.CreatePageTests.TestBackUpFrequencyDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -640,15 +280,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
-<td title='create.CreatePageTests.TestVMBackupSwitchOff()'><b>TestVMBackupSwitchOff</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOff() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td title='create.CreatePageTests.TestLocationDropdown()'><b>TestLocationDropdown</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1409342262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1409342262'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOff() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace214320652", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace214320652'><pre>java.lang.Throwable: Method create.CreatePageTests.TestLocationDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -670,15 +310,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestSaveRolesButtonInAssignRolesModal()'><b>TestSaveRolesButtonInAssignRolesModal</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestSaveRolesButtonInAssignRolesModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace268599241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace268599241'><pre>java.lang.Throwable: Method create.CreatePageTests.TestSaveRolesButtonInAssignRolesModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
 <td title='create.CreatePageTests.TestVLANDropdown()'><b>TestVLANDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace259077766", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace259077766'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1103017075", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1103017075'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVLANDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -700,15 +370,165 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestDiskForHorizontalScaling()'><b>TestDiskForHorizontalScaling</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1520491508", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1520491508'><pre>java.lang.Throwable: Method create.CreatePageTests.TestDiskForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()'><b>TestCreateButtontocheckSuccessMessageAfterSubmit</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace748975217", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace748975217'><pre>java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestVMNameTextBoxForHorizontal()'><b>TestVMNameTextBoxForHorizontal</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMNameTextBoxForHorizontal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace318794136", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace318794136'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMNameTextBoxForHorizontal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestAssignRemoteUserButton()'><b>TestAssignRemoteUserButton</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestAssignRemoteUserButton() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace55755528", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace55755528'><pre>java.lang.Throwable: Method create.CreatePageTests.TestAssignRemoteUserButton() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestVMBackupSwitchOn()'><b>TestVMBackupSwitchOn</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1263391254", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1263391254'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVMBackupSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
 <td title='create.CreatePageTests.TestProjectNameDropdown()'><b>TestProjectNameDropdown</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace345290829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace345290829'><pre>java.lang.Throwable: Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1746578747", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1746578747'><pre>java.lang.Throwable: Method create.CreatePageTests.TestProjectNameDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -730,15 +550,405 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 <tr>
-<td title='create.CreatePageTests.TestTemplateCheckBoxChecked()'><b>TestTemplateCheckBoxChecked</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<td title='create.CreatePageTests.TestIOPSDropdown()'><b>TestIOPSDropdown</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1454870101", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1454870101'><pre>java.lang.Throwable: Method create.CreatePageTests.TestIOPSDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestHorizontalSwitchOn()'><b>TestHorizontalSwitchOn</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace709439274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace709439274'><pre>java.lang.Throwable: Method create.CreatePageTests.TestHorizontalSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.ClickOnCreateReource()'><b>ClickOnCreateReource</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace752011518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace752011518'><pre>java.lang.Throwable: Method create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.CertAndLogin() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestRAMForhorizontalScaling()'><b>TestRAMForhorizontalScaling</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace762509150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace762509150'><pre>java.lang.Throwable: Method create.CreatePageTests.TestRAMForhorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestRetentionPeriodDropdown()'><b>TestRetentionPeriodDropdown</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace891894789", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace891894789'><pre>java.lang.Throwable: Method create.CreatePageTests.TestRetentionPeriodDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestUpperThreshold()'><b>TestUpperThreshold</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1091781053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1091781053'><pre>java.lang.Throwable: Method create.CreatePageTests.TestUpperThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestSIEMSwitchOn()'><b>TestSIEMSwitchOn</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestSIEMSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766696861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace766696861'><pre>java.lang.Throwable: Method create.CreatePageTests.TestSIEMSwitchOn() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit()'><b>TestCreateButtontocheckErrorsAfterSubmit</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace201392112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace201392112'><pre>java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestAssignRemoteUserModal()'><b>TestAssignRemoteUserModal</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestAssignRemoteUserModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1835778392", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1835778392'><pre>java.lang.Throwable: Method create.CreatePageTests.TestAssignRemoteUserModal() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm()'><b>TestCreateButtontocheckErrorsInTheForm</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1736293769", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1736293769'><pre>java.lang.Throwable: Method create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestVcpuForHorizontalScaling()'><b>TestVcpuForHorizontalScaling</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1409342262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1409342262'><pre>java.lang.Throwable: Method create.CreatePageTests.TestVcpuForHorizontalScaling() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestMaxGroupCount()'><b>TestMaxGroupCount</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace259077766", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace259077766'><pre>java.lang.Throwable: Method create.CreatePageTests.TestMaxGroupCount() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestSIEMDropdown()'><b>TestSIEMDropdown</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1296109622", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1296109622'><pre>java.lang.Throwable: Method create.CreatePageTests.TestSIEMDropdown() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@75db5df9</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestLowerThreshold()'><b>TestLowerThreshold</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.Throwable: Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1482166692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1482166692'><pre>java.lang.Throwable: Method create.CreatePageTests.TestTemplateCheckBoxChecked() on instance create.CreatePageTests@3c3d9b6b depends on not successfully finished methods 
-[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@3c3d9b6b]
+<div class='stack-trace' id='stack-trace1482166692'><pre>java.lang.Throwable: Method create.CreatePageTests.TestLowerThreshold() on instance create.CreatePageTests@75db5df9 depends on not successfully finished methods 
+[create.CreatePageTests.ClickOnCreateReource() on instance create.CreatePageTests@75db5df9]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -760,7 +970,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>create.CreatePageTests@3c3d9b6b</td></tr>
+<td>create.CreatePageTests@75db5df9</td></tr>
 </table><p>
 </body>
 </html>

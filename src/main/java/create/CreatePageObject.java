@@ -162,6 +162,30 @@ public class CreatePageObject {
 	private List<WebElement> VmNameTextBox;
 	@FindBy(xpath = "//input[contains(@id,'new')]/following-sibling::span[contains(@class,'availability-status') and contains(@class,'available')]")
 	private List<WebElement> AvailabityMessage;
+	@FindBy(id = "number")
+	private WebElement NumberOfVirtualMachines;
+	@FindBy(xpath = "//div[@id='vmNumber'] //div[@id='decrease']")
+	private WebElement VMDecreaseButton;
+	@FindBy(xpath = "//div[@id='vmNumber'] //div[@id='increase']")
+	private WebElement VMIncreaseButton;
+	@FindBy(xpath = "//label[@class='error']")
+	private List<WebElement> AllErrorMessage;
+	@FindBy(id = "create_vm")
+	private WebElement CreateButton;
+	@FindBy(id = "assign_user")
+	private WebElement AssignRemoteUserButton;
+	@FindBy(id = "selectall")
+	private WebElement SelectAllUsersButton;
+	@FindBy(xpath = "//input[contains(@class,'singlecheck')]")
+	private List<WebElement> UserNames;
+	@FindBy(xpath = "//input[@type='radio' and @value='0']")
+	private List<WebElement> AdminRadioButtons;
+	@FindBy(xpath = "//input[@type='radio' and @value='1']")
+	private List<WebElement> UserRadioButtons;
+	@FindBy(className = "toast-message")
+	private WebElement UserReatedErrorMessage;
+	@FindBy(id = "save_roles")
+	private WebElement SaverolesButton;
 	public Select SelectLocation() {
 		wait.until(ExpectedConditions.elementToBeClickable(LocationOptions));
 		return new Select(LocationOptions);
@@ -423,5 +447,60 @@ public class CreatePageObject {
 	{
 		return new Select(VlanOptions);
 	}
-	
+	public WebElement NumberOfVirtualMachines()
+	{
+		return NumberOfVirtualMachines;
+	}
+	public WebElement VMDecreaseButton()
+	{
+		return VMDecreaseButton;
+	}
+	public WebElement VMIncreaseButton()
+	{
+		return VMIncreaseButton;
+	}
+	public List<WebElement> VmNameTextBox()
+	{
+		return VmNameTextBox;
+	}
+	public WebElement CreateButton()
+	{
+		return CreateButton;
+	}
+	public List<WebElement> AvailabityMessage()
+	{
+		return AvailabityMessage;
+	}
+	public WebElement AssignRemoteUserButton()
+	{
+		return AssignRemoteUserButton;
+	}
+	public WebElement SelectAllUsersButton()
+	{
+		return SelectAllUsersButton;
+	}
+	public List<WebElement> UserNames()
+	{
+		return UserNames;
+	}
+	public List<WebElement> AdminRadioButtons()
+	{
+		return AdminRadioButtons;
+	}
+	public List<WebElement> UserRadioButtons()
+	{
+		return UserRadioButtons;
+	}
+	public List<WebElement> AllErrorMessage()
+	{
+		return AllErrorMessage;
+	}
+	public WebElement UserReatedErrorMessage()
+	{
+		return UserReatedErrorMessage;
+	}
+	public WebElement SaverolesButton()
+	{
+		return SaverolesButton;
+	}
 }

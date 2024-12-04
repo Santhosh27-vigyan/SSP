@@ -84,7 +84,16 @@
 				<include name="TestSIEMDropdown"/>
 				<!--======================Finalize And Create===============================-->
 				<include name="TestVLANDropdown"/>
-				
+				<!--======================TestNumberOfVM will not work when horizontal scaling is selected===============================-->
+				<exclude name="TestNumberOfVM"/>
+				<include name="TestVMNameTextBoxForHorizontal"/>
+				<exclude name="TestVMNameTextBoxForVertical"/>
+				<include name="TestAssignRemoteUserButton"/>
+				<include name="TestAssignRemoteUserModal"/>
+				<include name="TestSaveRolesButtonInAssignRolesModal"/>
+				<include name="TestCreateButtontocheckErrorsInTheForm"/>
+				<include name="TestCreateButtontocheckErrorsAfterSubmit"/>
+				<include name="TestCreateButtontocheckSuccessMessageAfterSubmit"/>
 
 			</run>
 		</groups>

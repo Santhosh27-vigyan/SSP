@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="ClassName" value="CreatePageObjects" />
+	<test name="TestUrlForValidLogin">
+		<classes>
+			<class name="setUpAndTearDown.SetAndDown" />
+		</classes>
+	</test>
+	<test name="CreatePageTests">
+		<groups>
+			<run>
+				<include name="CertAndLogin" />
+				<include name="ClickOnCreateReource" />
+				<include name="Horizontal" />
+
+			</run>
+		</groups>
+		<classes>
+			<class name="create.CreatePageTests">
+				<methods>
+				<!-- <include name="CertAndLogin" />
+				<include name="ClickOnCreateReource" />
+				<include name="TestLocationDropdown" />
+				<include name="TestProjectNameDropdown" />
+				<include name="TestStoragePathDropdown" />
+				<include name="TestOSDropdown" />
+				<include name="TestIOPSDropdown" />
+				<include name="TestHorizontalSwitchOn" />
+				<exclude name="TestHorizontalSwitchOff" />
+				<include name="TestLowerThreshold" />
+				<include name="TestUpperThreshold" />
+				<include name="TestVcpuForHorizontalScaling" />
+				<include name="TestRAMForhorizontalScaling" />
+				<include name="TestDiskForHorizontalScaling" />
+				<include name="TestLoadBalancerOn" />
+				<exclude name="TestLoadBalancerOff" />
+				<include name="TestTemplateCheckBoxChecked" />
+				<exclude name="TestTemplateCheckBoxUnChecked" />
+				<include name="TestMaxGroupCount" />
+				<include name="TestVMBackupSwitchOff"/>
+				<include name="TestVMBackupSwitchOn"/>
+				<include name="TestBackUpFrequencyDropdown"/>
+				<include name="TestRetentionPeriodDropdown"/>
+				<exclude name="TestSIEMSwitchOn"/>
+				<exclude name="TestSIEMSwitchOff"/>
+				<include name="TestSIEMDropdown"/>
+				<include name="TestVLANDropdown"/>
+				<include name="TestVMNameTextBoxForHorizontal"/>
+				<include name="TestAssignRemoteUserButton"/>
+				<include name="TestAssignRemoteUserModal"/>
+				<include name="TestSaveRolesButtonInAssignRolesModal"/>
+				<include name="TestCreateButtontocheckErrorsInTheForm"/>
+				<include name="TestCreateButtontocheckErrorsAfterSubmit"/>
+				<include name="TestCreateButtontocheckSuccessMessageAfterSubmit"/>-->
+					<exclude name="TestHorizontalSwitchOff" />
+					<exclude name="TestLoadBalancerOff" />
+					<exclude name="TestTemplateCheckBoxUnChecked" />
+					<exclude name="TestVMBackupSwitchOff"/>
+					<exclude name="TestSIEMSwitchOff"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 

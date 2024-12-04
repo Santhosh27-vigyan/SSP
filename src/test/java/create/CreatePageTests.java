@@ -1,4 +1,5 @@
 package create;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -9,6 +10,7 @@ import java.util.List;
 import javax.naming.InsufficientResourcesException;
 
 import org.apache.commons.math3.exception.MaxCountExceededException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -27,18 +29,21 @@ import Login.LoginPageTests;
 import createResource.CreateResourcePageTests;
 import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
+
 public class CreatePageTests extends SetAndDown {
 	@Test(groups = "CertAndLogin", priority = 1)
 	public void CertAndLogin() throws IOException {
 		LoginPageTests LPT = new LoginPageTests();
 		LPT.TestLoginWithValidCredentails(prop.getProperty("username"), prop.getProperty("password"));
 	}
+
 	@Test(groups = "ClickOnCreateReource", priority = 2, dataProvider = "dataProvider", dependsOnMethods = "CertAndLogin", alwaysRun = false)
 	public void ClickOnCreateReource(String ResourceName) {
 		CreateResourcePageTests CRPT = new CreateResourcePageTests();
 		CRPT.TestCreateReource(ResourceName);
 	}
-	@Test(groups = "TestLocationDropdown", priority = 3, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestLocationDropdown","Vertical","Horizontal","None"}, priority = 3, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestLocationDropdown(String LocationName) {
 		assertTrue(
 				CPO.SelectLocation().getOptions().stream().anyMatch(option -> option.getText().contains(LocationName)),
@@ -46,7 +51,8 @@ public class CreatePageTests extends SetAndDown {
 		CPO.SelectLocation().selectByVisibleText(LocationName);
 		assertEquals(CPO.SelectLocation().getFirstSelectedOption().getText(), LocationName);
 	}
-	@Test(groups = "TestProjectNameDropdown", priority = 4, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestProjectNameDropdown","Vertical","Horizontal","None"}, priority = 4, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestProjectNameDropdown(String ProjectName) {
 		// System.out.println(CPO.SelectProjectName().getOptions().size());
 		CustomeWait();
@@ -58,16 +64,22 @@ public class CreatePageTests extends SetAndDown {
 		CPO.SelectProjectName().selectByVisibleText(ProjectName);
 		assertEquals(CPO.SelectProjectName().getFirstSelectedOption().getText(), ProjectName);
 	}
-	@Test(groups = "TestStoragePathDropdown", priority = 5, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestStoragePathDropdown","Vertical","Horizontal","None"}, priority = 5, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestStoragePathDropdown(String StoragePathName) {
 		// System.out.println(CPO.SelectStoragePath().getOptions().size());
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(new ExpectedCondition<Boolean>() {
-			public Boolean apply(WebDriver driver) {
-				return CPO.SelectStoragePath().getOptions().stream()
-						.anyMatch(option -> option.getText().contains(StoragePathName)); // Check if the size is 7
-			}
-		});
+		try {
+			wait.until(new ExpectedCondition<Boolean>() {
+				public Boolean apply(WebDriver driver) {
+					return CPO.SelectStoragePath().getOptions().stream()
+							.anyMatch(option -> option.getText().contains(StoragePathName)); // Check if the size is 7
+				}
+			});
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 		assertTrue(
 				CPO.SelectStoragePath().getOptions().stream()
 						.anyMatch(option -> option.getText().contains(StoragePathName)),
@@ -79,30 +91,38 @@ public class CreatePageTests extends SetAndDown {
 		}
 		assertEquals(CPO.SelectStoragePath().getFirstSelectedOption().getText(), StoragePathName);
 	}
-	@Test(groups = "TestOSDropdown", priority = 6, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestOSDropdown","Vertical","Horizontal","None"}, priority = 6, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestOSDropdown(String OSName, String StoragePathName) {
 		CustomeWait();
 		// System.out.println(CPO.SelectStoragePath().getOptions().size());
 		TestStoragePathDropdown(StoragePathName);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(new ExpectedCondition<Boolean>() {
-			public Boolean apply(WebDriver driver) {
-				return CPO.SelectOS().getOptions().stream().anyMatch(option -> option.getText().contains(OSName));
-			}
-		});
+		try {
+			wait.until(new ExpectedCondition<Boolean>() {
+				public Boolean apply(WebDriver driver) {
+					return CPO.SelectOS().getOptions().stream().anyMatch(option -> option.getText().contains(OSName));
+				}
+			});
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 		assertTrue(CPO.SelectOS().getOptions().stream().anyMatch(option -> option.getText().contains(OSName)),
 				"Given Value " + OSName + " is not available in the dropdown");
 		CPO.SelectOS().selectByVisibleText(OSName);
 		assertEquals(CPO.SelectOS().getFirstSelectedOption().getText(), OSName);
 	}
-	@Test(groups = "TestIOPSDropdown", priority = 7, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestIOPSDropdown","Vertical","Horizontal","None"}, priority = 7, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestIOPSDropdown(String IOPSValue) {
 		assertTrue(CPO.SelectIops().getOptions().stream().anyMatch(option -> option.getText().contains(IOPSValue)),
 				"Given Value " + IOPSValue + " is not available in the dropdown");
 		CPO.SelectIops().selectByVisibleText(IOPSValue);
 		assertEquals(CPO.SelectIops().getFirstSelectedOption().getText(), IOPSValue);
 	}
-	@Test(groups = "TestHorizontalSwitchOn", priority = 8, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestHorizontalSwitchOn","Horizontal"}, priority = 8, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestHorizontalSwitchOn() {
 		if (!CPO.VerticalSwitchDiv().getAttribute("style").equals("display: none;")) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -113,7 +133,8 @@ public class CreatePageTests extends SetAndDown {
 			System.out.println("Horizontal Switch is already turned on");
 		}
 	}
-	@Test(groups = "TestHorizontalSwitchOff", priority = 9, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestHorizontalSwitchOff","Horizontal"}, priority = 9, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestHorizontalSwitchOff() {
 		if (CPO.VerticalSwitchDiv().getAttribute("style").equals("display: none;")) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -124,7 +145,8 @@ public class CreatePageTests extends SetAndDown {
 			System.out.println("Horizontal Switch is already turned off");
 		}
 	}
-	@Test(groups = "TestVerticalSwitchOn", priority = 10, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestVerticalSwitchOn","Vertical"}, priority = 10, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestVerticalSwitchOn() {
 		if (!CPO.HorizonantalSwitchDiv().getAttribute("style").equals("display: none;")) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -135,7 +157,8 @@ public class CreatePageTests extends SetAndDown {
 			System.out.println("Vertical Switch is already turned on");
 		}
 	}
-	@Test(groups = "TestVerticalSwitchOff", priority = 11, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestVerticalSwitchOff","Vertical"}, priority = 11, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestVerticalSwitchOff() {
 		if (CPO.HorizonantalSwitchDiv().getAttribute("style").equals("display: none;")) {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -146,7 +169,8 @@ public class CreatePageTests extends SetAndDown {
 			System.out.println("Vertical Switch is already turned off");
 		}
 	}
-	@Test(groups = "TestSavedTemplatesRadioButton", priority = 12, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestSavedTemplatesRadioButton","None"}, priority = 12, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestSavedTemplatesRadioButton() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		assertTrue(!CPO.HorizonantalSwitchDiv().getAttribute("style").equals("display: none;"),
@@ -157,7 +181,8 @@ public class CreatePageTests extends SetAndDown {
 		assertTrue(!CPO.SelectTemplateDropdownDiv().getAttribute("style").equals("display: none;"),
 				"Saved Templates Option is not selected");
 	}
-	@Test(groups = "TestSavedTemplatesDropDown", priority = 13,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestSavedTemplatesDropDown","None"}, priority = 13, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestSavedTemplatesDropDown(String SavedTemplateName) {
 		assertTrue(
 				CPO.SavedTemplates().getOptions().stream()
@@ -166,7 +191,8 @@ public class CreatePageTests extends SetAndDown {
 		CPO.SavedTemplates().selectByVisibleText(SavedTemplateName);
 		assertEquals(CPO.SavedTemplates().getFirstSelectedOption().getAttribute("value"), SavedTemplateName);
 	}
-	@Test(groups = "TestCustomRadioButton", priority = 14, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestCustomRadioButton","None"}, priority = 14, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestCustomRadioButton() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		assertTrue(!CPO.HorizonantalSwitchDiv().getAttribute("style").equals("display: none;"),
@@ -177,7 +203,8 @@ public class CreatePageTests extends SetAndDown {
 		assertTrue(CPO.CustomSelectorDiv().getAttribute("style").equals("display: block;"),
 				"Custom Option is not selected");
 	}
-	@Test(groups = "TestLowerThreshold", priority = 15, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestLowerThreshold","Vertical","Horizontal"}, priority = 15, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestLowerThreshold(String LowerThresholdValue) {
 		// TestHorizontalSwitchOn();
 		assertTrue(
@@ -187,7 +214,8 @@ public class CreatePageTests extends SetAndDown {
 		CPO.LowerThreshold().selectByValue(LowerThresholdValue);
 		assertEquals(CPO.LowerThreshold().getFirstSelectedOption().getAttribute("value"), LowerThresholdValue);
 	}
-	@Test(groups = "TestUpperThreshold", priority = 16, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestUpperThreshold","Vertical","Horizontal"}, priority = 16, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestUpperThreshold(String UpperThresholdValue) {
 		// TestHorizontalSwitchOn();
 		assertTrue(
@@ -197,7 +225,8 @@ public class CreatePageTests extends SetAndDown {
 		CPO.UpperThreshold().selectByValue(UpperThresholdValue);
 		assertEquals(CPO.UpperThreshold().getFirstSelectedOption().getAttribute("value"), UpperThresholdValue);
 	}
-	@Test(groups = "TestVcpuForHorizontalScaling", priority = 17, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestVcpuForHorizontalScaling","Horizontal","None"}, priority = 17, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestVcpuForHorizontalScaling(String VcpuvalueForHorizontalScaling)
 			throws InsufficientResourcesException {
 		Actions a = new Actions(driver);
@@ -228,7 +257,8 @@ public class CreatePageTests extends SetAndDown {
 //			if (InsufficienterrorMessage.getAttribute("style").contains("inline"))
 //				throw new InsufficientResourcesException(InsufficienterrorMessage.getText());
 	}
-	@Test(groups = "TestmaxVcpuOfVerticalScaling", priority = 18, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestmaxVcpuOfVerticalScaling","Vertical"}, priority = 18, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestmaxVcpuOfVerticalScaling(String MAxValue, String MinValue) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions a = new Actions(driver);
@@ -254,7 +284,8 @@ public class CreatePageTests extends SetAndDown {
 			}
 		}
 	}
-	@Test(groups = "TestMinVcpuOfVerticalScaling", priority = 19, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestMinVcpuOfVerticalScaling","Vertical"}, priority = 19, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestMinVcpuOfVerticalScaling(String MAxValue, String MinValue) {
 		String Message;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
@@ -263,7 +294,8 @@ public class CreatePageTests extends SetAndDown {
 		String min = ConditionCheck(MinValue, CPO.VerticalVcpuScalingMin(), "Vertical Min");
 		assertTrue(Integer.parseInt(MinValue) >= Integer.valueOf(min),
 				"Given Value(" + MinValue + ") Should be greater than " + min);
-		CPO.VerticalVcpuScalingFromButton().click();
+		if (Integer.parseInt(MinValue) != Integer.valueOf(min))
+			CPO.VerticalVcpuScalingFromButton().click();
 		mainloop1: while (true) {
 			String[] VerticalScalingVcpuFromValueGettext = ((String) js
 					.executeScript("return arguments[0].textContent;", CPO.VerticalScalingVcpuFromValue()))
@@ -298,12 +330,14 @@ public class CreatePageTests extends SetAndDown {
 			}
 		}
 	}
-	@Test(groups = "TestErrorAlertBoxOfVcpu", priority = 20, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestErrorAlertBoxOfVcpu","Vertical"}, priority = 20, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestErrorAlertBoxOfVcpu(String MAxValue, String MinValue) {
 		TestmaxVcpuOfVerticalScaling(MAxValue, MinValue);
 		TestMinVcpuOfVerticalScaling(MAxValue, MinValue);
 	}
-	@Test(groups = "TestRAMForhorizontalScaling", priority = 21, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestRAMForhorizontalScaling","Horizontal","None"}, priority = 21, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestRAMForhorizontalScaling(String RAMValueForHorizontalScaling) throws InsufficientResourcesException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions a = new Actions(driver);
@@ -332,7 +366,8 @@ public class CreatePageTests extends SetAndDown {
 //			if (InsufficienterrorMessage.getAttribute("style").contains("inline"))
 //				throw new InsufficientResourcesException(InsufficienterrorMessage.getText());
 	}
-	@Test(groups = "TestmaxRAMOfVerticalScaling", priority = 22, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestmaxRAMOfVerticalScaling","Vertical"}, priority = 22, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestmaxRAMOfVerticalScaling(String MAxValue, String MinValue) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions a = new Actions(driver);
@@ -359,7 +394,8 @@ public class CreatePageTests extends SetAndDown {
 						.parseInt(MAxValue), "Script error");
 		}
 	}
-	@Test(groups = "TestMinRAMOfVerticalScaling", priority = 23, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestMinRAMOfVerticalScaling","Vertical"}, priority = 23, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestMinRAMOfVerticalScaling(String MAxValue, String MinValue) {
 		String Message;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
@@ -368,88 +404,95 @@ public class CreatePageTests extends SetAndDown {
 		String min = ConditionCheck(MinValue, CPO.VerticalScalingRamValueMin(), "Vertical Min");
 		assertTrue(Integer.parseInt(MinValue) >= Integer.valueOf(min),
 				"Given Value(" + MinValue + ") Should be greater than " + min);
-		CPO.VerticalRamScalingFromButton().click();
-		assertTrue(Integer.parseInt(MinValue) >= Integer.parseInt(min.replace(" ", "")),"Given Value(" + MinValue + ") Should be greater than " + min);
-		
-			mainloop1: while (true) {
+		if (Integer.parseInt(MinValue) != Integer.valueOf(min))
+			CPO.VerticalRamScalingFromButton().click();
+		assertTrue(Integer.parseInt(MinValue) >= Integer.parseInt(min.replace(" ", "")),
+				"Given Value(" + MinValue + ") Should be greater than " + min);
 
-				String[] RamFromValueGettext = ((String) js.executeScript("return arguments[0].textContent;",
-						CPO.VerticalScalingRamFromValue())).split("\\s+G");
+		mainloop1: while (true) {
 
-				if (!(Integer.parseInt(RamFromValueGettext[0].replace(" ", "").trim()) < Integer
-						.valueOf(MAxValue))) {
-					try {
-						wait.until(ExpectedConditions.visibilityOf(CPO.Alert()));
-						if (CPO.Alert().isDisplayed()) {
-							wait.until(ExpectedConditions.elementToBeClickable(CPO.AlertOkButton()));
-							Message = CPO.AlertMessage().getText();
-							try {
-								Thread.sleep(100);
-							} catch (InterruptedException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							// js.executeScript("arguments[0].click();", AlertOkButton);
-							CPO.AlertOkButton().click();
-							assertEquals(Message, "Invalid RAM values.");
-							break mainloop1;
-						}
-					} catch (NoSuchElementException e) {
-						
-					} 
-				}
-				if (RamFromValueGettext[0].replace(" ", "").trim().equals(MinValue)
-						|| MinValue.equals(min.replace(" ", "")))
-					break mainloop1;
-				else
-					a.moveToElement(CPO.VerticalRamScalingFromButton()).click().sendKeys(Keys.ARROW_RIGHT).build().perform();
+			String[] RamFromValueGettext = ((String) js.executeScript("return arguments[0].textContent;",
+					CPO.VerticalScalingRamFromValue())).split("\\s+G");
+
+			if (!(Integer.parseInt(RamFromValueGettext[0].replace(" ", "").trim()) < Integer.valueOf(MAxValue))) {
 				try {
-					Thread.sleep(300);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					wait.until(ExpectedConditions.visibilityOf(CPO.Alert()));
+					if (CPO.Alert().isDisplayed()) {
+						wait.until(ExpectedConditions.elementToBeClickable(CPO.AlertOkButton()));
+						Message = CPO.AlertMessage().getText();
+						try {
+							Thread.sleep(100);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						// js.executeScript("arguments[0].click();", AlertOkButton);
+						CPO.AlertOkButton().click();
+						assertEquals(Message, "Invalid RAM values.");
+						break mainloop1;
+					}
+				} catch (NoSuchElementException e) {
+
 				}
 			}
+			if (RamFromValueGettext[0].replace(" ", "").trim().equals(MinValue)
+					|| MinValue.equals(min.replace(" ", "")))
+				break mainloop1;
+			else
+				a.moveToElement(CPO.VerticalRamScalingFromButton()).click().sendKeys(Keys.ARROW_RIGHT).build()
+						.perform();
+			try {
+				Thread.sleep(300);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 //			if (InsufficienterrorMessage.getAttribute("style").contains("inline"))
 //				throw new InsufficientResourcesException(InsufficienterrorMessage.getText());
-		
+
 	}
-	@Test(groups = "TestErrorAlertBoxOfRAM", priority = 24, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestErrorAlertBoxOfRAM","Vertical"}, priority = 24, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestErrorAlertBoxOfRAM(String MAxValue, String MinValue) {
 		TestmaxRAMOfVerticalScaling(MAxValue, MinValue);
 		TestMinRAMOfVerticalScaling(MAxValue, MinValue);
 	}
-	@Test(groups = "TestDiskForHorizontalScaling", priority = 25, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestDiskForHorizontalScaling(String DiskSizeForHorizontalScaling) throws InsufficientResourcesException {
+
+	@Test(groups = {"TestDiskForHorizontalScaling","Horizontal","None"}, priority = 25, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestDiskForHorizontalScaling(String DiskSizeForHorizontalScaling)
+			throws InsufficientResourcesException {
 		Actions a = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
 		String PreviousValue;
 		a.moveToElement(CPO.DiskSizeScalingButton()).click().build().perform();
-		ConditionCheck(DiskSizeForHorizontalScaling, CPO.DiskSizeValueMin(),"Horizontal");
+		ConditionCheck(DiskSizeForHorizontalScaling, CPO.DiskSizeValueMin(), "Horizontal");
 		String[] Max = CPO.DiskSizeValueMax().getText().split("\\s+G");
-		assertTrue(Integer.parseInt(DiskSizeForHorizontalScaling) <= Integer.parseInt(Max[0].replace(" ", "")),"Given Value(" + DiskSizeForHorizontalScaling + ") Should be less than " + Max[0]);
-		
-			mainloop: while (true) {
-				// System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
-				if (CPO.DiskSizeValue().getText().equals(DiskSizeForHorizontalScaling + " " + "GB"))
-					break mainloop;
-				else
-				{
-					PreviousValue = CPO.DiskSizeValue().getText();
-					a.moveToElement(CPO.DiskSizeScalingButton()).sendKeys(Keys.ARROW_RIGHT).build().perform();
-					wait.until(ExpectedConditions
-							.not(ExpectedConditions.textToBePresentInElement(CPO.DiskSizeValue(), PreviousValue)));
-				}
-					
-				String[] DiskValue = CPO.DiskSizeValue().getText().split("\\s+G");
-				assertFalse(Integer.parseInt(String.valueOf(DiskValue[0].replace(" ", "").trim())) > Integer.parseInt(DiskSizeForHorizontalScaling),"Script error");
-				
+		assertTrue(Integer.parseInt(DiskSizeForHorizontalScaling) <= Integer.parseInt(Max[0].replace(" ", "")),
+				"Given Value(" + DiskSizeForHorizontalScaling + ") Should be less than " + Max[0]);
+
+		mainloop: while (true) {
+			// System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
+			if (CPO.DiskSizeValue().getText().equals(DiskSizeForHorizontalScaling + " " + "GB"))
+				break mainloop;
+			else {
+				PreviousValue = CPO.DiskSizeValue().getText();
+				a.moveToElement(CPO.DiskSizeScalingButton()).sendKeys(Keys.ARROW_RIGHT).build().perform();
+				wait.until(ExpectedConditions
+						.not(ExpectedConditions.textToBePresentInElement(CPO.DiskSizeValue(), PreviousValue)));
 			}
+
+			String[] DiskValue = CPO.DiskSizeValue().getText().split("\\s+G");
+			assertFalse(Integer.parseInt(String.valueOf(DiskValue[0].replace(" ", "").trim())) > Integer
+					.parseInt(DiskSizeForHorizontalScaling), "Script error");
+
+		}
 //			if (InsufficienterrorMessage.getAttribute("style").contains("inline"))
 //				throw new InsufficientResourcesException(InsufficienterrorMessage.getText());
-		
+
 	}
-	@Test(groups = "TestDiskForVerticalScaling", priority = 26, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestDiskForVerticalScaling","Vertical"}, priority = 26, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestDiskForVerticalScaling(String DiskSizeForVerticalScaling) throws InsufficientResourcesException {
 		Actions a = new Actions(driver);
 		String PreviousValue;
@@ -457,84 +500,88 @@ public class CreatePageTests extends SetAndDown {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", CPO.DiskLable());
 		// a.moveToElement(VerticalScalingDiskSizeScalingButton).click().build().perform();
-		ConditionCheck(DiskSizeForVerticalScaling, CPO.VerticalScalingDiskSizeValueMin(),"vertical Min");
+		ConditionCheck(DiskSizeForVerticalScaling, CPO.VerticalScalingDiskSizeValueMin(), "vertical Min");
 		String[] Max = CPO.VerticalScalingDiskSizeValueMax().getText().split("\\s+G");
-		assertTrue(Integer.parseInt(DiskSizeForVerticalScaling) <= Integer.parseInt(Max[0].replace(" ", "")),"Given Value(" + DiskSizeForVerticalScaling + ") Should be less than " + Max[0]);
-		
-			mainloop: while (true) {
-				// System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
-				if (CPO.VerticalScalingDiskSizeValue().getText().equals(DiskSizeForVerticalScaling + " " + "GB"))
-					break mainloop;
-				else
-				{
-					PreviousValue = CPO.VerticalScalingDiskSizeValue().getText();
-					a.moveToElement(CPO.VerticalScalingDiskSizeScalingButton()).click().sendKeys(Keys.ARROW_RIGHT).build()
-					.perform();
-					wait.until(ExpectedConditions
-							.not(ExpectedConditions.textToBePresentInElement(CPO.VerticalScalingDiskSizeValue(), PreviousValue)));
-				}
-				String[] DiskValue = CPO.VerticalScalingDiskSizeValue().getText().split("\\s+G");
-				assertFalse(Integer.parseInt(String.valueOf(DiskValue[0].replace(" ", "").trim())) > Integer.parseInt(DiskSizeForVerticalScaling),"Script error");
-				
+		assertTrue(Integer.parseInt(DiskSizeForVerticalScaling) <= Integer.parseInt(Max[0].replace(" ", "")),
+				"Given Value(" + DiskSizeForVerticalScaling + ") Should be less than " + Max[0]);
+
+		mainloop: while (true) {
+			// System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
+			if (CPO.VerticalScalingDiskSizeValue().getText().equals(DiskSizeForVerticalScaling + " " + "GB"))
+				break mainloop;
+			else {
+				PreviousValue = CPO.VerticalScalingDiskSizeValue().getText();
+				a.moveToElement(CPO.VerticalScalingDiskSizeScalingButton()).click().sendKeys(Keys.ARROW_RIGHT).build()
+						.perform();
+				wait.until(ExpectedConditions.not(ExpectedConditions
+						.textToBePresentInElement(CPO.VerticalScalingDiskSizeValue(), PreviousValue)));
 			}
+			String[] DiskValue = CPO.VerticalScalingDiskSizeValue().getText().split("\\s+G");
+			assertFalse(Integer.parseInt(String.valueOf(DiskValue[0].replace(" ", "").trim())) > Integer
+					.parseInt(DiskSizeForVerticalScaling), "Script error");
+
+		}
 //			if (InsufficienterrorMessage.getAttribute("style").contains("inline"))
 //				throw new InsufficientResourcesException(InsufficienterrorMessage.getText());
 	}
-	@Test(groups = "TestLoadBalancerOn", priority = 27, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestLoadBalancerOn","Horizontal"}, priority = 27, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestLoadBalancerOn() {
-		
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", CPO.LoadBalancerButton());
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
+		js.executeScript("arguments[0].click();", CPO.LoadBalancerButton());
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
-	@Test(groups = "TestLoadBalancerOff", priority = 28, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestLoadBalancerOff","Horizontal"}, priority = 28, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestLoadBalancerOff() {
-		
+
 		TestLoadBalancerOn();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", CPO.LoadBalancerButton());
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
+		js.executeScript("arguments[0].click();", CPO.LoadBalancerButton());
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
-	@Test(groups = "TestTemplateCheckBoxChecked", priority = 29, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestTemplateCheckBoxChecked","Horizontal","None"}, priority = 29, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestTemplateCheckBoxChecked() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", CPO.TemplateCheckBox());
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		js.executeScript("arguments[0].click();", CPO.TemplateCheckBox());
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	@Test(groups = "TestTemplateCheckBoxUnChecked", priority = 30, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestTemplateCheckBoxUnChecked","Horizontal","None"}, priority = 30, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestTemplateCheckBoxUnChecked() {
 		TestTemplateCheckBoxChecked();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", CPO.TemplateCheckBox());
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		js.executeScript("arguments[0].click();", CPO.TemplateCheckBox());
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	@Test(groups = "TestMaxGroupCount", priority = 31, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+
+	@Test(groups = {"TestMaxGroupCount","Horizontal"}, priority = 31, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestMaxGroupCount(String MaxGroupCount) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		System.out.println(IncreaseButton.isDisplayed());
-//		System.out.println(decreaseButton.isDisplayed());
 		while (true) {
 			String CurrentmaxCount1 = (String) js.executeScript("return document.getElementById('number1').value;");
 			if (Integer.parseInt(CurrentmaxCount1) > Integer.parseInt(MaxGroupCount)) {
@@ -545,7 +592,8 @@ public class CreatePageTests extends SetAndDown {
 				break;
 			}
 			String CurrentmaxCount2 = (String) js.executeScript("return document.getElementById('number1').value;");
-			assertFalse(CurrentmaxCount1.equals(CurrentmaxCount2),"Max group count value can be "+Integer.parseInt(CurrentmaxCount1));			
+			assertFalse(CurrentmaxCount1.equals(CurrentmaxCount2),
+					"Max group count value can be " + Integer.parseInt(CurrentmaxCount1));
 		}
 		try {
 			Thread.sleep(500);
@@ -554,13 +602,13 @@ public class CreatePageTests extends SetAndDown {
 			e.printStackTrace();
 		}
 	}
-	@Test(groups = "TestVMBackupSwitchOff", priority = 32, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestVMBackupSwitchOff()
-	{
+
+	@Test(groups = {"TestVMBackupSwitchOff","Vertical","Horizontal","None"}, priority = 32, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestVMBackupSwitchOff() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", CPO.VMBackUpLabel());
-		if(!CPO.BackUpfrequencyLabel().isDisplayed())
-		System.out.println("VM Backup Switch is Already Turned Off");
+		if (!CPO.BackUpfrequencyLabel().isDisplayed())
+			System.out.println("VM Backup Switch is Already Turned Off");
 		else
 			js.executeScript("arguments[0].click();", CPO.VMBackupButton());
 		try {
@@ -570,13 +618,13 @@ public class CreatePageTests extends SetAndDown {
 			e.printStackTrace();
 		}
 	}
-	@Test(groups = "TestVMBackupSwitchOn", priority = 33, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestVMBackupSwitchOn()
-	{
+
+	@Test(groups = {"TestVMBackupSwitchOn","Vertical","Horizontal","None"}, priority = 33, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestVMBackupSwitchOn() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", CPO.VMBackUpLabel());
-		if(CPO.BackUpfrequencyLabel().isDisplayed())
-		System.out.println("VM Backup Switch is Already Turned On");
+		if (CPO.BackUpfrequencyLabel().isDisplayed())
+			System.out.println("VM Backup Switch is Already Turned On");
 		else
 			js.executeScript("arguments[0].click();", CPO.VMBackupButton());
 		try {
@@ -586,48 +634,52 @@ public class CreatePageTests extends SetAndDown {
 			e.printStackTrace();
 		}
 	}
-	@Test(groups = "TestBackUpFrequencyDropdown", priority = 34,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestBackUpFrequencyDropdown(String BackUpFrequencyValue)
-	{
-		
+
+	@Test(groups = {"TestBackUpFrequencyDropdown","Vertical","Horizontal","None"}, priority = 34, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestBackUpFrequencyDropdown(String BackUpFrequencyValue) {
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", CPO.VMBackUpLabel());
-		if(!CPO.BackUpfrequencyLabel().isDisplayed())
+		if (!CPO.BackUpfrequencyLabel().isDisplayed())
 			js.executeScript("arguments[0].click();", CPO.VMBackupButton());
-		assertTrue(CPO.BackUpFrequencyOptions().getOptions().stream().anyMatch(option -> option.getText().contains(BackUpFrequencyValue)),
+		assertTrue(
+				CPO.BackUpFrequencyOptions().getOptions().stream()
+						.anyMatch(option -> option.getText().contains(BackUpFrequencyValue)),
 				"Given Value " + BackUpFrequencyValue + " is not available in the dropdown");
 		CPO.BackUpFrequencyOptions().selectByVisibleText(BackUpFrequencyValue);
 		assertEquals(CPO.BackUpFrequencyOptions().getFirstSelectedOption().getText(), BackUpFrequencyValue);
 	}
-	@Test(groups = "TestRetentionPeriodDropdown", priority = 35,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestRetentionPeriodDropdown(String RetentionPeriodValue)
-	{
+
+	@Test(groups = {"TestRetentionPeriodDropdown","Vertical","Horizontal","None"}, priority = 35, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestRetentionPeriodDropdown(String RetentionPeriodValue) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", CPO.VMBackUpLabel());
-		if(!CPO.BackUpfrequencyLabel().isDisplayed())
+		if (!CPO.BackUpfrequencyLabel().isDisplayed())
 			js.executeScript("arguments[0].click();", CPO.VMBackupButton());
-		
+
 		try {
 			wait.until(new ExpectedCondition<Boolean>() {
 				public Boolean apply(WebDriver driver) {
-					return CPO.RetentionPeriodOptions().getOptions().stream().anyMatch(option -> option.getText().contains(RetentionPeriodValue));
+					return CPO.RetentionPeriodOptions().getOptions().stream()
+							.anyMatch(option -> option.getText().contains(RetentionPeriodValue));
 				}
 			});
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		assertTrue(CPO.RetentionPeriodOptions().getOptions().stream().anyMatch(option -> option.getText().contains(RetentionPeriodValue)),
+		assertTrue(
+				CPO.RetentionPeriodOptions().getOptions().stream()
+						.anyMatch(option -> option.getText().contains(RetentionPeriodValue)),
 				"Given Value " + RetentionPeriodValue + " is not available in the dropdown");
 		CPO.RetentionPeriodOptions().selectByVisibleText(RetentionPeriodValue);
 		assertEquals(CPO.RetentionPeriodOptions().getFirstSelectedOption().getText(), RetentionPeriodValue);
 	}
-	@Test(groups = "TestSIEMSwitchOn", priority = 36, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestSIEMSwitchOn()
-	{
+
+	@Test(groups = {"TestSIEMSwitchOn","Vertical","Horizontal","None"}, priority = 36, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestSIEMSwitchOn() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		if(CPO.SIEMDivClass().getAttribute("style").contains("none"))
-		{
+		if (CPO.SIEMDivClass().getAttribute("style").contains("none")) {
 			js.executeScript("arguments[0].click();", CPO.SIEMSwitch());
 			if (CPO.SIEMErrorMessage().getAttribute("style").contains("inline"))
 				throw new Error(CPO.SIEMErrorMessage().getText());
@@ -637,16 +689,14 @@ public class CreatePageTests extends SetAndDown {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		else
+		} else
 			System.out.println("SIEM Option is already turned on");
 	}
-	@Test(groups = "TestSIEMSwitchOff", priority = 37, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestSIEMSwitchOff()
-	{
+
+	@Test(groups = {"TestSIEMSwitchOff","Vertical","Horizontal","None"}, priority = 37, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestSIEMSwitchOff() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		if(!CPO.SIEMDivClass().getAttribute("style").contains("none"))
-		{
+		if (!CPO.SIEMDivClass().getAttribute("style").contains("none")) {
 			js.executeScript("arguments[0].click();", CPO.SIEMSwitch());
 			if (CPO.SIEMErrorMessage().getAttribute("style").contains("inline"))
 				throw new Error(CPO.SIEMErrorMessage().getText());
@@ -656,13 +706,12 @@ public class CreatePageTests extends SetAndDown {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		else
+		} else
 			System.out.println("SIEM Option is already turned off");
 	}
-	@Test(groups = "TestSIEMDropdown", priority = 38,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestSIEMDropdown(String SIEMName)
-	{
+
+	@Test(groups = {"TestSIEMDropdown","Vertical","Horizontal","None"}, priority = 38, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestSIEMDropdown(String SIEMName) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		TestSIEMSwitchOn();
 		assertTrue(CPO.SIEMVmList().getOptions().stream().anyMatch(option -> option.getText().contains(SIEMName)),
@@ -670,10 +719,10 @@ public class CreatePageTests extends SetAndDown {
 		CPO.SIEMVmList().selectByVisibleText(SIEMName);
 		assertEquals(CPO.SIEMVmList().getFirstSelectedOption().getText(), SIEMName);
 	}
-	@Test(groups = "TestVLANDropdown", priority = 39,dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestVLANDropdown(String VLANName)
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+
+	@Test(groups = {"TestVLANDropdown","Vertical","Horizontal","None"}, priority = 39, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestVLANDropdown(String VLANName) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
 		String Message;
 		assertTrue(CPO.VlanOptions().getOptions().stream().anyMatch(option -> option.getText().contains(VLANName)),
 				"Given Value " + VLANName + " is not available in the dropdown");
@@ -682,13 +731,156 @@ public class CreatePageTests extends SetAndDown {
 			wait.until(ExpectedConditions.visibilityOf(CPO.Alert()));
 			Message = CPO.AlertMessage().getText();
 			CPO.AlertOkButton().click();
-			assertEquals(Message,"Note: This VLAN is fully utilized. Select a different VLAN or contact Admin for additional VLAN requirement.");
+			assertEquals(Message,
+					"Note: This VLAN is fully utilized. Select a different VLAN or contact Admin for additional VLAN requirement.");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		assertEquals(CPO.VlanOptions().getFirstSelectedOption().getText(), VLANName);
+
+	}
+
+	@Test(groups = {"TestNumberOfVM","Vertical"}, priority = 40, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestNumberOfVM(String MaxVMCount) {
+		Actions a = new Actions(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		a.moveToElement(CPO.NumberOfVirtualMachines()).build().perform();
+		// js.executeScript("arguments[0].scrollIntoView(true);",
+		// CPO.NumberOfVirtualMachines());
+		while (true) {
+			String CurrentmaxCount1 = (String) js.executeScript("return document.getElementById('number').value;");
+			if (Integer.parseInt(CurrentmaxCount1) > Integer.parseInt(MaxVMCount)) {
+				CPO.VMDecreaseButton().click();
+			} else if (Integer.parseInt(CurrentmaxCount1) < Integer.parseInt(MaxVMCount)) {
+				CPO.VMIncreaseButton().click();
+			} else if (Integer.parseInt(CurrentmaxCount1) == Integer.parseInt(MaxVMCount)) {
+				break;
+			}
+			String CurrentmaxCount2 = (String) js.executeScript("return document.getElementById('number').value;");
+			assertFalse(CurrentmaxCount1.equals(CurrentmaxCount2),
+					"Max group count value can be " + Integer.parseInt(CurrentmaxCount1));
+		}
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	
+	@Test(groups = {"TestVMNameTextBoxForHorizontal","Horizontal"}, priority = 41, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestVMNameTextBoxForHorizontal(String VMNamesForHorizontal) {
+		VMName(VMNamesForHorizontal);
+	}
+
+	@Test(groups = {"TestVMNameTextBoxForVertical","Vertical","None"}, priority = 42, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestVMNameTextBoxForVertical(String VMNamesForHorizontal, String NumberOfVms) {
+		TestNumberOfVM(NumberOfVms);
+		VMName(VMNamesForHorizontal);
+	}
+
+	@Test(groups = {"TestAssignRemoteUserButton","Vertical","Horizontal","None"}, priority = 43, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestAssignRemoteUserButton() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", CPO.AssignRemoteUserButton());
+		js.executeScript("$('#display_modal').modal('show');");
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("display_modal")));
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		assertTrue(!CPO.SelectAllUsersButton().isSelected(), "Modal didn't Open");
+	}
+
+	@Test(groups = {"TestAssignRemoteUserModal","Vertical","Horizontal","None"}, priority = 44, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestAssignRemoteUserModal(String SelectAllUserCondition, String username, String Role) {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("display_modal")));
+		if (SelectAllUserCondition.equals("yes")) {
+			if (!CPO.SelectAllUsersButton().isSelected()) {
+				js.executeScript("arguments[0].click();", CPO.SelectAllUsersButton());
+				if (Role.equalsIgnoreCase("Admin"))
+					TestAdminRadioButton(username);
+				if (Role.equalsIgnoreCase("User"))
+					TestUserRadioButton(username);
+			}
+		} else {
+			TestUserNamePresentOrNot(username);
+			if (Role.equalsIgnoreCase("Admin"))
+				TestAdminRadioButton(username);
+			if (Role.equalsIgnoreCase("User"))
+				TestUserRadioButton(username);
+		}
+
+	}
+	@Test(groups = {"TestSaveRolesButtonInAssignRolesModal","Vertical","Horizontal","None"}, priority = 45, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestSaveRolesButtonInAssignRolesModal() {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", CPO.SaverolesButton());
+		try {
+			assertFalse(CPO.UserReatedErrorMessage().isDisplayed(),CPO.UserReatedErrorMessage().getText());
+		} catch (NoSuchElementException e) {
+			// TODO: handle exception
+		}
+		
+		
+
+	}
+	@Test(groups = {"TestCreateButtontocheckErrorsInTheForm","Vertical","Horizontal","None"}, priority = 46, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestCreateButtontocheckErrorsInTheForm() {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", CPO.CreateButton());
+		String Error = "";
+		for (int i = 0; i < CPO.AllErrorMessage().size(); i++) {
+			Error += CPO.AllErrorMessage().get(i).getText();
+		}
+		if(CPO.AllErrorMessage().size() > 0)
+		{
+		System.out.println("Errors are " + Error); 
+		}
+
+	}
+	
+
+	@Test(groups = {"TestCreateButtontocheckErrorsAfterSubmit","Vertical","Horizontal","None"}, priority = 47, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestCreateButtontocheckErrorsAfterSubmit() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", CPO.CreateButton());
+		try {
+			wait.until(ExpectedConditions.visibilityOf(CPO.UserReatedErrorMessage()));
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		
-		assertEquals(CPO.VlanOptions().getFirstSelectedOption().getText(), VLANName);
+		assertTrue(CPO.UserReatedErrorMessage().getText().contains("Error") );
+		
+
 	}
+
+	@Test(groups = {"TestCreateButtontocheckSuccessMessageAfterSubmit","Vertical","Horizontal","None"}, priority = 48, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
+	public void TestCreateButtontocheckSuccessMessageAfterSubmit() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", CPO.CreateButton());
+		try {
+			wait.until(ExpectedConditions.visibilityOf(CPO.UserReatedErrorMessage()));	
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		assertEquals(CPO.UserReatedErrorMessage().getText(), "New Virtual Machine Request has been successfully created.");
+
+	}
+
 	public void CustomeWait() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(new ExpectedCondition<Boolean>() {
@@ -698,6 +890,7 @@ public class CreatePageTests extends SetAndDown {
 			}
 		});
 	}
+
 	public String ConditionCheck(String value, WebElement MinElement, String Type) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		String[] min = ((String) js.executeScript("return arguments[0].textContent;", MinElement)).split("\\s+G");
@@ -718,6 +911,69 @@ public class CreatePageTests extends SetAndDown {
 		}
 		return min[0];
 	}
+
+	public void VMName(String VMNames) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String[] Names = VMNames.split(",");
+		// Below line is not working in firefox
+		// a.moveToElement(CreateButton).build().perform();
+		js.executeScript("arguments[0].scrollIntoView(true);", CPO.CreateButton());
+		for (int i = 0; i < CPO.VmNameTextBox().size(); i++) {
+			// System.out.println(Names.length + Names[i]);
+			// System.out.println(VmNameTextBox.size() + "VmNameTextBox");
+
+			CPO.VmNameTextBox().get(i).sendKeys(Names[i]);
+			assertFalse(CPO.AvailabityMessage().get(i).getText().contains("Taken"),
+					"Given VM Name " + Names[i] + " is " + CPO.AvailabityMessage().get(i).getText());
+			if (i == Names.length - 1)
+				break;
+
+		}
+		assertTrue(Names.length == CPO.VmNameTextBox().size(),
+				"Need " + CPO.VmNameTextBox().size() + " Names but we have " + Names.length);
+	}
+
+	public void TestUserNamePresentOrNot(String UserName) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		boolean CustomerNamePresent = false;
+		// System.out.println( UserNames.size());
+		for (int k = 0; k < CPO.UserNames().size(); k++) {
+			if (CPO.UserNames().get(k).findElement(By.xpath("./following-sibling::label")).getText()
+					.contains(UserName)) {
+				CustomerNamePresent = true;
+				js.executeScript("arguments[0].scrollIntoView(true)", CPO.UserNames().get(k));
+				js.executeScript("arguments[0].click();", CPO.UserNames().get(k));
+				break;
+			}
+		}
+		if (!CustomerNamePresent)
+			throw new Error(UserName + " is not in the list");
+	}
+
+	public void TestAdminRadioButton(String UserName) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		for (int j = 0; j < CPO.AdminRadioButtons().size(); j++) {
+			if (CPO.UserNames().get(j).findElement(By.xpath("./following-sibling::label")).getText()
+					.contains(UserName)) {
+				js.executeScript("arguments[0].scrollIntoView(true)", CPO.AdminRadioButtons().get(j));
+				js.executeScript("arguments[0].click();", CPO.AdminRadioButtons().get(j));
+				break;
+			}
+		}
+	}
+
+	public void TestUserRadioButton(String UserName) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		for (int j = 0; j < CPO.UserRadioButtons().size(); j++) {
+			if (CPO.UserNames().get(j).findElement(By.xpath("./following-sibling::label")).getText()
+					.contains(UserName)) {
+				js.executeScript("arguments[0].scrollIntoView(true)", CPO.UserRadioButtons().get(j));
+				js.executeScript("arguments[0].click();", CPO.UserRadioButtons().get(j));
+				break;
+			}
+		}
+	}
+
 	@DataProvider
 	public Object[][] dataProvider(Method method) throws IOException {
 		if (method.getName().equals("ClickOnCreateReource")) {
@@ -758,8 +1014,7 @@ public class CreatePageTests extends SetAndDown {
 		}
 		if (method.getName().equals("TestSavedTemplatesDropDown")) {
 			return ExcelUtils.GetExcelData(
-					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
-					"SavedTemplates");
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "SavedTemplates");
 		}
 		if (method.getName().equals("TestVcpuForHorizontalScaling")) {
 			return ExcelUtils.GetExcelData(
@@ -774,14 +1029,16 @@ public class CreatePageTests extends SetAndDown {
 		}
 		if (method.getName().equals("TestErrorAlertBoxOfVcpu")) {
 			return ExcelUtils.GetExcelData(
-					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "ToCheckAlertOfVcpu");
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
+					"ToCheckAlertOfVcpu");
 		}
 		if (method.getName().equals("TestRAMForhorizontalScaling")) {
 			return ExcelUtils.GetExcelData(
 					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
 					"RAMValueForHScaling");
 		}
-		if (method.getName().equals("TestmaxRAMOfVerticalScaling") || method.getName().equals("TestMinRAMOfVerticalScaling") ) {
+		if (method.getName().equals("TestmaxRAMOfVerticalScaling")
+				|| method.getName().equals("TestMinRAMOfVerticalScaling")) {
 			return ExcelUtils.GetExcelData(
 					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
 					"RAMValueForVScaling");
@@ -803,8 +1060,7 @@ public class CreatePageTests extends SetAndDown {
 		}
 		if (method.getName().equals("TestMaxGroupCount")) {
 			return ExcelUtils.GetExcelData(
-					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
-					"MaxGroupCount");
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "MaxGroupCount");
 		}
 		if (method.getName().equals("TestBackUpFrequencyDropdown")) {
 			return ExcelUtils.GetExcelData(
@@ -818,16 +1074,29 @@ public class CreatePageTests extends SetAndDown {
 		}
 		if (method.getName().equals("TestSIEMDropdown")) {
 			return ExcelUtils.GetExcelData(
-					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
-					"SIEMName");
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "SIEMName");
 		}
 		if (method.getName().equals("TestVLANDropdown")) {
 			return ExcelUtils.GetExcelData(
-					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx",
-					"VLANName");
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "VLANName");
 		}
-		
-		
+		if (method.getName().equals("TestNumberOfVM")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "NumberOfVms");
+		}
+		if (method.getName().equals("TestVMNameTextBoxForHorizontal")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "VMNamesForH");
+		}
+		if (method.getName().equals("TestVMNameTextBoxForVertical")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "VMNamesForV");
+		}
+		if (method.getName().equals("TestAssignRemoteUserModal")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreatePage.xlsx", "UserInfo");
+		}
+
 		return null;
 	}
 }
