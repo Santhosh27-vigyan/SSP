@@ -1,11 +1,16 @@
 package createResource;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.InetAddress;
 import java.time.Duration;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
@@ -13,14 +18,12 @@ import org.testng.annotations.Test;
 import Login.LoginPageTests;
 import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
-
 public class CreateResourcePageTests extends SetAndDown {
 	@Test(groups = "CertAndLogin", priority = 1)
 	public void CertAndLogin() throws IOException {
 		LoginPageTests LPT = new LoginPageTests();
 		LPT.TestLoginWithValidCredentails(prop.getProperty("username"), prop.getProperty("password"));
 	}
-
 	@Test(groups = "TestCollapseButton", priority = 2)
 	public void TestCollapseButton() {
 		assertTrue(CRPO.ResourceManagementButton().isDisplayed());
@@ -32,7 +35,6 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertTrue(!CRPO.ResourceManagementButton().isDisplayed(), "Options not collapsed");
 	}
-
 	@Test(groups = "TestManageOption", priority = 2)
 	public void TestManageOption() {
 		CRPO.ManageOption().click();
@@ -44,7 +46,6 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertEquals(driver.getTitle(), "Services - IPM+ Cloud - Dashboards - Grafana");
 	}
-
 	@Test(groups = "TestDashboardOption", priority = 2)
 	public void TestDashboardOption() {
 		CRPO.DashboardOption().click();
@@ -56,7 +57,6 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertEquals(driver.getTitle(), "Dashboard");
 	}
-
 	@Test(groups = "TestFeedbackOption", priority = 2)
 	public void TestFeedbackOption() {
 		CRPO.FeedbackOption().click();
@@ -67,7 +67,6 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertTrue(CRPO.FeedbackOptionModal().isDisplayed(), "Feedback page didn't appear");
 	}
-
 	@Test(groups = "TestHelpIcon", priority = 2, dataProvider = "dataProvider")
 	public void TestHelpIcon(String Option1, String Option2, String Option3) {
 		CRPO.HelpIcon().click();
@@ -80,7 +79,6 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertEquals(CRPO.HelpOptions().get(1).getText().trim(), Option2);
 		assertEquals(CRPO.HelpOptions().get(2).getText().trim(), Option3);
 	}
-
 	@Test(groups = "TestprofileAndSettingsOption", priority = 2, dataProvider = "dataProvider")
 	public void TestprofileAndSettingsOption(String Option1, String Option2) {
 		CRPO.ProfileAndSettingsDropdown().click();
@@ -92,12 +90,10 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertEquals(CRPO.ProfileAndSettingsDropdownOptions().get(0).getText().trim(), Option1);
 		assertEquals(CRPO.ProfileAndSettingsDropdownOptions().get(1).getText().trim(), Option2);
 	}
-
 	@Test(groups = "TestSearchBox", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchBox(String SearchText) {
 		CRPO.SearchBox().sendKeys(SearchText);
 	}
-
 	@Test(groups = "TestSearchIconWithResourceNotInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithResourceNotInTheList(String TextToSearch) {
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
@@ -106,7 +102,6 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertFalse(CRPO.FilteredResources().size() != 0,
 				"Search is showing results even for the resource not in the list");
 	}
-
 	@Test(groups = "TestSearchIconWithResourceInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithResourceInTheList(String TextToSearch) {
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
@@ -116,7 +111,6 @@ public class CreateResourcePageTests extends SetAndDown {
 				"Search is Either not showing results even for the resource Present in the list or showing more than 1 Result");
 		assertEquals(CRPO.FilteredResources().get(0).getText(), TextToSearch);
 	}
-
 	@Test(groups = "TestSearchIconWithPartialResourceNameInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithPartialResourceNameInTheList(String TextToSearch) {
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
@@ -129,7 +123,6 @@ public class CreateResourcePageTests extends SetAndDown {
 					"Resource name does not contain the Partial String");
 		}
 	}
-
 	@Test(groups = "TestCreateReource", priority = 2, dataProvider = "dataProvider")
 	public void TestCreateReource(String ResourceName) {
 		CRPO.ClickOnCreate(ResourceName);
@@ -142,7 +135,6 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertTrue(CRPO.FormTitle().getText().contains(ResourceName),
 				"Form is not opened for Given Resourcename " + ResourceName);
 	}
-
 	@Test(groups = "TestViewReource", priority = 2, dataProvider = "dataProvider")
 	public void TestViewReource(String ResourceName) {
 		CRPO.ClickOnView(ResourceName);
@@ -157,10 +149,11 @@ public class CreateResourcePageTests extends SetAndDown {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		for (int i = 0; i < CRPO.CheckResourceType().size(); i++) {
-			assertTrue(CRPO.CheckResourceType().get(i).getText().equals(ResourceName),
+		for (int i = 0; i < CRPO.CheckResourceType("Resource Type").size(); i++) {
+			assertTrue(CRPO.CheckResourceType("Resource Type").get(i).getText().equals(ResourceName),
 					"Table Showing the Details of the resources Types other the " + ResourceName);
 		}
+		
 	}
 
 	@DataProvider

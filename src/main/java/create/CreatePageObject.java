@@ -186,6 +186,8 @@ public class CreatePageObject {
 	private WebElement UserReatedErrorMessage;
 	@FindBy(id = "save_roles")
 	private WebElement SaverolesButton;
+	@FindBy(xpath = "//table[@id='virtual_machine_list_data_table'] //tr[@role='row']/th")
+	private List<WebElement> TableHeaderNames;
 	public Select SelectLocation() {
 		wait.until(ExpectedConditions.elementToBeClickable(LocationOptions));
 		return new Select(LocationOptions);
@@ -502,5 +504,9 @@ public class CreatePageObject {
 	public WebElement SaverolesButton()
 	{
 		return SaverolesButton;
+	}
+	public List<WebElement> TableHeaderNames()
+	{
+		return TableHeaderNames;
 	}
 }

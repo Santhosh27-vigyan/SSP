@@ -94,6 +94,7 @@
 				<include name="TestCreateButtontocheckErrorsInTheForm"/>
 				<include name="TestCreateButtontocheckErrorsAfterSubmit"/>
 				<include name="TestCreateButtontocheckSuccessMessageAfterSubmit"/>
+				<include name="TestIPAddress"></include>
 
 			</run>
 		</groups>

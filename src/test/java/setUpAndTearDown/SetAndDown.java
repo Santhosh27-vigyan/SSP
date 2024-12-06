@@ -34,7 +34,7 @@ public class SetAndDown extends Base1 {
 		// System.out.println(ClassName);
 		LPO = new LoginPageObjects(driver);
 		CRPO = new CreateResourcePageObjects(driver);
-		if (ClassName.equalsIgnoreCase("CreatePageObjects"))
+		//if (ClassName.equalsIgnoreCase("CreatePageObjects"))
 			CPO = new CreatePageObject(driver);
 		Ch = new CertificationHandle(driver);
 		driver.manage().window().maximize();

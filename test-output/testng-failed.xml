@@ -7,41 +7,18 @@
       <run>
         <include name="CertAndLogin"/>
         <include name="ClickOnCreateReource"/>
-        <include name="Horizontal"/>
+        <include name="None"/>
       </run>
     </groups>
     <classes>
       <class name="create.CreatePageTests">
         <methods>
-          <include name="TestSIEMDropdown"/>
-          <include name="TestTemplateCheckBoxChecked"/>
-          <include name="TestAssignRemoteUserButton"/>
-          <include name="TestOSDropdown"/>
-          <include name="TestVLANDropdown"/>
-          <include name="TestCreateButtontocheckErrorsInTheForm"/>
-          <include name="TestVcpuForHorizontalScaling"/>
-          <include name="TestProjectNameDropdown"/>
-          <include name="TestAssignRemoteUserModal"/>
-          <include name="TestCreateButtontocheckSuccessMessageAfterSubmit"/>
-          <include name="TestCreateButtontocheckErrorsAfterSubmit"/>
-          <include name="TestVMNameTextBoxForHorizontal"/>
-          <include name="TestHorizontalSwitchOn"/>
-          <include name="TestRetentionPeriodDropdown"/>
-          <include name="TestDiskForHorizontalScaling"/>
-          <include name="TestMaxGroupCount"/>
-          <include name="TestUpperThreshold"/>
-          <include name="TestSaveRolesButtonInAssignRolesModal"/>
-          <include name="TestLoadBalancerOn"/>
           <include name="ClickOnCreateReource"/>
-          <include name="TestRAMForhorizontalScaling"/>
-          <include name="TestLocationDropdown"/>
-          <include name="TestVMBackupSwitchOn"/>
-          <include name="TestStoragePathDropdown"/>
-          <include name="TestSIEMSwitchOn"/>
-          <include name="TestBackUpFrequencyDropdown"/>
+          <include name="TestCreateButtontocheckErrorsAfterSubmit"/>
+          <include name="TestCreateButtontocheckErrorsInTheForm"/>
+          <include name="TestIPAddress"/>
           <include name="CertAndLogin"/>
-          <include name="TestIOPSDropdown"/>
-          <include name="TestLowerThreshold"/>
+          <include name="TestCreateButtontocheckSuccessMessageAfterSubmit"/>
         </methods>
       </class> <!-- create.CreatePageTests -->
     </classes>

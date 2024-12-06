@@ -152,12 +152,12 @@ public class CreateResourcePageObjects {
 			}
 		}
 	}
-	public List<WebElement> CheckResourceType()
+	public List<WebElement> CheckResourceType(String HeaderName)
 	{
 		List<WebElement> ResourceTypes = null;
 	main:	for (int i = 0; i < TableHeaderNames.size(); i++) {
 			//System.out.println(TableHeaderNames.get(i).getText());
-			if(TableHeaderNames.get(i).getText().equalsIgnoreCase("Resource Type"))
+			if(TableHeaderNames.get(i).getText().equalsIgnoreCase(HeaderName))
 			{
 				int num=i+1;
 				 ResourceTypes = driver.findElements(By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td["+num+"]"));

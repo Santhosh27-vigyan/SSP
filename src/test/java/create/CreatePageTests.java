@@ -5,8 +5,11 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.InetAddress;
 import java.time.Duration;
 import java.util.List;
+import org.apache.logging.log4j.*;
+
 import javax.naming.InsufficientResourcesException;
 
 import org.apache.commons.math3.exception.MaxCountExceededException;
@@ -27,6 +30,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Login.LoginPageTests;
 import createResource.CreateResourcePageTests;
+import jdk.internal.org.jline.utils.Log;
 import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
 
@@ -846,6 +850,10 @@ public class CreatePageTests extends SetAndDown {
 		{
 		System.out.println("Errors are " + Error); 
 		}
+		else
+		{
+			assertTrue(CPO.AllErrorMessage().size() > 0,"No Errors Found");
+		}
 
 	}
 	
@@ -862,12 +870,14 @@ public class CreatePageTests extends SetAndDown {
 		}
 		
 		assertTrue(CPO.UserReatedErrorMessage().getText().contains("Error") );
+		assertEquals(CPO.UserReatedErrorMessage().getText(), "Error while creating new Virtual Machine!");
 		
 
 	}
 
 	@Test(groups = {"TestCreateButtontocheckSuccessMessageAfterSubmit","Vertical","Horizontal","None"}, priority = 48, dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestCreateButtontocheckSuccessMessageAfterSubmit() {
+		Logger log=LogManager.getLogger(CreatePageTests.class.getName());
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", CPO.CreateButton());
@@ -876,9 +886,88 @@ public class CreatePageTests extends SetAndDown {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+		log.info(CPO.UserReatedErrorMessage().getText());
 		assertEquals(CPO.UserReatedErrorMessage().getText(), "New Virtual Machine Request has been successfully created.");
 
+	}
+	@Test(groups = {"TestIPAddress","Vertical","Horizontal","None"}, priority = 49, dependsOnMethods = {"ClickOnCreateReource","TestCreateButtontocheckSuccessMessageAfterSubmit"}, dataProvider = "dataProvider",alwaysRun = false)
+	public void TestIPAddress(String ResourceName)
+	{
+		Logger log=LogManager.getLogger(CreatePageTests.class.getName());
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofMinutes(15));
+		List<WebElement> VMNames = null;
+		String IpAddress = null;
+		try {
+			wait.until(ExpectedConditions.not(ExpectedConditions.titleContains("IPM+ Cloud")));
+		} catch (Exception e) {
+		}
+		assertEquals(driver.getTitle(), "Virtual Machines");
+		wait.until(new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver driver) {
+				return  CPO.TableHeaderNames().size() > 0; 
+			}
+		});
+		System.out.println(CPO.TableHeaderNames().size()+"CPO.TableHeaderNames().size()");
+		main: for (int i = 0; i < CPO.TableHeaderNames().size(); i++) {
+			
+			if (CPO.TableHeaderNames().get(i).getText().trim().equalsIgnoreCase("VM Name")) {
+				int num = i + 1;
+				wait.until(new ExpectedCondition<Boolean>() {
+					public Boolean apply(WebDriver driver) {
+						return driver
+								.findElements(By.xpath(
+										"//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + num + "]"))
+								.size() > 0; 
+					}
+				});
+				VMNames = driver.findElements(
+						By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + num + "]"));
+				System.out.println(VMNames.size()+" VMNames.size()");
+				for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
+					if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("IP Address")) {
+						int num1 = (j + 1) - num;
+						for (int j2 = 0; j2 < VMNames.size(); j2++) {
+							if (VMNames.get(j2).getText().trim().equalsIgnoreCase(ResourceName)) {
+								IpAddress = VMNames.get(j2)
+										.findElement(By.xpath("./following-sibling::td[" + num1 + "]")).getText();
+								
+							}
+						}
+					}
+				}
+				for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
+					if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("Status")) {
+						int num1 = (j + 1) - num;
+						for (int j2 = 0; j2 < VMNames.size(); j2++) {
+							if (VMNames.get(j2).getText().trim().equalsIgnoreCase(ResourceName)) {
+								try {
+									wait2.until(ExpectedConditions.textToBePresentInElement( VMNames.get(j2)
+											.findElement(By.xpath("./following-sibling::td[" + num1 + "]")), "Running"));
+								} catch (Exception e) {
+									System.out.println("Time out exception ");
+								}
+								
+								
+								break main;
+							}
+						}
+					}
+				}
+			}
+		}
+		int timeout = 5000;  // Timeout in milliseconds
+
+	    try {
+	        InetAddress inet = InetAddress.getByName(IpAddress);
+	        System.out.println("Pinging " + IpAddress);
+	        assertTrue(inet.isReachable(timeout),IpAddress + " is not reachable.");
+	        log.info(IpAddress + " is reachable.");
+	        
+	    } catch (IOException e) {
+	        System.out.println("Error: " + e.getMessage());
+	    }
+	
 	}
 
 	public void CustomeWait() {
@@ -976,7 +1065,7 @@ public class CreatePageTests extends SetAndDown {
 
 	@DataProvider
 	public Object[][] dataProvider(Method method) throws IOException {
-		if (method.getName().equals("ClickOnCreateReource")) {
+		if (method.getName().equals("ClickOnCreateReource") || method.getName().equals("TestIPAddress")) {
 			return ExcelUtils.GetExcelData(
 					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreateResourcePage.xlsx",
 					"ResourceNameToCreate");
