@@ -7,34 +7,37 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.*;
 
 import javax.naming.InsufficientResourcesException;
-
-import org.apache.commons.math3.exception.MaxCountExceededException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Login.LoginPageTests;
 import createResource.CreateResourcePageTests;
-import jdk.internal.org.jline.utils.Log;
 import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
 
 public class CreatePageTests extends SetAndDown {
+	//if you want to test vm IP's other than excel value please define it below ex:String[] vmnames={"VMName"};
+	String[] vmnames;
 	@Test(groups = "CertAndLogin", priority = 1)
 	public void CertAndLogin() throws IOException {
 		LoginPageTests LPT = new LoginPageTests();
@@ -716,7 +719,6 @@ public class CreatePageTests extends SetAndDown {
 
 	@Test(groups = {"TestSIEMDropdown","Vertical","Horizontal","None"}, priority = 38, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestSIEMDropdown(String SIEMName) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		TestSIEMSwitchOn();
 		assertTrue(CPO.SIEMVmList().getOptions().stream().anyMatch(option -> option.getText().contains(SIEMName)),
 				"Given Value " + SIEMName + " is not available in the dropdown");
@@ -775,11 +777,13 @@ public class CreatePageTests extends SetAndDown {
 	
 	@Test(groups = {"TestVMNameTextBoxForHorizontal","Horizontal"}, priority = 41, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestVMNameTextBoxForHorizontal(String VMNamesForHorizontal) {
+		vmnames= VMNamesForHorizontal.split(",");
 		VMName(VMNamesForHorizontal);
 	}
 
 	@Test(groups = {"TestVMNameTextBoxForVertical","Vertical","None"}, priority = 42, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
 	public void TestVMNameTextBoxForVertical(String VMNamesForHorizontal, String NumberOfVms) {
+		vmnames=VMNamesForHorizontal.split(",");
 		TestNumberOfVM(NumberOfVms);
 		VMName(VMNamesForHorizontal);
 	}
@@ -846,13 +850,19 @@ public class CreatePageTests extends SetAndDown {
 		for (int i = 0; i < CPO.AllErrorMessage().size(); i++) {
 			Error += CPO.AllErrorMessage().get(i).getText();
 		}
-		if(CPO.AllErrorMessage().size() > 0)
+//		for (int i = 0; i < CPO.AvailabityMessage().size(); i++) {
+//			Error += CPO.AvailabityMessage().get(i).getText();
+//		}
+	//	System.out.println(CPO.AllErrorMessage().size());
+		//if(CPO.AllErrorMessage().size() > 0 || CPO.AvailabityMessage().size()>0)
+			if(CPO.AllErrorMessage().size() > 0)
 		{
 		System.out.println("Errors are " + Error); 
 		}
 		else
 		{
 			assertTrue(CPO.AllErrorMessage().size() > 0,"No Errors Found");
+		//	assertTrue(CPO.AvailabityMessage().size()>0,"No Errors Found");
 		}
 
 	}
@@ -870,7 +880,9 @@ public class CreatePageTests extends SetAndDown {
 		}
 		
 		assertTrue(CPO.UserReatedErrorMessage().getText().contains("Error") );
+		
 		assertEquals(CPO.UserReatedErrorMessage().getText(), "Error while creating new Virtual Machine!");
+		System.out.println("error in TestCreateButtontocheckErrorsAfterSubmit "+CPO.UserReatedErrorMessage().getText());
 		
 
 	}
@@ -890,86 +902,176 @@ public class CreatePageTests extends SetAndDown {
 		assertEquals(CPO.UserReatedErrorMessage().getText(), "New Virtual Machine Request has been successfully created.");
 
 	}
-	@Test(groups = {"TestIPAddress","Vertical","Horizontal","None"}, priority = 49, dependsOnMethods = {"ClickOnCreateReource","TestCreateButtontocheckSuccessMessageAfterSubmit"}, dataProvider = "dataProvider",alwaysRun = false)
-	public void TestIPAddress(String ResourceName)
+	@Test(groups = {"TestIPAddress","Vertical","Horizontal","None"}, priority = 49, dependsOnMethods = {"ClickOnCreateReource","TestCreateButtontocheckSuccessMessageAfterSubmit"},alwaysRun = false)
+	public void TestIPAddress()
 	{
-		Logger log=LogManager.getLogger(CreatePageTests.class.getName());
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofMinutes(15));
-		List<WebElement> VMNames = null;
-		String IpAddress = null;
-		try {
-			wait.until(ExpectedConditions.not(ExpectedConditions.titleContains("IPM+ Cloud")));
-		} catch (Exception e) {
-		}
-		assertEquals(driver.getTitle(), "Virtual Machines");
-		wait.until(new ExpectedCondition<Boolean>() {
-			public Boolean apply(WebDriver driver) {
-				return  CPO.TableHeaderNames().size() > 0; 
-			}
-		});
-		System.out.println(CPO.TableHeaderNames().size()+"CPO.TableHeaderNames().size()");
-		main: for (int i = 0; i < CPO.TableHeaderNames().size(); i++) {
+		for (int m = 0; m < vmnames.length; m++) {
+
 			
+			 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			String IpAddress = null;
+			try {
+				wait.until(ExpectedConditions.not(ExpectedConditions.titleContains("IPM+ Cloud")));
+			} catch (Exception e) {
+			}
+			assertEquals(driver.getTitle(), "Virtual Machines");
+			wait.until(new ExpectedCondition<Boolean>() {
+				public Boolean apply(WebDriver driver) {
+					return CPO.TableHeaderNames().size() > 0;
+				}
+			});
+			// FluentWait with polling interval and timeout
+			int timeout1 = 900; // 15 minutes timeout in seconds
+			int pollingInterval = 30; // 30 seconds polling interval
+			// System.out.println(CPO.TableHeaderNames().size() +
+			// "CPO.TableHeaderNames().size()");
+			// Create FluentWait instance
+			Wait<WebDriver> wait3 = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(timeout1)) // Total
+																										// wait
+																										// time
+					.pollingEvery(Duration.ofSeconds(pollingInterval)) // Poll every 30 seconds
+					.ignoring(NoSuchElementException.class) // Ignore NoSuchElementException during the
+															// wait
+					.ignoring(StaleElementReferenceException.class); // Ignore
+																		// StaleElementReferenceException
+																		// during the wait
+			Pair<Integer, List<WebElement>> VMNamesList = ListOfVmNames(m);
+			IpAddress = IPAddress(VMNamesList.getRight(), VMNamesList.getLeft(), m);
+
+			try {
+				int index = m;
+				// Wait until the desired status is present in the status element
+				wait3.until(new ExpectedCondition<Boolean>() {
+					public Boolean apply(WebDriver driver) {
+
+						try {
+							if (GetStatus(ListOfVmNames(index).getRight(), ListOfVmNames(index).getLeft(), index)
+									.equals("Running"))
+								return true;
+							driver.navigate().refresh();
+
+						} catch (NoSuchElementException | StaleElementReferenceException e) {
+							System.out.println(e);
+
+						}
+
+						return null;
+					}
+
+				});
+				System.out.println("VM Status is " + GetStatus(ListOfVmNames(index).getRight(), ListOfVmNames(index).getLeft(), index));
+			} catch (Exception e) {
+				System.out.println(
+						"VM Status is " + GetStatus(ListOfVmNames(m).getRight(), ListOfVmNames(m).getLeft(), m) + " After 15 mins");
+			}
+		assertTrue(TestIPPinging(IpAddress),"IP is not pinging for the vm ");	
+
+		}
+	}
+	
+	public Pair<Integer,List<WebElement>> ListOfVmNames(int ResourceIndex)
+	{
+		int num = 0;
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		List<WebElement> VMNames = null;
+		for (int i = 0; i < CPO.TableHeaderNames().size(); i++) {
+
 			if (CPO.TableHeaderNames().get(i).getText().trim().equalsIgnoreCase("VM Name")) {
-				int num = i + 1;
+				 num = i + 1;
+				 int index=num;
 				wait.until(new ExpectedCondition<Boolean>() {
 					public Boolean apply(WebDriver driver) {
 						return driver
 								.findElements(By.xpath(
-										"//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + num + "]"))
-								.size() > 0; 
+										"//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + index + "]"))
+								.size() > 0;
 					}
 				});
-				VMNames = driver.findElements(
+				
+				VMNames= driver.findElements(
 						By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + num + "]"));
-				System.out.println(VMNames.size()+" VMNames.size()");
-				for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
-					if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("IP Address")) {
-						int num1 = (j + 1) - num;
-						for (int j2 = 0; j2 < VMNames.size(); j2++) {
-							if (VMNames.get(j2).getText().trim().equalsIgnoreCase(ResourceName)) {
-								IpAddress = VMNames.get(j2)
-										.findElement(By.xpath("./following-sibling::td[" + num1 + "]")).getText();
-								
-							}
-						}
-					}
-				}
-				for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
-					if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("Status")) {
-						int num1 = (j + 1) - num;
-						for (int j2 = 0; j2 < VMNames.size(); j2++) {
-							if (VMNames.get(j2).getText().trim().equalsIgnoreCase(ResourceName)) {
-								try {
-									wait2.until(ExpectedConditions.textToBePresentInElement( VMNames.get(j2)
-											.findElement(By.xpath("./following-sibling::td[" + num1 + "]")), "Running"));
-								} catch (Exception e) {
-									System.out.println("Time out exception ");
-								}
-								
-								
-								break main;
-							}
-						}
+				
+		}
+		}
+		
+		return Pair.of(num, VMNames);
+	}
+	
+	public String IPAddress(List<WebElement> VMNames,int num,int ResourceIndex)
+	{
+		String IpAddress = null;
+		for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
+			if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("IP Address")) {
+			//	System.out.println(VMNames.size() + " VMNames.size()2");
+				int num1 = (j + 1) - num;
+				for (int j2 = 0; j2 < VMNames.size(); j2++) {
+					//System.out.println(VMNames.get(j2).getText().trim());
+					if (VMNames.get(j2).getText().trim().equalsIgnoreCase(vmnames[ResourceIndex])) {
+						//System.out.println(VMNames.size() + " VMNames.size()3");
+						IpAddress = VMNames.get(j2)
+								.findElement(By.xpath("./following-sibling::td[" + num1 + "]")).getText();
+					//	System.out.println(IpAddress + " IpAddress");
+
 					}
 				}
 			}
 		}
-		int timeout = 5000;  // Timeout in milliseconds
-
-	    try {
-	        InetAddress inet = InetAddress.getByName(IpAddress);
-	        System.out.println("Pinging " + IpAddress);
-	        assertTrue(inet.isReachable(timeout),IpAddress + " is not reachable.");
-	        log.info(IpAddress + " is reachable.");
-	        
-	    } catch (IOException e) {
-	        System.out.println("Error: " + e.getMessage());
-	    }
-	
+		return IpAddress;
 	}
+	public String GetStatus(List<WebElement> VMNames,int num,int ResourceIndex)
+	{
+		String Status = null;
+		for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
+			if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("Status")) {
+				int num1 = (j + 1) - num;
+				
 
+				
+				for (int j2 = 0; j2 < VMNames.size(); j2++) {
+					if (VMNames.get(j2).getText().trim().equalsIgnoreCase(vmnames[ResourceIndex])) {
+					Status=	VMNames.get(j2).findElement(By.xpath("./following-sibling::td[" + num1 + "]")).getText();
+						
+						break ;
+					}
+				}
+			}
+		}
+		return Status;
+	}
+public boolean TestIPPinging(String IpAddress)
+{
+	Logger log = LogManager.getLogger(CreatePageTests.class.getName());
+	try {
+		Thread.sleep(60000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	int timeout = 30000; // Timeout in milliseconds
+boolean status = false;
+	try {
+		InetAddress inet = InetAddress.getByName(IpAddress);
+		
+		if(inet.isReachable(timeout))
+		{
+			status= true;
+			System.out.println(IpAddress+" is reachable");
+			log.info(IpAddress+" is reachable");
+		}
+		else
+		{
+			System.out.println(IpAddress+" is not reachable");
+			status= false;
+			log.info(IpAddress+" is not reachable");
+		}
+		
+	} catch (IOException e) {
+		System.out.println("Error: " + e.getMessage());
+	}
+	return status;
+	
+}
 	public void CustomeWait() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(new ExpectedCondition<Boolean>() {
@@ -1065,7 +1167,7 @@ public class CreatePageTests extends SetAndDown {
 
 	@DataProvider
 	public Object[][] dataProvider(Method method) throws IOException {
-		if (method.getName().equals("ClickOnCreateReource") || method.getName().equals("TestIPAddress")) {
+		if (method.getName().equals("ClickOnCreateReource") ) {
 			return ExcelUtils.GetExcelData(
 					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\CreateResourcePage.xlsx",
 					"ResourceNameToCreate");

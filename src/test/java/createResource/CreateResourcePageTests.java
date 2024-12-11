@@ -1,4 +1,5 @@
 package createResource;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -7,23 +8,36 @@ import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.time.Duration;
 import java.util.List;
+
+import org.apache.commons.lang3.tuple.Pair;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import Login.LoginPageTests;
+import create.CreatePageTests;
 import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
+
 public class CreateResourcePageTests extends SetAndDown {
+	String[] vmnames = { "test4" };
+
 	@Test(groups = "CertAndLogin", priority = 1)
 	public void CertAndLogin() throws IOException {
 		LoginPageTests LPT = new LoginPageTests();
 		LPT.TestLoginWithValidCredentails(prop.getProperty("username"), prop.getProperty("password"));
 	}
+
 	@Test(groups = "TestCollapseButton", priority = 2)
 	public void TestCollapseButton() {
 		assertTrue(CRPO.ResourceManagementButton().isDisplayed());
@@ -35,6 +49,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertTrue(!CRPO.ResourceManagementButton().isDisplayed(), "Options not collapsed");
 	}
+
 	@Test(groups = "TestManageOption", priority = 2)
 	public void TestManageOption() {
 		CRPO.ManageOption().click();
@@ -46,6 +61,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertEquals(driver.getTitle(), "Services - IPM+ Cloud - Dashboards - Grafana");
 	}
+
 	@Test(groups = "TestDashboardOption", priority = 2)
 	public void TestDashboardOption() {
 		CRPO.DashboardOption().click();
@@ -57,6 +73,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertEquals(driver.getTitle(), "Dashboard");
 	}
+
 	@Test(groups = "TestFeedbackOption", priority = 2)
 	public void TestFeedbackOption() {
 		CRPO.FeedbackOption().click();
@@ -67,6 +84,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		}
 		assertTrue(CRPO.FeedbackOptionModal().isDisplayed(), "Feedback page didn't appear");
 	}
+
 	@Test(groups = "TestHelpIcon", priority = 2, dataProvider = "dataProvider")
 	public void TestHelpIcon(String Option1, String Option2, String Option3) {
 		CRPO.HelpIcon().click();
@@ -79,6 +97,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertEquals(CRPO.HelpOptions().get(1).getText().trim(), Option2);
 		assertEquals(CRPO.HelpOptions().get(2).getText().trim(), Option3);
 	}
+
 	@Test(groups = "TestprofileAndSettingsOption", priority = 2, dataProvider = "dataProvider")
 	public void TestprofileAndSettingsOption(String Option1, String Option2) {
 		CRPO.ProfileAndSettingsDropdown().click();
@@ -90,10 +109,12 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertEquals(CRPO.ProfileAndSettingsDropdownOptions().get(0).getText().trim(), Option1);
 		assertEquals(CRPO.ProfileAndSettingsDropdownOptions().get(1).getText().trim(), Option2);
 	}
+
 	@Test(groups = "TestSearchBox", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchBox(String SearchText) {
 		CRPO.SearchBox().sendKeys(SearchText);
 	}
+
 	@Test(groups = "TestSearchIconWithResourceNotInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithResourceNotInTheList(String TextToSearch) {
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
@@ -102,6 +123,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertFalse(CRPO.FilteredResources().size() != 0,
 				"Search is showing results even for the resource not in the list");
 	}
+
 	@Test(groups = "TestSearchIconWithResourceInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithResourceInTheList(String TextToSearch) {
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
@@ -111,6 +133,7 @@ public class CreateResourcePageTests extends SetAndDown {
 				"Search is Either not showing results even for the resource Present in the list or showing more than 1 Result");
 		assertEquals(CRPO.FilteredResources().get(0).getText(), TextToSearch);
 	}
+
 	@Test(groups = "TestSearchIconWithPartialResourceNameInTheList", priority = 2, dataProvider = "dataProvider")
 	public void TestSearchIconWithPartialResourceNameInTheList(String TextToSearch) {
 		// Minimum 3 characters to be sent for search to work and it is case sensitive.
@@ -123,6 +146,7 @@ public class CreateResourcePageTests extends SetAndDown {
 					"Resource name does not contain the Partial String");
 		}
 	}
+
 	@Test(groups = "TestCreateReource", priority = 2, dataProvider = "dataProvider")
 	public void TestCreateReource(String ResourceName) {
 		CRPO.ClickOnCreate(ResourceName);
@@ -135,6 +159,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		assertTrue(CRPO.FormTitle().getText().contains(ResourceName),
 				"Form is not opened for Given Resourcename " + ResourceName);
 	}
+
 	@Test(groups = "TestViewReource", priority = 2, dataProvider = "dataProvider")
 	public void TestViewReource(String ResourceName) {
 		CRPO.ClickOnView(ResourceName);
@@ -149,11 +174,96 @@ public class CreateResourcePageTests extends SetAndDown {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+
 		for (int i = 0; i < CRPO.CheckResourceType("Resource Type").size(); i++) {
 			assertTrue(CRPO.CheckResourceType("Resource Type").get(i).getText().equals(ResourceName),
 					"Table Showing the Details of the resources Types other the " + ResourceName);
 		}
+
 		
+	}
+
+	public Pair<Integer, List<WebElement>> ListOfVmNames(int ResourceIndex) {
+		int num = 0;
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		List<WebElement> VMNames = null;
+		try {
+			
+		
+		for (int i = 0; i < CPO.TableHeaderNames().size(); i++) {
+
+			if (CPO.TableHeaderNames().get(i).getText().trim().equalsIgnoreCase("VM Name")) {
+				num = i + 1;
+				int index = num;
+				wait.until(new ExpectedCondition<Boolean>() {
+					public Boolean apply(WebDriver driver) {
+						return driver
+								.findElements(By.xpath(
+										"//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + index + "]"))
+								.size() > 0;
+					}
+				});
+
+				VMNames = driver.findElements(
+						By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + num + "]"));
+
+			}
+		}
+		} catch (StaleElementReferenceException e) {
+			// TODO: handle exception
+		}
+		return Pair.of(num, VMNames);
+	}
+
+	public String IPAddress(List<WebElement> VMNames, int num, int ResourceIndex) {
+		String IpAddress = null;
+		try {
+			
+		
+		for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
+			if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("IP Address")) {
+				// System.out.println(VMNames.size() + " VMNames.size()2");
+				int num1 = (j + 1) - num;
+				for (int j2 = 0; j2 < VMNames.size(); j2++) {
+					// System.out.println(VMNames.get(j2).getText().trim());
+					if (VMNames.get(j2).getText().trim().equalsIgnoreCase(vmnames[ResourceIndex])) {
+						// System.out.println(VMNames.size() + " VMNames.size()3");
+						IpAddress = VMNames.get(j2).findElement(By.xpath("./following-sibling::td[" + num1 + "]"))
+								.getText();
+						// System.out.println(IpAddress + " IpAddress");
+
+					}
+				}
+			}
+		}
+		} catch (StaleElementReferenceException e) {
+			// TODO: handle exception
+		}
+		return IpAddress;
+	}
+
+	public String GetStatus(List<WebElement> VMNames, int num, int ResourceIndex) {
+		String Status = null;
+		try {
+
+			for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
+				if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("Status")) {
+					int num1 = (j + 1) - num;
+
+					for (int j2 = 0; j2 < VMNames.size(); j2++) {
+						if (VMNames.get(j2).getText().trim().equalsIgnoreCase(vmnames[ResourceIndex])) {
+							Status = VMNames.get(j2).findElement(By.xpath("./following-sibling::td[" + num1 + "]"))
+									.getText();
+
+							break;
+						}
+					}
+				}
+			}
+		} catch (StaleElementReferenceException e) {
+			// TODO: handle exception
+		}
+		return Status;
 	}
 
 	@DataProvider

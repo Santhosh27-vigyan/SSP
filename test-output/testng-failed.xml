@@ -7,7 +7,7 @@
       <run>
         <include name="CertAndLogin"/>
         <include name="ClickOnCreateReource"/>
-        <include name="None"/>
+        <include name="Horizontal"/>
       </run>
     </groups>
     <classes>
