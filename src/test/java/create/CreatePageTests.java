@@ -921,7 +921,7 @@ public class CreatePageTests extends SetAndDown {
 				}
 			});
 			// FluentWait with polling interval and timeout
-			int timeout1 = 900; // 15 minutes timeout in seconds
+			int timeout1 = 1200; // 20 minutes timeout in seconds
 			int pollingInterval = 30; // 30 seconds polling interval
 			// System.out.println(CPO.TableHeaderNames().size() +
 			// "CPO.TableHeaderNames().size()");

@@ -39,3 +39,11 @@
 12:53:43.828 [main] INFO  create.CreatePageTests - 10.150.36.236 is not reachable
 12:58:09.690 [main] INFO  create.CreatePageTests - New Virtual Machine Request has been successfully created.
 13:15:06.324 [main] INFO  create.CreatePageTests - 10.150.36.238 is not reachable
+14:53:30.780 [main] INFO  create.CreatePageTests - Error while creating new Virtual Machine!
+14:55:37.634 [main] INFO  create.CreatePageTests - Error while creating new Virtual Machine!
+14:59:11.482 [main] INFO  create.CreatePageTests - New Virtual Machine Request has been successfully created.
+15:12:19.748 [main] INFO  create.CreatePageTests - 10.150.37.73 is reachable
+15:19:26.117 [main] INFO  create.CreatePageTests - New Virtual Machine Request has been successfully created.
+15:32:30.516 [main] INFO  create.CreatePageTests - 10.150.37.75 is reachable
+15:43:12.213 [main] INFO  create.CreatePageTests - 10.150.37.76 is reachable
+15:55:06.741 [main] INFO  create.CreatePageTests - 10.150.37.77 is reachable

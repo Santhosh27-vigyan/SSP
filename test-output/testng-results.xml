@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="33" passed="30" failed="3" skipped="0">
+<testng-results ignored="0" total="33" passed="31" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-11T12:57:30 IST" name="Suite" finished-at="2024-12-11T13:15:06 IST" duration-ms="1056009">
+  <suite started-at="2024-12-11T15:18:52 IST" name="Suite" finished-at="2024-12-11T15:55:06 IST" duration-ms="2174623">
     <groups>
       <group name="Vertical">
         <method signature="CreatePageTests.TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@7494f96a]" name="TestLocationDropdown" class="create.CreatePageTests"/>
@@ -10,14 +10,22 @@
         <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@7494f96a]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@7494f96a]" name="TestOSDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@7494f96a]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVerticalSwitchOn()[pri:10, instance:create.CreatePageTests@7494f96a]" name="TestVerticalSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@7494f96a]" name="TestLowerThreshold" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@7494f96a]" name="TestUpperThreshold" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestmaxVcpuOfVerticalScaling(java.lang.String,java.lang.String)[pri:18, instance:create.CreatePageTests@7494f96a]" name="TestmaxVcpuOfVerticalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestMinVcpuOfVerticalScaling(java.lang.String,java.lang.String)[pri:19, instance:create.CreatePageTests@7494f96a]" name="TestMinVcpuOfVerticalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestmaxRAMOfVerticalScaling(java.lang.String,java.lang.String)[pri:22, instance:create.CreatePageTests@7494f96a]" name="TestmaxRAMOfVerticalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestMinRAMOfVerticalScaling(java.lang.String,java.lang.String)[pri:23, instance:create.CreatePageTests@7494f96a]" name="TestMinRAMOfVerticalScaling" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestDiskForVerticalScaling(java.lang.String)[pri:26, instance:create.CreatePageTests@7494f96a]" name="TestDiskForVerticalScaling" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@7494f96a]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@7494f96a]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@7494f96a]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@7494f96a]" name="TestSIEMSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@7494f96a]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@7494f96a]" name="TestVLANDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestNumberOfVM(java.lang.String)[pri:40, instance:create.CreatePageTests@7494f96a]" name="TestNumberOfVM" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVMNameTextBoxForVertical(java.lang.String,java.lang.String)[pri:42, instance:create.CreatePageTests@7494f96a]" name="TestVMNameTextBoxForVertical" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@7494f96a]" name="TestSaveRolesButtonInAssignRolesModal" class="create.CreatePageTests"/>
@@ -26,9 +34,6 @@
         <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@7494f96a]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestIPAddress()[pri:49, instance:create.CreatePageTests@7494f96a]" name="TestIPAddress" class="create.CreatePageTests"/>
       </group> <!-- Vertical -->
-      <group name="TestVMNameTextBoxForHorizontal">
-        <method signature="CreatePageTests.TestVMNameTextBoxForHorizontal(java.lang.String)[pri:41, instance:create.CreatePageTests@7494f96a]" name="TestVMNameTextBoxForHorizontal" class="create.CreatePageTests"/>
-      </group> <!-- TestVMNameTextBoxForHorizontal -->
       <group name="TestCreateButtontocheckErrorsAfterSubmit">
         <method signature="CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@7494f96a]" name="TestCreateButtontocheckErrorsAfterSubmit" class="create.CreatePageTests"/>
       </group> <!-- TestCreateButtontocheckErrorsAfterSubmit -->
@@ -41,22 +46,14 @@
         <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@7494f96a]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@7494f96a]" name="TestOSDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@7494f96a]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@7494f96a]" name="TestHorizontalSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@7494f96a]" name="TestLowerThreshold" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@7494f96a]" name="TestUpperThreshold" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@7494f96a]" name="TestVcpuForHorizontalScaling" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@7494f96a]" name="TestRAMForhorizontalScaling" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@7494f96a]" name="TestDiskForHorizontalScaling" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@7494f96a]" name="TestLoadBalancerOn" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@7494f96a]" name="TestTemplateCheckBoxChecked" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@7494f96a]" name="TestMaxGroupCount" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@7494f96a]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@7494f96a]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@7494f96a]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@7494f96a]" name="TestSIEMSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@7494f96a]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@7494f96a]" name="TestVLANDropdown" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestVMNameTextBoxForHorizontal(java.lang.String)[pri:41, instance:create.CreatePageTests@7494f96a]" name="TestVMNameTextBoxForHorizontal" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@7494f96a]" name="TestSaveRolesButtonInAssignRolesModal" class="create.CreatePageTests"/>
@@ -65,6 +62,9 @@
         <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@7494f96a]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestIPAddress()[pri:49, instance:create.CreatePageTests@7494f96a]" name="TestIPAddress" class="create.CreatePageTests"/>
       </group> <!-- Horizontal -->
+      <group name="TestMinVcpuOfVerticalScaling">
+        <method signature="CreatePageTests.TestMinVcpuOfVerticalScaling(java.lang.String,java.lang.String)[pri:19, instance:create.CreatePageTests@7494f96a]" name="TestMinVcpuOfVerticalScaling" class="create.CreatePageTests"/>
+      </group> <!-- TestMinVcpuOfVerticalScaling -->
       <group name="TestProjectNameDropdown">
         <method signature="CreatePageTests.TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@7494f96a]" name="TestProjectNameDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestProjectNameDropdown -->
@@ -74,24 +74,24 @@
       <group name="TestAssignRemoteUserModal">
         <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
       </group> <!-- TestAssignRemoteUserModal -->
-      <group name="TestVcpuForHorizontalScaling">
-        <method signature="CreatePageTests.TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@7494f96a]" name="TestVcpuForHorizontalScaling" class="create.CreatePageTests"/>
-      </group> <!-- TestVcpuForHorizontalScaling -->
       <group name="TestCreateButtontocheckSuccessMessageAfterSubmit">
         <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@7494f96a]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
       </group> <!-- TestCreateButtontocheckSuccessMessageAfterSubmit -->
+      <group name="TestVerticalSwitchOn">
+        <method signature="CreatePageTests.TestVerticalSwitchOn()[pri:10, instance:create.CreatePageTests@7494f96a]" name="TestVerticalSwitchOn" class="create.CreatePageTests"/>
+      </group> <!-- TestVerticalSwitchOn -->
       <group name="TestCreateButtontocheckErrorsInTheForm">
         <method signature="CreatePageTests.TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@7494f96a]" name="TestCreateButtontocheckErrorsInTheForm" class="create.CreatePageTests"/>
       </group> <!-- TestCreateButtontocheckErrorsInTheForm -->
       <group name="TestSIEMDropdown">
         <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@7494f96a]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestSIEMDropdown -->
+      <group name="TestNumberOfVM">
+        <method signature="CreatePageTests.TestNumberOfVM(java.lang.String)[pri:40, instance:create.CreatePageTests@7494f96a]" name="TestNumberOfVM" class="create.CreatePageTests"/>
+      </group> <!-- TestNumberOfVM -->
       <group name="TestVLANDropdown">
         <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@7494f96a]" name="TestVLANDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestVLANDropdown -->
-      <group name="TestTemplateCheckBoxChecked">
-        <method signature="CreatePageTests.TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@7494f96a]" name="TestTemplateCheckBoxChecked" class="create.CreatePageTests"/>
-      </group> <!-- TestTemplateCheckBoxChecked -->
       <group name="TestOSDropdown">
         <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@7494f96a]" name="TestOSDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestOSDropdown -->
@@ -101,6 +101,9 @@
       <group name="TestBackUpFrequencyDropdown">
         <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@7494f96a]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestBackUpFrequencyDropdown -->
+      <group name="TestmaxRAMOfVerticalScaling">
+        <method signature="CreatePageTests.TestmaxRAMOfVerticalScaling(java.lang.String,java.lang.String)[pri:22, instance:create.CreatePageTests@7494f96a]" name="TestmaxRAMOfVerticalScaling" class="create.CreatePageTests"/>
+      </group> <!-- TestmaxRAMOfVerticalScaling -->
       <group name="TestAssignRemoteUserButton">
         <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
       </group> <!-- TestAssignRemoteUserButton -->
@@ -116,9 +119,9 @@
       <group name="TestIOPSDropdown">
         <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@7494f96a]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestIOPSDropdown -->
-      <group name="TestRAMForhorizontalScaling">
-        <method signature="CreatePageTests.TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@7494f96a]" name="TestRAMForhorizontalScaling" class="create.CreatePageTests"/>
-      </group> <!-- TestRAMForhorizontalScaling -->
+      <group name="TestVMNameTextBoxForVertical">
+        <method signature="CreatePageTests.TestVMNameTextBoxForVertical(java.lang.String,java.lang.String)[pri:42, instance:create.CreatePageTests@7494f96a]" name="TestVMNameTextBoxForVertical" class="create.CreatePageTests"/>
+      </group> <!-- TestVMNameTextBoxForVertical -->
       <group name="TestStoragePathDropdown">
         <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@7494f96a]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestStoragePathDropdown -->
@@ -128,15 +131,18 @@
       <group name="ClickOnCreateReource">
         <method signature="CreatePageTests.ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@7494f96a]" name="ClickOnCreateReource" class="create.CreatePageTests"/>
       </group> <!-- ClickOnCreateReource -->
+      <group name="TestMinRAMOfVerticalScaling">
+        <method signature="CreatePageTests.TestMinRAMOfVerticalScaling(java.lang.String,java.lang.String)[pri:23, instance:create.CreatePageTests@7494f96a]" name="TestMinRAMOfVerticalScaling" class="create.CreatePageTests"/>
+      </group> <!-- TestMinRAMOfVerticalScaling -->
+      <group name="TestDiskForVerticalScaling">
+        <method signature="CreatePageTests.TestDiskForVerticalScaling(java.lang.String)[pri:26, instance:create.CreatePageTests@7494f96a]" name="TestDiskForVerticalScaling" class="create.CreatePageTests"/>
+      </group> <!-- TestDiskForVerticalScaling -->
+      <group name="TestmaxVcpuOfVerticalScaling">
+        <method signature="CreatePageTests.TestmaxVcpuOfVerticalScaling(java.lang.String,java.lang.String)[pri:18, instance:create.CreatePageTests@7494f96a]" name="TestmaxVcpuOfVerticalScaling" class="create.CreatePageTests"/>
+      </group> <!-- TestmaxVcpuOfVerticalScaling -->
       <group name="TestRetentionPeriodDropdown">
         <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@7494f96a]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
       </group> <!-- TestRetentionPeriodDropdown -->
-      <group name="TestHorizontalSwitchOn">
-        <method signature="CreatePageTests.TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@7494f96a]" name="TestHorizontalSwitchOn" class="create.CreatePageTests"/>
-      </group> <!-- TestHorizontalSwitchOn -->
-      <group name="TestDiskForHorizontalScaling">
-        <method signature="CreatePageTests.TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@7494f96a]" name="TestDiskForHorizontalScaling" class="create.CreatePageTests"/>
-      </group> <!-- TestDiskForHorizontalScaling -->
       <group name="TestUpperThreshold">
         <method signature="CreatePageTests.TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@7494f96a]" name="TestUpperThreshold" class="create.CreatePageTests"/>
       </group> <!-- TestUpperThreshold -->
@@ -146,16 +152,13 @@
         <method signature="CreatePageTests.TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@7494f96a]" name="TestStoragePathDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@7494f96a]" name="TestOSDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@7494f96a]" name="TestIOPSDropdown" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@7494f96a]" name="TestVcpuForHorizontalScaling" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@7494f96a]" name="TestRAMForhorizontalScaling" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@7494f96a]" name="TestDiskForHorizontalScaling" class="create.CreatePageTests"/>
-        <method signature="CreatePageTests.TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@7494f96a]" name="TestTemplateCheckBoxChecked" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@7494f96a]" name="TestVMBackupSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@7494f96a]" name="TestBackUpFrequencyDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@7494f96a]" name="TestRetentionPeriodDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@7494f96a]" name="TestSIEMSwitchOn" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@7494f96a]" name="TestSIEMDropdown" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@7494f96a]" name="TestVLANDropdown" class="create.CreatePageTests"/>
+        <method signature="CreatePageTests.TestVMNameTextBoxForVertical(java.lang.String,java.lang.String)[pri:42, instance:create.CreatePageTests@7494f96a]" name="TestVMNameTextBoxForVertical" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserButton" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" name="TestAssignRemoteUserModal" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@7494f96a]" name="TestSaveRolesButtonInAssignRolesModal" class="create.CreatePageTests"/>
@@ -164,28 +167,22 @@
         <method signature="CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@7494f96a]" name="TestCreateButtontocheckSuccessMessageAfterSubmit" class="create.CreatePageTests"/>
         <method signature="CreatePageTests.TestIPAddress()[pri:49, instance:create.CreatePageTests@7494f96a]" name="TestIPAddress" class="create.CreatePageTests"/>
       </group> <!-- None -->
-      <group name="TestMaxGroupCount">
-        <method signature="CreatePageTests.TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@7494f96a]" name="TestMaxGroupCount" class="create.CreatePageTests"/>
-      </group> <!-- TestMaxGroupCount -->
-      <group name="TestLoadBalancerOn">
-        <method signature="CreatePageTests.TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@7494f96a]" name="TestLoadBalancerOn" class="create.CreatePageTests"/>
-      </group> <!-- TestLoadBalancerOn -->
     </groups>
-    <test started-at="2024-12-11T12:57:30 IST" name="TestUrlForValidLogin" finished-at="2024-12-11T12:57:33 IST" duration-ms="3215">
+    <test started-at="2024-12-11T15:18:52 IST" name="TestUrlForValidLogin" finished-at="2024-12-11T15:18:54 IST" duration-ms="2848">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2024-12-11T12:57:30 IST" name="TestOpenLoginPage" finished-at="2024-12-11T12:57:33 IST" duration-ms="3147" status="PASS">
+        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2024-12-11T15:18:52 IST" name="TestOpenLoginPage" finished-at="2024-12-11T15:18:54 IST" duration-ms="2787" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOpenLoginPage -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
     </test> <!-- TestUrlForValidLogin -->
-    <test started-at="2024-12-11T12:57:33 IST" name="CreatePageTests" finished-at="2024-12-11T13:15:06 IST" duration-ms="1052716">
+    <test started-at="2024-12-11T15:18:55 IST" name="CreatePageTests" finished-at="2024-12-11T15:55:06 IST" duration-ms="2171717">
       <class name="create.CreatePageTests">
-        <test-method signature="CertAndLogin()[pri:1, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:33 IST" name="CertAndLogin" finished-at="2024-12-11T12:57:41 IST" duration-ms="7866" status="PASS">
+        <test-method signature="CertAndLogin()[pri:1, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:18:55 IST" name="CertAndLogin" finished-at="2024-12-11T15:18:57 IST" duration-ms="2799" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CertAndLogin -->
-        <test-method signature="ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:43 IST" name="ClickOnCreateReource" data-provider="dataProvider" finished-at="2024-12-11T12:57:45 IST" depends-on-methods="create.CreatePageTests.CertAndLogin" duration-ms="1724" status="PASS">
+        <test-method signature="ClickOnCreateReource(java.lang.String)[pri:2, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:18:59 IST" name="ClickOnCreateReource" data-provider="dataProvider" finished-at="2024-12-11T15:19:01 IST" depends-on-methods="create.CreatePageTests.CertAndLogin" duration-ms="2079" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -196,7 +193,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickOnCreateReource -->
-        <test-method signature="TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:45 IST" name="TestLocationDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:46 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="485" status="PASS">
+        <test-method signature="TestLocationDropdown(java.lang.String)[pri:3, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:02 IST" name="TestLocationDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:02 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="715" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -207,7 +204,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestLocationDropdown -->
-        <test-method signature="TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:46 IST" name="TestProjectNameDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:46 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="634" status="PASS">
+        <test-method signature="TestProjectNameDropdown(java.lang.String)[pri:4, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:03 IST" name="TestProjectNameDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:03 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="875" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -218,7 +215,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestProjectNameDropdown -->
-        <test-method signature="TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:47 IST" name="TestStoragePathDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:47 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="553" status="PASS">
+        <test-method signature="TestStoragePathDropdown(java.lang.String)[pri:5, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:04 IST" name="TestStoragePathDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:04 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="719" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,7 +226,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestStoragePathDropdown -->
-        <test-method signature="TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:47 IST" name="TestOSDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:48 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="959" status="PASS">
+        <test-method signature="TestOSDropdown(java.lang.String,java.lang.String)[pri:6, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:05 IST" name="TestOSDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:05 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="864" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -245,7 +242,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOSDropdown -->
-        <test-method signature="TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:48 IST" name="TestIOPSDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:49 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="324" status="PASS">
+        <test-method signature="TestIOPSDropdown(java.lang.String)[pri:7, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:05 IST" name="TestIOPSDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:06 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="341" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -256,11 +253,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestIOPSDropdown -->
-        <test-method signature="TestHorizontalSwitchOn()[pri:8, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:49 IST" name="TestHorizontalSwitchOn" finished-at="2024-12-11T12:57:49 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="149" status="PASS">
+        <test-method signature="TestVerticalSwitchOn()[pri:10, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:06 IST" name="TestVerticalSwitchOn" finished-at="2024-12-11T15:19:06 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="82" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestHorizontalSwitchOn -->
-        <test-method signature="TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:49 IST" name="TestLowerThreshold" data-provider="dataProvider" finished-at="2024-12-11T12:57:49 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="284" status="PASS">
+        </test-method> <!-- TestVerticalSwitchOn -->
+        <test-method signature="TestLowerThreshold(java.lang.String)[pri:15, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:06 IST" name="TestLowerThreshold" data-provider="dataProvider" finished-at="2024-12-11T15:19:06 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="279" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -271,7 +268,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestLowerThreshold -->
-        <test-method signature="TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:49 IST" name="TestUpperThreshold" data-provider="dataProvider" finished-at="2024-12-11T12:57:50 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="350" status="PASS">
+        <test-method signature="TestUpperThreshold(java.lang.String)[pri:16, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:06 IST" name="TestUpperThreshold" data-provider="dataProvider" finished-at="2024-12-11T15:19:07 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="321" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -282,9 +279,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestUpperThreshold -->
-        <test-method signature="TestVcpuForHorizontalScaling(java.lang.String)[pri:17, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:50 IST" name="TestVcpuForHorizontalScaling" data-provider="dataProvider" finished-at="2024-12-11T12:57:50 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="257" status="PASS">
+        <test-method signature="TestmaxVcpuOfVerticalScaling(java.lang.String,java.lang.String)[pri:18, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:07 IST" name="TestmaxVcpuOfVerticalScaling" data-provider="dataProvider" finished-at="2024-12-11T15:19:07 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="257" status="PASS">
           <params>
             <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
               <value>
                 <![CDATA[2]]>
               </value>
@@ -292,10 +294,15 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestVcpuForHorizontalScaling -->
-        <test-method signature="TestRAMForhorizontalScaling(java.lang.String)[pri:21, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:50 IST" name="TestRAMForhorizontalScaling" data-provider="dataProvider" finished-at="2024-12-11T12:57:50 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="191" status="PASS">
+        </test-method> <!-- TestmaxVcpuOfVerticalScaling -->
+        <test-method signature="TestMinVcpuOfVerticalScaling(java.lang.String,java.lang.String)[pri:19, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:07 IST" name="TestMinVcpuOfVerticalScaling" data-provider="dataProvider" finished-at="2024-12-11T15:19:07 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="43" status="PASS">
           <params>
             <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
               <value>
                 <![CDATA[2]]>
               </value>
@@ -303,8 +310,40 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestRAMForhorizontalScaling -->
-        <test-method signature="TestDiskForHorizontalScaling(java.lang.String)[pri:25, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:50 IST" name="TestDiskForHorizontalScaling" data-provider="dataProvider" finished-at="2024-12-11T12:57:52 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1048" status="PASS">
+        </test-method> <!-- TestMinVcpuOfVerticalScaling -->
+        <test-method signature="TestmaxRAMOfVerticalScaling(java.lang.String,java.lang.String)[pri:22, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:07 IST" name="TestmaxRAMOfVerticalScaling" data-provider="dataProvider" finished-at="2024-12-11T15:19:07 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="149" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestmaxRAMOfVerticalScaling -->
+        <test-method signature="TestMinRAMOfVerticalScaling(java.lang.String,java.lang.String)[pri:23, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:08 IST" name="TestMinRAMOfVerticalScaling" data-provider="dataProvider" finished-at="2024-12-11T15:19:08 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="45" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestMinRAMOfVerticalScaling -->
+        <test-method signature="TestDiskForVerticalScaling(java.lang.String)[pri:26, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:08 IST" name="TestDiskForVerticalScaling" data-provider="dataProvider" finished-at="2024-12-11T15:19:09 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1007" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -314,31 +353,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestDiskForHorizontalScaling -->
-        <test-method signature="TestLoadBalancerOn()[pri:27, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:52 IST" name="TestLoadBalancerOn" finished-at="2024-12-11T12:57:52 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="535" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestLoadBalancerOn -->
-        <test-method signature="TestTemplateCheckBoxChecked()[pri:29, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:52 IST" name="TestTemplateCheckBoxChecked" finished-at="2024-12-11T12:57:53 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="565" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestTemplateCheckBoxChecked -->
-        <test-method signature="TestMaxGroupCount(java.lang.String)[pri:31, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:53 IST" name="TestMaxGroupCount" data-provider="dataProvider" finished-at="2024-12-11T12:57:54 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1305" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestMaxGroupCount -->
-        <test-method signature="TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:54 IST" name="TestVMBackupSwitchOn" finished-at="2024-12-11T12:57:55 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="584" status="PASS">
+        </test-method> <!-- TestDiskForVerticalScaling -->
+        <test-method signature="TestVMBackupSwitchOn()[pri:33, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:09 IST" name="TestVMBackupSwitchOn" finished-at="2024-12-11T15:19:09 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestVMBackupSwitchOn -->
-        <test-method signature="TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:55 IST" name="TestBackUpFrequencyDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:55 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="305" status="PASS">
+        <test-method signature="TestBackUpFrequencyDropdown(java.lang.String)[pri:34, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:09 IST" name="TestBackUpFrequencyDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:10 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="298" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -349,7 +369,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestBackUpFrequencyDropdown -->
-        <test-method signature="TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:55 IST" name="TestRetentionPeriodDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:55 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="296" status="PASS">
+        <test-method signature="TestRetentionPeriodDropdown(java.lang.String)[pri:35, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:10 IST" name="TestRetentionPeriodDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:10 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="304" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -360,11 +380,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestRetentionPeriodDropdown -->
-        <test-method signature="TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:55 IST" name="TestSIEMSwitchOn" finished-at="2024-12-11T12:57:56 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="582" status="PASS">
+        <test-method signature="TestSIEMSwitchOn()[pri:36, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:10 IST" name="TestSIEMSwitchOn" finished-at="2024-12-11T15:19:11 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSIEMSwitchOn -->
-        <test-method signature="TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:56 IST" name="TestSIEMDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:56 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="274" status="PASS">
+        <test-method signature="TestSIEMDropdown(java.lang.String)[pri:38, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:11 IST" name="TestSIEMDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:11 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="224" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -375,33 +395,49 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSIEMDropdown -->
-        <test-method signature="TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:56 IST" name="TestVLANDropdown" data-provider="dataProvider" finished-at="2024-12-11T12:57:58 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1440" status="PASS">
+        <test-method signature="TestVLANDropdown(java.lang.String)[pri:39, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:11 IST" name="TestVLANDropdown" data-provider="dataProvider" finished-at="2024-12-11T15:19:12 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1432" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[10.150.36.0 - teshtshweta]]>
+                <![CDATA[10.150.37.0 - karthik]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestVLANDropdown -->
-        <test-method signature="TestVMNameTextBoxForHorizontal(java.lang.String)[pri:41, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:58 IST" name="TestVMNameTextBoxForHorizontal" data-provider="dataProvider" finished-at="2024-12-11T12:57:58 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="209" status="PASS">
+        <test-method signature="TestNumberOfVM(java.lang.String)[pri:40, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:12 IST" name="TestNumberOfVM" data-provider="dataProvider" finished-at="2024-12-11T15:19:14 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1059" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[test1]]>
+                <![CDATA[5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestVMNameTextBoxForHorizontal -->
-        <test-method signature="TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:57:58 IST" name="TestAssignRemoteUserButton" finished-at="2024-12-11T12:58:02 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="3683" status="PASS">
+        </test-method> <!-- TestNumberOfVM -->
+        <test-method signature="TestVMNameTextBoxForVertical(java.lang.String,java.lang.String)[pri:42, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:14 IST" name="TestVMNameTextBoxForVertical" data-provider="dataProvider" finished-at="2024-12-11T15:19:15 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="1469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test7,test8,test9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestVMNameTextBoxForVertical -->
+        <test-method signature="TestAssignRemoteUserButton()[pri:43, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:15 IST" name="TestAssignRemoteUserButton" finished-at="2024-12-11T15:19:19 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="3667" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestAssignRemoteUserButton -->
-        <test-method signature="TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:02 IST" name="TestAssignRemoteUserModal" data-provider="dataProvider" finished-at="2024-12-11T12:58:02 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="195" status="PASS">
+        <test-method signature="TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:19 IST" name="TestAssignRemoteUserModal" data-provider="dataProvider" finished-at="2024-12-11T15:19:19 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="238" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -422,7 +458,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestAssignRemoteUserModal -->
-        <test-method signature="TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:02 IST" name="TestAssignRemoteUserModal" data-provider="dataProvider" finished-at="2024-12-11T12:58:02 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="405" status="PASS">
+        <test-method signature="TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:19 IST" name="TestAssignRemoteUserModal" data-provider="dataProvider" finished-at="2024-12-11T15:19:19 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="432" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -443,7 +479,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestAssignRemoteUserModal -->
-        <test-method signature="TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:02 IST" name="TestAssignRemoteUserModal" data-provider="dataProvider" finished-at="2024-12-11T12:58:03 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="468" status="PASS">
+        <test-method signature="TestAssignRemoteUserModal(java.lang.String,java.lang.String,java.lang.String)[pri:44, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:19 IST" name="TestAssignRemoteUserModal" data-provider="dataProvider" finished-at="2024-12-11T15:19:20 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="457" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -464,11 +500,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestAssignRemoteUserModal -->
-        <test-method signature="TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:03 IST" name="TestSaveRolesButtonInAssignRolesModal" finished-at="2024-12-11T12:58:03 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="39" status="PASS">
+        <test-method signature="TestSaveRolesButtonInAssignRolesModal()[pri:45, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:20 IST" name="TestSaveRolesButtonInAssignRolesModal" finished-at="2024-12-11T15:19:20 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSaveRolesButtonInAssignRolesModal -->
-        <test-method signature="TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:03 IST" name="TestCreateButtontocheckErrorsInTheForm" finished-at="2024-12-11T12:58:03 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="80" status="FAIL">
+        <test-method signature="TestCreateButtontocheckErrorsInTheForm()[pri:46, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:20 IST" name="TestCreateButtontocheckErrorsInTheForm" finished-at="2024-12-11T15:19:20 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="78" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[No Errors Found expected [true] but found [false]]]>
@@ -513,7 +549,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCreateButtontocheckErrorsInTheForm -->
-        <test-method signature="TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:03 IST" name="TestCreateButtontocheckErrorsAfterSubmit" finished-at="2024-12-11T12:58:09 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="6022" status="FAIL">
+        <test-method signature="TestCreateButtontocheckErrorsAfterSubmit()[pri:47, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:20 IST" name="TestCreateButtontocheckErrorsAfterSubmit" finished-at="2024-12-11T15:19:26 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="5459" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -559,58 +595,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCreateButtontocheckErrorsAfterSubmit -->
-        <test-method signature="TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:09 IST" name="TestCreateButtontocheckSuccessMessageAfterSubmit" finished-at="2024-12-11T12:58:09 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="90" status="PASS">
+        <test-method signature="TestCreateButtontocheckSuccessMessageAfterSubmit()[pri:48, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:26 IST" name="TestCreateButtontocheckSuccessMessageAfterSubmit" finished-at="2024-12-11T15:19:26 IST" depends-on-methods="create.CreatePageTests.ClickOnCreateReource" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCreateButtontocheckSuccessMessageAfterSubmit -->
-        <test-method signature="TestIPAddress()[pri:49, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T12:58:09 IST" name="TestIPAddress" finished-at="2024-12-11T13:15:06 IST" depends-on-methods="create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit, create.CreatePageTests.ClickOnCreateReource" duration-ms="1016610" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[IP is not pinging for the vm  expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: IP is not pinging for the vm  expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at create.CreatePageTests.TestIPAddress(CreatePageTests.java:967)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="TestIPAddress()[pri:49, instance:create.CreatePageTests@7494f96a]" started-at="2024-12-11T15:19:26 IST" name="TestIPAddress" finished-at="2024-12-11T15:55:06 IST" depends-on-methods="create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit, create.CreatePageTests.ClickOnCreateReource" duration-ms="2140593" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestIPAddress -->
       </class> <!-- create.CreatePageTests -->
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2024-12-11T12:57:27 IST" name="DriverIntilization" finished-at="2024-12-11T12:57:30 IST" duration-ms="2865" status="PASS">
+        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2024-12-11T15:18:48 IST" name="DriverIntilization" finished-at="2024-12-11T15:18:52 IST" duration-ms="3341" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -621,7 +616,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverIntilization -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2024-12-11T13:15:06 IST" name="TearDown" finished-at="2024-12-11T13:15:06 IST" duration-ms="433" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2024-12-11T15:55:06 IST" name="TearDown" finished-at="2024-12-11T15:55:07 IST" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

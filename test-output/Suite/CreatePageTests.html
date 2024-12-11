@@ -55,13 +55,13 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>CreatePageTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>29/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>30/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 11 12:57:33 IST 2024</td>
+<td>Started on:</td><td>Wed Dec 11 15:18:55 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>1052 seconds (1052716 ms)</td>
+<tr><td>Total time:</td><td>2171 seconds (2171717 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td>Horizontal CertAndLogin ClickOnCreateReource </td>
+<td>Included groups:</td><td>Vertical CertAndLogin ClickOnCreateReource </td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
@@ -76,12 +76,54 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm()'><b>TestCreateButtontocheckErrorsInTheForm</b><br>Test class: create.CreatePageTests</td>
+<td><div><pre>java.lang.AssertionError: No Errors Found expected [true] but found [false]
+	at create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm(CreatePageTests.java:864)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace355933666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace355933666'><pre>java.lang.AssertionError: No Errors Found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm(CreatePageTests.java:864)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
 <td title='create.CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit()'><b>TestCreateButtontocheckErrorsAfterSubmit</b><br>Test class: create.CreatePageTests</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at create.CreatePageTests.TestCreateButtontocheckErrorsAfterSubmit(CreatePageTests.java:882)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1538891037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1538891037'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2021979938", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2021979938'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -116,91 +158,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>6</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestIPAddress()'><b>TestIPAddress</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.AssertionError: IP is not pinging for the vm  expected [true] but found [false]
-	at create.CreatePageTests.TestIPAddress(CreatePageTests.java:967)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1285178191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1285178191'><pre>java.lang.AssertionError: IP is not pinging for the vm  expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at create.CreatePageTests.TestIPAddress(CreatePageTests.java:967)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>1016</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm()'><b>TestCreateButtontocheckErrorsInTheForm</b><br>Test class: create.CreatePageTests</td>
-<td><div><pre>java.lang.AssertionError: No Errors Found expected [true] but found [false]
-	at create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm(CreatePageTests.java:864)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace424974506", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace424974506'><pre>java.lang.AssertionError: No Errors Found expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at create.CreatePageTests.TestCreateButtontocheckErrorsInTheForm(CreatePageTests.java:864)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
+<td>5</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -212,112 +170,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='create.CreatePageTests.TestAssignRemoteUserButton()'><b>TestAssignRemoteUserButton</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>3</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestRAMForhorizontalScaling()'><b>TestRAMForhorizontalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 2</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestHorizontalSwitchOn()'><b>TestHorizontalSwitchOn</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestVMNameTextBoxForHorizontal()'><b>TestVMNameTextBoxForHorizontal</b><br>Test class: create.CreatePageTests<br>Parameters: test1</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestVcpuForHorizontalScaling()'><b>TestVcpuForHorizontalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 2</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestLowerThreshold()'><b>TestLowerThreshold</b><br>Test class: create.CreatePageTests<br>Parameters: 20</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestUpperThreshold()'><b>TestUpperThreshold</b><br>Test class: create.CreatePageTests<br>Parameters: 70</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestSIEMDropdown()'><b>TestSIEMDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: SIEM_TEST_Server2 - 10.150.37.49</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestLoadBalancerOn()'><b>TestLoadBalancerOn</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestStoragePathDropdown()'><b>TestStoragePathDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: Storage_Linux_Sep17 - 850GB</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestTemplateCheckBoxChecked()'><b>TestTemplateCheckBoxChecked</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestSIEMSwitchOn()'><b>TestSIEMSwitchOn</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestMaxGroupCount()'><b>TestMaxGroupCount</b><br>Test class: create.CreatePageTests<br>Parameters: 1</td>
-<td></td>
-<td>1</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.CertAndLogin()'><b>CertAndLogin</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>7</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestVMBackupSwitchOn()'><b>TestVMBackupSwitchOn</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestOSDropdown()'><b>TestOSDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: Ubuntu 22.04 LTS (CLI), Storage_Linux_Sep17 - 850GB</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestAssignRemoteUserModal()'><b>TestAssignRemoteUserModal</b><br>Test class: create.CreatePageTests<br>Parameters: No, lead2, user</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestDiskForHorizontalScaling()'><b>TestDiskForHorizontalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 32</td>
-<td></td>
-<td>1</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()'><b>TestCreateButtontocheckSuccessMessageAfterSubmit</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestProjectNameDropdown()'><b>TestProjectNameDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: AT_Testing</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestSaveRolesButtonInAssignRolesModal()'><b>TestSaveRolesButtonInAssignRolesModal</b><br>Test class: create.CreatePageTests</td>
-<td></td>
-<td>0</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestAssignRemoteUserModal()'><b>TestAssignRemoteUserModal</b><br>Test class: create.CreatePageTests<br>Parameters: No, karthik, admin</td>
+<td title='create.CreatePageTests.TestMinRAMOfVerticalScaling()'><b>TestMinRAMOfVerticalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 4, 2</td>
 <td></td>
 <td>0</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
@@ -327,7 +180,7 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
 <tr>
-<td title='create.CreatePageTests.TestLocationDropdown()'><b>TestLocationDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: Mysuru, India</td>
+<td title='create.CreatePageTests.TestStoragePathDropdown()'><b>TestStoragePathDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: Storage_Linux_Sep17 - 850GB</td>
 <td></td>
 <td>0</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
@@ -337,22 +190,132 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
 <tr>
-<td title='create.CreatePageTests.ClickOnCreateReource()'><b>ClickOnCreateReource</b><br>Test class: create.CreatePageTests<br>Parameters: Linux CLI</td>
-<td></td>
-<td>1</td>
-<td>create.CreatePageTests@7494f96a</td></tr>
-<tr>
-<td title='create.CreatePageTests.TestRetentionPeriodDropdown()'><b>TestRetentionPeriodDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: 3 days</td>
+<td title='create.CreatePageTests.TestSaveRolesButtonInAssignRolesModal()'><b>TestSaveRolesButtonInAssignRolesModal</b><br>Test class: create.CreatePageTests</td>
 <td></td>
 <td>0</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
 <tr>
-<td title='create.CreatePageTests.TestVLANDropdown()'><b>TestVLANDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: 10.150.36.0 - teshtshweta</td>
+<td title='create.CreatePageTests.TestLocationDropdown()'><b>TestLocationDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: Mysuru, India</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestAssignRemoteUserModal()'><b>TestAssignRemoteUserModal</b><br>Test class: create.CreatePageTests<br>Parameters: No, karthik, admin</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestAssignRemoteUserModal()'><b>TestAssignRemoteUserModal</b><br>Test class: create.CreatePageTests<br>Parameters: No, lead2, user</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestIOPSDropdown()'><b>TestIOPSDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: 200</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestmaxRAMOfVerticalScaling()'><b>TestmaxRAMOfVerticalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 4, 2</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestVLANDropdown()'><b>TestVLANDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: 10.150.37.0 - karthik</td>
 <td></td>
 <td>1</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
 <tr>
-<td title='create.CreatePageTests.TestIOPSDropdown()'><b>TestIOPSDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: 200</td>
+<td title='create.CreatePageTests.CertAndLogin()'><b>CertAndLogin</b><br>Test class: create.CreatePageTests</td>
+<td></td>
+<td>2</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestUpperThreshold()'><b>TestUpperThreshold</b><br>Test class: create.CreatePageTests<br>Parameters: 70</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestIPAddress()'><b>TestIPAddress</b><br>Test class: create.CreatePageTests</td>
+<td></td>
+<td>2140</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestVMNameTextBoxForVertical()'><b>TestVMNameTextBoxForVertical</b><br>Test class: create.CreatePageTests<br>Parameters: test7,test8,test9, 3</td>
+<td></td>
+<td>1</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestNumberOfVM()'><b>TestNumberOfVM</b><br>Test class: create.CreatePageTests<br>Parameters: 5</td>
+<td></td>
+<td>1</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestProjectNameDropdown()'><b>TestProjectNameDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: AT_Testing</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestLowerThreshold()'><b>TestLowerThreshold</b><br>Test class: create.CreatePageTests<br>Parameters: 20</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestVerticalSwitchOn()'><b>TestVerticalSwitchOn</b><br>Test class: create.CreatePageTests</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestSIEMSwitchOn()'><b>TestSIEMSwitchOn</b><br>Test class: create.CreatePageTests</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestVMBackupSwitchOn()'><b>TestVMBackupSwitchOn</b><br>Test class: create.CreatePageTests</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestSIEMDropdown()'><b>TestSIEMDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: SIEM_TEST_Server2 - 10.150.37.49</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestMinVcpuOfVerticalScaling()'><b>TestMinVcpuOfVerticalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 4, 2</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestCreateButtontocheckSuccessMessageAfterSubmit()'><b>TestCreateButtontocheckSuccessMessageAfterSubmit</b><br>Test class: create.CreatePageTests</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.ClickOnCreateReource()'><b>ClickOnCreateReource</b><br>Test class: create.CreatePageTests<br>Parameters: Linux CLI</td>
+<td></td>
+<td>2</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestAssignRemoteUserButton()'><b>TestAssignRemoteUserButton</b><br>Test class: create.CreatePageTests</td>
+<td></td>
+<td>3</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestmaxVcpuOfVerticalScaling()'><b>TestmaxVcpuOfVerticalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 4, 2</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestDiskForVerticalScaling()'><b>TestDiskForVerticalScaling</b><br>Test class: create.CreatePageTests<br>Parameters: 32</td>
+<td></td>
+<td>1</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestOSDropdown()'><b>TestOSDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: Ubuntu 22.04 LTS (CLI), Storage_Linux_Sep17 - 850GB</td>
+<td></td>
+<td>0</td>
+<td>create.CreatePageTests@7494f96a</td></tr>
+<tr>
+<td title='create.CreatePageTests.TestRetentionPeriodDropdown()'><b>TestRetentionPeriodDropdown</b><br>Test class: create.CreatePageTests<br>Parameters: 3 days</td>
 <td></td>
 <td>0</td>
 <td>create.CreatePageTests@7494f96a</td></tr>
