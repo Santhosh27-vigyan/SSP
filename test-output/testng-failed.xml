@@ -7,16 +7,20 @@
       <run>
         <include name="CertAndLogin"/>
         <include name="ClickOnCreateReource"/>
-        <include name="Vertical"/>
+        <include name="None"/>
       </run>
     </groups>
     <classes>
       <class name="create.CreatePageTests">
         <methods>
           <include name="ClickOnCreateReource"/>
+          <include name="TestStoragePathDropdown" invocation-numbers="0"/>
           <include name="TestCreateButtontocheckErrorsAfterSubmit"/>
           <include name="TestCreateButtontocheckErrorsInTheForm"/>
+          <include name="TestProjectNameDropdown" invocation-numbers="0"/>
+          <include name="TestIPAddress"/>
           <include name="CertAndLogin"/>
+          <include name="TestCreateButtontocheckSuccessMessageAfterSubmit"/>
         </methods>
       </class> <!-- create.CreatePageTests -->
     </classes>
