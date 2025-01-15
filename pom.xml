@@ -40,6 +40,7 @@
     <artifactId>selenium-java</artifactId>
     <version>4.23.1</version>
 </dependency>
+
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>

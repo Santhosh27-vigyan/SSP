@@ -14,6 +14,7 @@ import Resources.Base1;
 import certification.CertificationHandle;
 import create.CreatePageObject;
 import createResource.CreateResourcePageObjects;
+import storage.storagePageObjects;
 
 public class SetAndDown extends Base1 {
 	public static WebDriver driver;
@@ -23,6 +24,7 @@ public class SetAndDown extends Base1 {
 	public static CertificationHandle Ch;
 	public static CreateResourcePageObjects CRPO;
 	public static CreatePageObject CPO;
+	public static storagePageObjects SPO;
 
 	@Parameters("ClassName")
 	@BeforeSuite
@@ -36,6 +38,7 @@ public class SetAndDown extends Base1 {
 		CRPO = new CreateResourcePageObjects(driver);
 		//if (ClassName.equalsIgnoreCase("CreatePageObjects"))
 			CPO = new CreatePageObject(driver);
+			SPO=new storagePageObjects(driver);
 		Ch = new CertificationHandle(driver);
 		driver.manage().window().maximize();
 	}

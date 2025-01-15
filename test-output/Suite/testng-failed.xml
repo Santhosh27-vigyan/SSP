@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="ClassName" value="CreatePageObjects"/>
-  <test thread-count="5" name="CreatePageTests(failed)">
+  <parameter name="ClassName" value="storagePageObjects"/>
+  <test thread-count="5" name="StoragePageTests(failed)">
     <groups>
       <run>
         <include name="CertAndLogin"/>
-        <include name="ClickOnCreateReource"/>
-        <include name="None"/>
+        <include name="Storage"/>
       </run>
     </groups>
     <classes>
-      <class name="create.CreatePageTests">
+      <class name="storage.StoragePageTests">
         <methods>
-          <include name="ClickOnCreateReource"/>
-          <include name="TestStoragePathDropdown" invocation-numbers="0"/>
-          <include name="TestCreateButtontocheckErrorsAfterSubmit"/>
-          <include name="TestCreateButtontocheckErrorsInTheForm"/>
-          <include name="TestProjectNameDropdown" invocation-numbers="0"/>
-          <include name="TestIPAddress"/>
+          <include name="TestAddNewStorageButton"/>
+          <include name="TestResourceManagementOption"/>
+          <include name="TestZoneDropdown"/>
+          <include name="TestStorageOtion"/>
           <include name="CertAndLogin"/>
-          <include name="TestCreateButtontocheckSuccessMessageAfterSubmit"/>
+          <include name="TestLinuxOrWindowsRadioButton"/>
         </methods>
-      </class> <!-- create.CreatePageTests -->
+      </class> <!-- storage.StoragePageTests -->
     </classes>
-  </test> <!-- CreatePageTests(failed) -->
+  </test> <!-- StoragePageTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 29 15:07:09 IST 2024</td>
+<td>Started on:</td><td>Wed Jan 15 15:30:01 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>163 seconds (163969 ms)</td>
+<tr><td>Total time:</td><td>193 seconds (193576 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,21 +76,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithvalidCredentialsUsingRightCaptcha()'><b>TestLoginWithvalidCredentialsUsingRightCaptcha</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#</td>
-<td><div><pre>java.lang.AssertionError: expected [Services] but found [IPM+ Cloud]
-	at Login.LoginPageTests.TestLoginWithvalidCredentialsUsingRightCaptcha(LoginPageTests.java:122)
-	at allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithvalidCredentialsUsingRightCaptcha(ExecuteAllLoginTestAtOnce.java:79)
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetUsingRightEmail()'><b>TestPasswordResetUsingRightEmail</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for value to contain &quot;display: block;&quot;. (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.83, chrome: {chromedriverVersion: 132.0.6834.83 (03d59cf5ecf1..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58094}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58094/devtoo..., se:cdpVersion: 132.0.6834.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 22a241470ed7fe873bd91d9e228bf445
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Login.LoginPageTests.TestPasswordResetUsingRightEmail(LoginPageTests.java:252)
+	at allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetUsingRightEmail(ExecuteAllLoginTestAtOnce.java:127)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace152937115", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace152937115'><pre>java.lang.AssertionError: expected [Services] but found [IPM+ Cloud]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at Login.LoginPageTests.TestLoginWithvalidCredentialsUsingRightCaptcha(LoginPageTests.java:122)
-	at allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithvalidCredentialsUsingRightCaptcha(ExecuteAllLoginTestAtOnce.java:79)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2129021779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2129021779'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for value to contain &quot;display: block;&quot;. (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.83, chrome: {chromedriverVersion: 132.0.6834.83 (03d59cf5ecf1..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58094}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58094/devtoo..., se:cdpVersion: 132.0.6834.83, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 22a241470ed7fe873bd91d9e228bf445
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Login.LoginPageTests.TestPasswordResetUsingRightEmail(LoginPageTests.java:252)
+	at allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetUsingRightEmail(ExecuteAllLoginTestAtOnce.java:127)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -120,8 +128,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>11</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>19</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -132,75 +140,75 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithInvalidCredentialsUsingRightCaptcha()'><b>TestLoginWithInvalidCredentialsUsingRightCaptcha</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: sfsfsdfsd, sdfsdf, sdfsdf, sdfdsf</td>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestTermsOfServiceCheckBox()'><b>TestTermsOfServiceCheckBox</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
 <td></td>
-<td>10</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
-<tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetUsingRightEmail()'><b>TestPasswordResetUsingRightEmail</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
-<td></td>
-<td>14</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
-<tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithvalidCredentialsUsingWrongCaptcha()'><b>TestLoginWithvalidCredentialsUsingWrongCaptcha</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: sfsfsdfsd, sdfsdf, test1@vipl.com, ipmcloud@200#</td>
-<td></td>
-<td>11</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
-<tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestForgotPasswordLink()'><b>TestForgotPasswordLink</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
-<td></td>
-<td>9</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
-<tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithInValidCredentails()'><b>TestLoginWithInValidCredentails</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: adas, asdasd</td>
-<td></td>
-<td>10</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
-<tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetUsingWrongEmail()'><b>TestPasswordResetUsingWrongEmail</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
-<td></td>
-<td>9</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>5</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 <tr>
 <td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestEmptyPassword()'><b>TestEmptyPassword</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
 <td></td>
-<td>9</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
-<tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithValidCredentails()'><b>TestLoginWithValidCredentails</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: test1@vipl.com, ipmcloud@200#</td>
-<td></td>
-<td>12</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>11</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 <tr>
 <td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestValidPassword()'><b>TestValidPassword</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
 <td></td>
-<td>9</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>7</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 <tr>
-<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestTermsOfServiceCheckBox()'><b>TestTermsOfServiceCheckBox</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetUsingWrongEmail()'><b>TestPasswordResetUsingWrongEmail</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
 <td></td>
-<td>8</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>12</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 <tr>
 <td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestEmptyUserName()'><b>TestEmptyUserName</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
 <td></td>
-<td>9</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>8</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 <tr>
 <td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestValidUserName()'><b>TestValidUserName</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: LoginPageObjects</td>
 <td></td>
-<td>11</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>16</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
+<tr>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithvalidCredentialsUsingWrongCaptcha()'><b>TestLoginWithvalidCredentialsUsingWrongCaptcha</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: sfsfsdfsd, sdfsdf, test3@gmail.com, ipmcloud@1#</td>
+<td></td>
+<td>10</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
+<tr>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithvalidCredentialsUsingRightCaptcha()'><b>TestLoginWithvalidCredentialsUsingRightCaptcha</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: sfsfsdfsd, sdfsdf, test3@gmail.com, ipmcloud@1#</td>
+<td></td>
+<td>20</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
+<tr>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithInValidCredentails()'><b>TestLoginWithInValidCredentails</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: adas, asdasd</td>
+<td></td>
+<td>13</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 <tr>
 <td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetUsingEmptyEmail()'><b>TestPasswordResetUsingEmptyEmail</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
 <td></td>
-<td>11</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>9</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
+<tr>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestForgotPasswordLink()'><b>TestForgotPasswordLink</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
+<td></td>
+<td>7</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
+<tr>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithValidCredentails()'><b>TestLoginWithValidCredentails</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: test3@gmail.com, ipmcloud@1#</td>
+<td></td>
+<td>24</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 <tr>
 <td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestPasswordResetCancelButton()'><b>TestPasswordResetCancelButton</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce</td>
 <td></td>
-<td>10</td>
-<td>allLoginTests.ExecuteAllLoginTestAtOnce@7b98f307</td></tr>
+<td>12</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
+<tr>
+<td title='allLoginTests.ExecuteAllLoginTestAtOnce.TestLoginWithInvalidCredentialsUsingRightCaptcha()'><b>TestLoginWithInvalidCredentialsUsingRightCaptcha</b><br>Test class: allLoginTests.ExecuteAllLoginTestAtOnce<br>Parameters: sfsfsdfsd, sdfsdf, sdfsdf, sdfdsf</td>
+<td></td>
+<td>11</td>
+<td>allLoginTests.ExecuteAllLoginTestAtOnce@34123d65</td></tr>
 </table><p>
 </body>
 </html>

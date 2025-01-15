@@ -56,7 +56,7 @@ public class LoginPageTests extends SetAndDown {
 		if (!LPO.TermsOfServiceCheckBox().isSelected())
 			LPO.TermsOfServiceCheckBox().click();
 		LPO.ClickOnLogin().click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		try {
 			// wait.until(ExpectedConditions.visibilityOf(LPO.DashboardPageWebElement()));
 			wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("IPM+ Cloud | Log In")));

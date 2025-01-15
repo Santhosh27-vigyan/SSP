@@ -22,6 +22,8 @@ public class CreateResourcePageObjects {
 	}
 	@FindBy(id = "create_resource_menu")
 	private WebElement ResourceManagement;
+	@FindBy(id = "resource_list")
+	private WebElement ResourceListOption;
 	@FindBy(xpath = "//a[@data-widget='pushmenu']")
 	private WebElement CollapseButton;
 	@FindBy(linkText = "Manage")
@@ -57,6 +59,10 @@ public class CreateResourcePageObjects {
 	public WebElement ResourceManagementButton()
 	{
 		return ResourceManagement;
+	}
+	public WebElement ResourceListOption()
+	{
+		return ResourceListOption;
 	}
 	public WebElement CollapseButton()
 	{

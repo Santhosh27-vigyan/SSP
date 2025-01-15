@@ -7,9 +7,7 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.time.Duration;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.*;
 import javax.naming.InsufficientResourcesException;
@@ -801,10 +799,10 @@ public class CreatePageTests extends SetAndDown {
 
 	@Test(groups = { "TestVMNameTextBoxForVertical", "Vertical",
 			"None" }, priority = 42, dataProvider = "dataProvider", dependsOnMethods = "ClickOnCreateReource", alwaysRun = false)
-	public void TestVMNameTextBoxForVertical(String VMNamesForHorizontal, String NumberOfVms) {
-		vmnames = VMNamesForHorizontal.split(",");
+	public void TestVMNameTextBoxForVertical(String VMNamesForVertical, String NumberOfVms) {
+		vmnames = VMNamesForVertical.split(",");
 		TestNumberOfVM(NumberOfVms);
-		VMName(VMNamesForHorizontal);
+		VMName(VMNamesForVertical);
 	}
 
 	@Test(groups = { "TestAssignRemoteUserButton", "Vertical", "Horizontal",
@@ -917,6 +915,7 @@ public class CreatePageTests extends SetAndDown {
 	@Test(groups = { "TestIPAddress", "Vertical", "Horizontal", "None" }, priority = 49, dependsOnMethods = {
 			"ClickOnCreateReource", "TestCreateButtontocheckSuccessMessageAfterSubmit" }, alwaysRun = false)
 	public void TestIPAddress() {
+		CRPO.ResourceListOption().click();
 		for (int m = 0; m < vmnames.length; m++) {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			String IpAddress = null;

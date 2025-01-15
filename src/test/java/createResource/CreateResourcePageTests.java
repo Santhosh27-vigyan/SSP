@@ -30,7 +30,7 @@ import setUpAndTearDown.SetAndDown;
 import utilities.ExcelUtils;
 
 public class CreateResourcePageTests extends SetAndDown {
-	String[] vmnames = { "test4" };
+	
 
 	@Test(groups = "CertAndLogin", priority = 1)
 	public void CertAndLogin() throws IOException {
@@ -183,88 +183,7 @@ public class CreateResourcePageTests extends SetAndDown {
 		
 	}
 
-	public Pair<Integer, List<WebElement>> ListOfVmNames(int ResourceIndex) {
-		int num = 0;
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		List<WebElement> VMNames = null;
-		try {
-			
-		
-		for (int i = 0; i < CPO.TableHeaderNames().size(); i++) {
-
-			if (CPO.TableHeaderNames().get(i).getText().trim().equalsIgnoreCase("VM Name")) {
-				num = i + 1;
-				int index = num;
-				wait.until(new ExpectedCondition<Boolean>() {
-					public Boolean apply(WebDriver driver) {
-						return driver
-								.findElements(By.xpath(
-										"//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + index + "]"))
-								.size() > 0;
-					}
-				});
-
-				VMNames = driver.findElements(
-						By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + num + "]"));
-
-			}
-		}
-		} catch (StaleElementReferenceException e) {
-			// TODO: handle exception
-		}
-		return Pair.of(num, VMNames);
-	}
-
-	public String IPAddress(List<WebElement> VMNames, int num, int ResourceIndex) {
-		String IpAddress = null;
-		try {
-			
-		
-		for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
-			if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("IP Address")) {
-				// System.out.println(VMNames.size() + " VMNames.size()2");
-				int num1 = (j + 1) - num;
-				for (int j2 = 0; j2 < VMNames.size(); j2++) {
-					// System.out.println(VMNames.get(j2).getText().trim());
-					if (VMNames.get(j2).getText().trim().equalsIgnoreCase(vmnames[ResourceIndex])) {
-						// System.out.println(VMNames.size() + " VMNames.size()3");
-						IpAddress = VMNames.get(j2).findElement(By.xpath("./following-sibling::td[" + num1 + "]"))
-								.getText();
-						// System.out.println(IpAddress + " IpAddress");
-
-					}
-				}
-			}
-		}
-		} catch (StaleElementReferenceException e) {
-			// TODO: handle exception
-		}
-		return IpAddress;
-	}
-
-	public String GetStatus(List<WebElement> VMNames, int num, int ResourceIndex) {
-		String Status = null;
-		try {
-
-			for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
-				if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("Status")) {
-					int num1 = (j + 1) - num;
-
-					for (int j2 = 0; j2 < VMNames.size(); j2++) {
-						if (VMNames.get(j2).getText().trim().equalsIgnoreCase(vmnames[ResourceIndex])) {
-							Status = VMNames.get(j2).findElement(By.xpath("./following-sibling::td[" + num1 + "]"))
-									.getText();
-
-							break;
-						}
-					}
-				}
-			}
-		} catch (StaleElementReferenceException e) {
-			// TODO: handle exception
-		}
-		return Status;
-	}
+	
 
 	@DataProvider
 	public Object[][] dataProvider(Method method) throws IOException {

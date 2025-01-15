@@ -24,14 +24,15 @@ public class Base1 {
 		Properties prop=new Properties();
 		FileInputStream Fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
 		prop.load(Fis);
+	
 		//if you define browser name in property file use below line
 		//String browserName = prop.getProperty("browser");
 		
 		//if you want to send  browser value directly you can use below line
-			//String browserName = "chrome";
+			String browserName = "chrome";
 			
 		//if you send browser value through maven command use below line
-		String browserName = System.getProperty("browser");
+		//String browserName = System.getProperty("browser");
 				
 				System.out.println(browserName);
 				String type = prop.getProperty("type");
