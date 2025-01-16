@@ -492,7 +492,7 @@ public class CreatePageTests extends SetAndDown {
 		assertTrue(Integer.parseInt(DiskSizeForHorizontalScaling) <= Integer.parseInt(Max[0].replace(" ", "")),
 				"Given Value(" + DiskSizeForHorizontalScaling + ") Should be less than " + Max[0]);
 		mainloop: while (true) {
-			// System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
+			//System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
 			if (CPO.DiskSizeValue().getText().equals(DiskSizeForHorizontalScaling + " " + "GB"))
 				break mainloop;
 			else {

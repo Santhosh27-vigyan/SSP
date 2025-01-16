@@ -7,17 +7,18 @@
       <run>
         <include name="CertAndLogin"/>
         <include name="Storage"/>
+        <include name="view"/>
+        <exclude name="Negative"/>
+        <exclude name="Positive"/>
       </run>
     </groups>
     <classes>
       <class name="storage.StoragePageTests">
         <methods>
-          <include name="TestAddNewStorageButton"/>
           <include name="TestResourceManagementOption"/>
-          <include name="TestZoneDropdown"/>
           <include name="TestStorageOtion"/>
+          <include name="TestStorageViewOption" invocation-numbers="0"/>
           <include name="CertAndLogin"/>
-          <include name="TestLinuxOrWindowsRadioButton"/>
         </methods>
       </class> <!-- storage.StoragePageTests -->
     </classes>

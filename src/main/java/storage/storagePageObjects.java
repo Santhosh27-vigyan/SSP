@@ -1,6 +1,9 @@
 package storage;
 
 import java.time.Duration;
+import java.util.List;
+
+import javax.xml.xpath.XPath;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -38,6 +41,32 @@ public class storagePageObjects {
 	private WebElement WindowsRadioButton;
 	@FindBy(id = "pool_new")
 	private WebElement TypeDropdown;
+	@FindBy(id = "storage_name")
+	private WebElement StorageNameTextBox;
+	@FindBy(xpath = "//label[@class='error']")
+	private List<WebElement> StoragePageErrors;
+	@FindBy(xpath = "//input[@id='storage_name']/following-sibling::label[@class='error']")
+	private List<WebElement> ErrorsinStorageNameTextBox;
+	@FindBy(xpath = "//span[@class='availability-status available']")
+	private List<WebElement> AvailableMessage;
+	@FindBy(xpath = "//span[@class='availability-status not-available']")
+	private List<WebElement> NotAvailableMessage;
+	@FindBy(xpath = "//span[@class='irs-handle single']")
+	private WebElement TotalSizeButton;
+	@FindBy(xpath = "//label[@for='total_storage_size_new']/parent::div //span[@class='irs-single']")
+	private WebElement SizeValue;
+	@FindBy(xpath = "//label[@for='total_storage_size_new']/parent::div //span[@class='irs-min']")
+	private WebElement SizeValueMin;
+	@FindBy(xpath = "//label[@for='total_storage_size_new']/parent::div //span[@class='irs-max']")
+	private WebElement SizeValueMax;
+	@FindBy(id = "createStoragebuttom")
+	private WebElement AddButton;
+	@FindBy(xpath = "//button[contains(@onclick,'cancel_add_operation')]")
+	private WebElement CancelButton;
+	@FindBy(xpath = "//table[@id='storage_list_data_table']/thead/tr/th")
+	private List<WebElement> TableHeaderNames;
+	@FindBy(xpath = "//div[contains(@class,'storage_list_view')]/h1[text()='VM List']")
+	private WebElement StorageViewPage;
 
 	public WebElement ResourceManagementOption() {
 		return ResourceManagement;
@@ -71,5 +100,57 @@ public class storagePageObjects {
 	public Select SelectType() {
 		Select Types = new Select(TypeDropdown);
 		return Types;
+	}
+
+	public WebElement StorageName() {
+		return StorageNameTextBox;
+	}
+
+	public List<WebElement> ErrorsOnStoragePage() {
+		return StoragePageErrors;
+	}
+
+	public List<WebElement> ErrorInStorageName() {
+		return ErrorsinStorageNameTextBox;
+	}
+
+	public List<WebElement> AvailableMessage() {
+		return AvailableMessage;
+	}
+
+	public List<WebElement> NotAvailableMessage() {
+		return NotAvailableMessage;
+	}
+
+	public WebElement TotalSizeSlider() {
+		return TotalSizeButton;
+	}
+
+	public WebElement SizeValue() {
+		return SizeValue;
+	}
+
+	public WebElement SizeValueMin() {
+		return SizeValueMin;
+	}
+
+	public WebElement SizeValueMax() {
+		return SizeValueMax;
+	}
+
+	public WebElement CancelButton() {
+		return CancelButton;
+	}
+
+	public WebElement AddButton() {
+		return AddButton;
+	}
+
+	public List<WebElement> TableHeaderNames() {
+		return TableHeaderNames;
+	}
+	public WebElement STorageViewPage()
+	{
+		return StorageViewPage;
 	}
 }

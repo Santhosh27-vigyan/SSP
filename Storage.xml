@@ -12,12 +12,23 @@
 			<run>
 				<include name="CertAndLogin" />
 				<include name="Storage" />
+				<exclude name="Negative"/>
+				<exclude name="Positive"/>
+				<include name="view"/>
 
 			</run>
 		</groups>
 		<classes>
 			<class name="storage.StoragePageTests">
-				<methods><exclude name="TestWindowsRadioButton"></exclude></methods>
+				<methods><exclude name="TestWindowsRadioButton"/>
+			<!-- 	===================NegativeTestCases=================================  -->
+				<exclude name="TestStoragePathTextBoxWithEmptyInput"/>
+				<!-- <exclude name="TestStoragePathTextBoxWithlessThan5Characters"/>-->
+				<exclude name="TestStoragePathTextBoxWithMoreThanThan30Characters"/>
+				<exclude name="TestStoragePathTextBoxWithExistingName"/>
+			<!-- 	===================NegativeTestCases=================================  -->
+			<exclude name="TestAddButton"></exclude>
+				</methods>
 				</class>
 		</classes>
 	</test>

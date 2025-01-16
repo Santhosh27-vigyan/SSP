@@ -1,83 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-15T18:32:19 IST" name="Suite" finished-at="2025-01-15T18:33:14 IST" duration-ms="54333">
+  <suite started-at="2025-01-16T18:25:32 IST" name="Suite" finished-at="2025-01-16T18:26:29 IST" duration-ms="57453">
     <groups>
       <group name="Storage">
-        <method signature="StoragePageTests.TestResourceManagementOption()[pri:2, instance:storage.StoragePageTests@7770f470]" name="TestResourceManagementOption" class="storage.StoragePageTests"/>
-        <method signature="StoragePageTests.TestStorageOtion()[pri:3, instance:storage.StoragePageTests@7770f470]" name="TestStorageOtion" class="storage.StoragePageTests"/>
-        <method signature="StoragePageTests.TestAddNewStorageButton()[pri:4, instance:storage.StoragePageTests@7770f470]" name="TestAddNewStorageButton" class="storage.StoragePageTests"/>
-        <method signature="StoragePageTests.TestZoneDropdown(java.lang.String)[pri:5, instance:storage.StoragePageTests@7770f470]" name="TestZoneDropdown" class="storage.StoragePageTests"/>
-        <method signature="StoragePageTests.TestLinuxOrWindowsRadioButton(java.lang.String)[pri:6, instance:storage.StoragePageTests@7770f470]" name="TestLinuxOrWindowsRadioButton" class="storage.StoragePageTests"/>
-        <method signature="StoragePageTests.TestTypeDropdown(java.lang.String)[pri:7, instance:storage.StoragePageTests@7770f470]" name="TestTypeDropdown" class="storage.StoragePageTests"/>
+        <method signature="StoragePageTests.TestResourceManagementOption()[pri:2, instance:storage.StoragePageTests@55b0dcab]" name="TestResourceManagementOption" class="storage.StoragePageTests"/>
+        <method signature="StoragePageTests.TestStorageOtion()[pri:3, instance:storage.StoragePageTests@55b0dcab]" name="TestStorageOtion" class="storage.StoragePageTests"/>
+        <method signature="StoragePageTests.TestStorageViewOption(java.lang.String)[pri:16, instance:storage.StoragePageTests@55b0dcab]" name="TestStorageViewOption" class="storage.StoragePageTests"/>
       </group> <!-- Storage -->
       <group name="CertAndLogin">
-        <method signature="StoragePageTests.CertAndLogin()[pri:1, instance:storage.StoragePageTests@7770f470]" name="CertAndLogin" class="storage.StoragePageTests"/>
+        <method signature="StoragePageTests.CertAndLogin()[pri:1, instance:storage.StoragePageTests@55b0dcab]" name="CertAndLogin" class="storage.StoragePageTests"/>
       </group> <!-- CertAndLogin -->
+      <group name="View">
+        <method signature="StoragePageTests.TestStorageViewOption(java.lang.String)[pri:16, instance:storage.StoragePageTests@55b0dcab]" name="TestStorageViewOption" class="storage.StoragePageTests"/>
+      </group> <!-- View -->
     </groups>
-    <test started-at="2025-01-15T18:32:19 IST" name="TestUrlForValidLogin" finished-at="2025-01-15T18:32:32 IST" duration-ms="12477">
+    <test started-at="2025-01-16T18:25:32 IST" name="TestUrlForValidLogin" finished-at="2025-01-16T18:25:37 IST" duration-ms="5274">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-15T18:32:19 IST" name="TestOpenLoginPage" finished-at="2025-01-15T18:32:32 IST" duration-ms="12424" status="PASS">
+        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-16T18:25:32 IST" name="TestOpenLoginPage" finished-at="2025-01-16T18:25:37 IST" duration-ms="5207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOpenLoginPage -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
     </test> <!-- TestUrlForValidLogin -->
-    <test started-at="2025-01-15T18:32:32 IST" name="StoragePageTests" finished-at="2025-01-15T18:33:14 IST" duration-ms="41769">
+    <test started-at="2025-01-16T18:25:37 IST" name="StoragePageTests" finished-at="2025-01-16T18:26:29 IST" duration-ms="52018">
       <class name="storage.StoragePageTests">
-        <test-method signature="CertAndLogin()[pri:1, instance:storage.StoragePageTests@7770f470]" started-at="2025-01-15T18:32:32 IST" name="CertAndLogin" finished-at="2025-01-15T18:32:54 IST" duration-ms="22037" status="PASS">
+        <test-method signature="CertAndLogin()[pri:1, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:25:37 IST" name="CertAndLogin" finished-at="2025-01-16T18:26:15 IST" duration-ms="37707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CertAndLogin -->
-        <test-method signature="TestResourceManagementOption()[pri:2, instance:storage.StoragePageTests@7770f470]" started-at="2025-01-15T18:32:54 IST" name="TestResourceManagementOption" finished-at="2025-01-15T18:32:54 IST" depends-on-methods="storage.StoragePageTests.CertAndLogin" duration-ms="291" status="PASS">
+        <test-method signature="TestResourceManagementOption()[pri:2, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:26:15 IST" name="TestResourceManagementOption" finished-at="2025-01-16T18:26:15 IST" depends-on-methods="storage.StoragePageTests.CertAndLogin" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestResourceManagementOption -->
-        <test-method signature="TestStorageOtion()[pri:3, instance:storage.StoragePageTests@7770f470]" started-at="2025-01-15T18:32:54 IST" name="TestStorageOtion" finished-at="2025-01-15T18:33:04 IST" depends-on-methods="storage.StoragePageTests.TestResourceManagementOption" duration-ms="9567" status="PASS">
+        <test-method signature="TestStorageOtion()[pri:3, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:26:15 IST" name="TestStorageOtion" finished-at="2025-01-16T18:26:24 IST" depends-on-methods="storage.StoragePageTests.TestResourceManagementOption" duration-ms="8426" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestStorageOtion -->
-        <test-method signature="TestAddNewStorageButton()[pri:4, instance:storage.StoragePageTests@7770f470]" started-at="2025-01-15T18:33:04 IST" name="TestAddNewStorageButton" finished-at="2025-01-15T18:33:05 IST" depends-on-methods="storage.StoragePageTests.TestStorageOtion" duration-ms="1481" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestAddNewStorageButton -->
-        <test-method signature="TestZoneDropdown(java.lang.String)[pri:5, instance:storage.StoragePageTests@7770f470]" started-at="2025-01-15T18:33:07 IST" name="TestZoneDropdown" data-provider="dataProvider" finished-at="2025-01-15T18:33:07 IST" depends-on-methods="storage.StoragePageTests.TestAddNewStorageButton" duration-ms="374" status="PASS">
+        <test-method signature="TestStorageViewOption(java.lang.String)[pri:16, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:26:25 IST" name="TestStorageViewOption" data-provider="dataProvider" finished-at="2025-01-16T18:26:29 IST" depends-on-methods="storage.StoragePageTests.TestStorageOtion" duration-ms="3719" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Mysuru, India]]>
+                <![CDATA[new_storage]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestZoneDropdown -->
-        <test-method signature="TestLinuxOrWindowsRadioButton(java.lang.String)[pri:6, instance:storage.StoragePageTests@7770f470]" started-at="2025-01-15T18:33:07 IST" name="TestLinuxOrWindowsRadioButton" data-provider="dataProvider" finished-at="2025-01-15T18:33:08 IST" depends-on-methods="storage.StoragePageTests.TestZoneDropdown" duration-ms="1063" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Windows]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestLinuxOrWindowsRadioButton -->
-        <test-method signature="TestTypeDropdown(java.lang.String)[pri:7, instance:storage.StoragePageTests@7770f470]" started-at="2025-01-15T18:33:08 IST" name="TestTypeDropdown" data-provider="dataProvider" finished-at="2025-01-15T18:33:14 IST" depends-on-methods="storage.StoragePageTests.TestZoneDropdown" duration-ms="5291" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Premium SSD]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestTypeDropdown -->
+        </test-method> <!-- TestStorageViewOption -->
       </class> <!-- storage.StoragePageTests -->
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-15T18:32:17 IST" name="DriverIntilization" finished-at="2025-01-15T18:32:19 IST" duration-ms="2796" status="PASS">
+        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-16T18:25:29 IST" name="DriverIntilization" finished-at="2025-01-16T18:25:32 IST" duration-ms="3248" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -88,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverIntilization -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-15T18:33:14 IST" name="TearDown" finished-at="2025-01-15T18:33:14 IST" duration-ms="341" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-16T18:26:29 IST" name="TearDown" finished-at="2025-01-16T18:26:30 IST" duration-ms="437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
