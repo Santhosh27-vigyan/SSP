@@ -1,57 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-16T18:25:32 IST" name="Suite" finished-at="2025-01-16T18:26:29 IST" duration-ms="57453">
+  <suite started-at="2025-01-24T15:58:52 IST" name="Suite" finished-at="2025-01-24T15:59:44 IST" duration-ms="52055">
     <groups>
-      <group name="Storage">
-        <method signature="StoragePageTests.TestResourceManagementOption()[pri:2, instance:storage.StoragePageTests@55b0dcab]" name="TestResourceManagementOption" class="storage.StoragePageTests"/>
-        <method signature="StoragePageTests.TestStorageOtion()[pri:3, instance:storage.StoragePageTests@55b0dcab]" name="TestStorageOtion" class="storage.StoragePageTests"/>
-        <method signature="StoragePageTests.TestStorageViewOption(java.lang.String)[pri:16, instance:storage.StoragePageTests@55b0dcab]" name="TestStorageViewOption" class="storage.StoragePageTests"/>
-      </group> <!-- Storage -->
+      <group name="Utility">
+        <method signature="NetworkServicesPageTests.GetVMNamesIpAndStatusFromResourcePage()[pri:2, instance:utility.NetworkServicesPageTests@77f1baf5]" name="GetVMNamesIpAndStatusFromResourcePage" class="utility.NetworkServicesPageTests"/>
+        <method signature="NetworkServicesPageTests.TestUtilityOption()[pri:3, instance:utility.NetworkServicesPageTests@77f1baf5]" name="TestUtilityOption" class="utility.NetworkServicesPageTests"/>
+        <method signature="NetworkServicesPageTests.TestNetworkServicesOption()[pri:4, instance:utility.NetworkServicesPageTests@77f1baf5]" name="TestNetworkServicesOption" class="utility.NetworkServicesPageTests"/>
+        <method signature="NetworkServicesPageTests.TestPublicIpAddRequest(java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:utility.NetworkServicesPageTests@77f1baf5]" name="TestPublicIpAddRequest" class="utility.NetworkServicesPageTests"/>
+      </group> <!-- Utility -->
       <group name="CertAndLogin">
-        <method signature="StoragePageTests.CertAndLogin()[pri:1, instance:storage.StoragePageTests@55b0dcab]" name="CertAndLogin" class="storage.StoragePageTests"/>
+        <method signature="NetworkServicesPageTests.CertAndLogin()[pri:1, instance:utility.NetworkServicesPageTests@77f1baf5]" name="CertAndLogin" class="utility.NetworkServicesPageTests"/>
       </group> <!-- CertAndLogin -->
-      <group name="View">
-        <method signature="StoragePageTests.TestStorageViewOption(java.lang.String)[pri:16, instance:storage.StoragePageTests@55b0dcab]" name="TestStorageViewOption" class="storage.StoragePageTests"/>
-      </group> <!-- View -->
     </groups>
-    <test started-at="2025-01-16T18:25:32 IST" name="TestUrlForValidLogin" finished-at="2025-01-16T18:25:37 IST" duration-ms="5274">
+    <test started-at="2025-01-24T15:58:52 IST" name="TestUrlForValidLogin" finished-at="2025-01-24T15:58:55 IST" duration-ms="3364">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-16T18:25:32 IST" name="TestOpenLoginPage" finished-at="2025-01-16T18:25:37 IST" duration-ms="5207" status="PASS">
+        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-24T15:58:52 IST" name="TestOpenLoginPage" finished-at="2025-01-24T15:58:55 IST" duration-ms="3298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOpenLoginPage -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
     </test> <!-- TestUrlForValidLogin -->
-    <test started-at="2025-01-16T18:25:37 IST" name="StoragePageTests" finished-at="2025-01-16T18:26:29 IST" duration-ms="52018">
-      <class name="storage.StoragePageTests">
-        <test-method signature="CertAndLogin()[pri:1, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:25:37 IST" name="CertAndLogin" finished-at="2025-01-16T18:26:15 IST" duration-ms="37707" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CertAndLogin -->
-        <test-method signature="TestResourceManagementOption()[pri:2, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:26:15 IST" name="TestResourceManagementOption" finished-at="2025-01-16T18:26:15 IST" depends-on-methods="storage.StoragePageTests.CertAndLogin" duration-ms="290" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestResourceManagementOption -->
-        <test-method signature="TestStorageOtion()[pri:3, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:26:15 IST" name="TestStorageOtion" finished-at="2025-01-16T18:26:24 IST" depends-on-methods="storage.StoragePageTests.TestResourceManagementOption" duration-ms="8426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestStorageOtion -->
-        <test-method signature="TestStorageViewOption(java.lang.String)[pri:16, instance:storage.StoragePageTests@55b0dcab]" started-at="2025-01-16T18:26:25 IST" name="TestStorageViewOption" data-provider="dataProvider" finished-at="2025-01-16T18:26:29 IST" depends-on-methods="storage.StoragePageTests.TestStorageOtion" duration-ms="3719" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[new_storage]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestStorageViewOption -->
-      </class> <!-- storage.StoragePageTests -->
+    <test started-at="2025-01-24T15:58:55 IST" name="NetworkServicesTests" finished-at="2025-01-24T15:59:44 IST" duration-ms="48621">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-16T18:25:29 IST" name="DriverIntilization" finished-at="2025-01-16T18:25:32 IST" duration-ms="3248" status="PASS">
+        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-24T15:58:49 IST" name="DriverIntilization" finished-at="2025-01-24T15:58:52 IST" duration-ms="2897" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -62,11 +35,50 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverIntilization -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-16T18:26:29 IST" name="TearDown" finished-at="2025-01-16T18:26:30 IST" duration-ms="437" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-24T15:59:44 IST" name="TearDown" finished-at="2025-01-24T15:59:44 IST" duration-ms="343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
-    </test> <!-- StoragePageTests -->
+      <class name="utility.NetworkServicesPageTests">
+        <test-method signature="CertAndLogin()[pri:1, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:58:55 IST" name="CertAndLogin" finished-at="2025-01-24T15:58:58 IST" duration-ms="3170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CertAndLogin -->
+        <test-method signature="GetVMNamesIpAndStatusFromResourcePage()[pri:2, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:58:58 IST" name="GetVMNamesIpAndStatusFromResourcePage" finished-at="2025-01-24T15:59:13 IST" depends-on-methods="utility.NetworkServicesPageTests.CertAndLogin" duration-ms="14280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetVMNamesIpAndStatusFromResourcePage -->
+        <test-method signature="TestUtilityOption()[pri:3, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:59:13 IST" name="TestUtilityOption" finished-at="2025-01-24T15:59:13 IST" depends-on-methods="utility.NetworkServicesPageTests.CertAndLogin" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestUtilityOption -->
+        <test-method signature="TestNetworkServicesOption()[pri:4, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:59:13 IST" name="TestNetworkServicesOption" finished-at="2025-01-24T15:59:14 IST" depends-on-methods="utility.NetworkServicesPageTests.TestUtilityOption" duration-ms="1520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestNetworkServicesOption -->
+        <test-method signature="TestPublicIpAddRequest(java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:59:16 IST" name="TestPublicIpAddRequest" data-provider="dataProvider" finished-at="2025-01-24T15:59:44 IST" depends-on-methods="utility.NetworkServicesPageTests.TestNetworkServicesOption" duration-ms="27818" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[EC_Test_Win_10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[14]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Save]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPublicIpAddRequest -->
+      </class> <!-- utility.NetworkServicesPageTests -->
+    </test> <!-- NetworkServicesTests -->
   </suite> <!-- Suite -->
 </testng-results>

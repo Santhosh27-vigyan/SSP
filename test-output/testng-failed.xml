@@ -2,25 +2,22 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="ClassName" value="storagePageObjects"/>
-  <test thread-count="5" name="StoragePageTests(failed)">
+  <test thread-count="5" name="NetworkServicesTests(failed)">
     <groups>
       <run>
         <include name="CertAndLogin"/>
-        <include name="Storage"/>
-        <include name="view"/>
-        <exclude name="Negative"/>
-        <exclude name="Positive"/>
+        <include name="Utility"/>
       </run>
     </groups>
     <classes>
-      <class name="storage.StoragePageTests">
+      <class name="utility.NetworkServicesPageTests">
         <methods>
-          <include name="TestResourceManagementOption"/>
-          <include name="TestStorageOtion"/>
-          <include name="TestStorageViewOption" invocation-numbers="0"/>
+          <include name="TestPublicIpAddRequest" invocation-numbers="0"/>
           <include name="CertAndLogin"/>
+          <include name="TestNetworkServicesOption"/>
+          <include name="TestUtilityOption"/>
         </methods>
-      </class> <!-- storage.StoragePageTests -->
+      </class> <!-- utility.NetworkServicesPageTests -->
     </classes>
-  </test> <!-- StoragePageTests(failed) -->
+  </test> <!-- NetworkServicesTests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

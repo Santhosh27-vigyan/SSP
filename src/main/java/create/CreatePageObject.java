@@ -186,6 +186,8 @@ public class CreatePageObject {
 	private WebElement SaverolesButton;
 	@FindBy(xpath = "//table[@id='virtual_machine_list_data_table'] //tr[@role='row']/th")
 	private List<WebElement> TableHeaderNames;
+	private String TableId="virtual_machine_list_data_table"; //from TableHeaderNames Xpath
+			
 	public Select SelectLocation() {
 		wait.until(ExpectedConditions.elementToBeClickable(LocationOptions));
 		return new Select(LocationOptions);
@@ -506,5 +508,9 @@ public class CreatePageObject {
 	public List<WebElement> TableHeaderNames()
 	{
 		return TableHeaderNames;
+	}
+	public String TableId()
+	{
+		return TableId;
 	}
 }

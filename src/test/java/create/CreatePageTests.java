@@ -944,15 +944,15 @@ public class CreatePageTests extends SetAndDown {
 					.ignoring(StaleElementReferenceException.class); // Ignore
 																		// StaleElementReferenceException
 																		// during the wait
-			Pair<Integer, List<WebElement>> VMNamesList = ListOfVmNames(m);
-			IpAddress = IPAddress(VMNamesList.getRight(), VMNamesList.getLeft(), m);
+			Pair<Integer, List<WebElement>> VMNamesList = ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId());
+			IpAddress = IPAddress(VMNamesList.getRight(), VMNamesList.getLeft(), m,CPO.TableHeaderNames());
 			try {
 				int index = m;
 				// Wait until the desired status is present in the status element
 				wait3.until(new ExpectedCondition<Boolean>() {
 					public Boolean apply(WebDriver driver) {
 						try {
-							if (GetStatus(ListOfVmNames(index).getRight(), ListOfVmNames(index).getLeft(), index)
+							if (GetStatus(ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getRight(), ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getLeft(), index)
 									.equals("Running"))
 								return true;
 							driver.navigate().refresh();
@@ -963,42 +963,43 @@ public class CreatePageTests extends SetAndDown {
 					}
 				});
 				System.out.println("VM Status is "
-						+ GetStatus(ListOfVmNames(index).getRight(), ListOfVmNames(index).getLeft(), index));
+						+ GetStatus(ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getRight(), ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getLeft(), index));
 			} catch (Exception e) {
 				System.out.println("VM Status is "
-						+ GetStatus(ListOfVmNames(m).getRight(), ListOfVmNames(m).getLeft(), m) + " After 15 mins");
+						+ GetStatus(ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getRight(), ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getLeft(), m) + " After 15 mins");
 			}
 			assertTrue(TestIPPinging(IpAddress), "IP is not pinging for the vm ");
 		}
 	}
 
-	public Pair<Integer, List<WebElement>> ListOfVmNames(int ResourceIndex) {
+	public Pair<Integer, List<WebElement>> ListOfVmNames(List<WebElement> TableHeaderNames,String TableId) {
+		
 		int num = 0;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		List<WebElement> VMNames = null;
-		for (int i = 0; i < CPO.TableHeaderNames().size(); i++) {
-			if (CPO.TableHeaderNames().get(i).getText().trim().equalsIgnoreCase("VM Name")) {
+		for (int i = 0; i < TableHeaderNames.size(); i++) {
+			if (TableHeaderNames.get(i).getText().trim().equalsIgnoreCase("VM Name")) {
 				num = i + 1;
 				int index = num;
 				wait.until(new ExpectedCondition<Boolean>() {
 					public Boolean apply(WebDriver driver) {
 						return driver
 								.findElements(By.xpath(
-										"//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + index + "]"))
+										"//table[@id='"+TableId+"']/tbody/tr/td[" + index + "]"))
 								.size() > 0;
 					}
 				});
 				VMNames = driver.findElements(
-						By.xpath("//table[@id='virtual_machine_list_data_table']/tbody/tr/td[" + num + "]"));
+						By.xpath("//table[@id='"+TableId+"']/tbody/tr/td[" + num + "]"));
 			}
 		}
 		return Pair.of(num, VMNames);
 	}
 
-	public String IPAddress(List<WebElement> VMNames, int num, int ResourceIndex) {
+	public String IPAddress(List<WebElement> VMNames, int num, int ResourceIndex,List<WebElement> tableHeaderNames) {
 		String IpAddress = null;
-		for (int j = 0; j < CPO.TableHeaderNames().size(); j++) {
-			if (CPO.TableHeaderNames().get(j).getText().trim().equalsIgnoreCase("IP Address")) {
+		for (int j = 0; j < tableHeaderNames.size(); j++) {
+			if (tableHeaderNames.get(j).getText().trim().equalsIgnoreCase("IP Address")) {
 				// System.out.println(VMNames.size() + " VMNames.size()2");
 				int num1 = (j + 1) - num;
 				for (int j2 = 0; j2 < VMNames.size(); j2++) {

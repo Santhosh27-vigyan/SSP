@@ -12,24 +12,33 @@
 			<run>
 				<include name="CertAndLogin" />
 				<include name="Storage" />
-				<exclude name="Negative"/>
-				<exclude name="Positive"/>
-				<include name="view"/>
+				<exclude name="Negative" />
+				<exclude name="Positive" />
+				<include name="View" />
 
 			</run>
 		</groups>
 		<classes>
 			<class name="storage.StoragePageTests">
-				<methods><exclude name="TestWindowsRadioButton"/>
-			<!-- 	===================NegativeTestCases=================================  -->
-				<exclude name="TestStoragePathTextBoxWithEmptyInput"/>
-				<!-- <exclude name="TestStoragePathTextBoxWithlessThan5Characters"/>-->
-				<exclude name="TestStoragePathTextBoxWithMoreThanThan30Characters"/>
-				<exclude name="TestStoragePathTextBoxWithExistingName"/>
-			<!-- 	===================NegativeTestCases=================================  -->
-			<exclude name="TestAddButton"></exclude>
+				<methods>
+					<exclude name="TestWindowsRadioButton" />
+					<!--
+					===================NegativeTestCases=================================  -->
+					<exclude name="TestStoragePathTextBoxWithEmptyInput" />
+					<!-- <exclude
+					name="TestStoragePathTextBoxWithlessThan5Characters"/> -->
+					<exclude
+						name="TestStoragePathTextBoxWithMoreThanThan30Characters" />
+					<exclude name="TestStoragePathTextBoxWithExistingName" />
+					<!--
+					===================NegativeTestCases=================================  -->
+					<exclude name="TestCancelButton" />
+					<!-- 	===================If you include "view" group please
+					exclude TestAddNewStorageButton
+					method=================================  -->
+					<exclude name="TestAddNewStorageButton" />
 				</methods>
-				</class>
+			</class>
 		</classes>
 	</test>
 </suite> 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="ClassName" value="storagePageObjects" />
+	<test name="TestUrlForValidLogin">
+		<classes>
+			<class name="setUpAndTearDown.SetAndDown" />
+		</classes>
+	</test>
+	<test name="NetworkServicesTests">
+		<groups>
+			<run>
+				<include name="CertAndLogin" />
+				<include name="Utility" />
+
+			</run>
+		</groups>
+		<classes>
+			<class name="utility.NetworkServicesPageTests">
+				<methods>
+					<exclude name="TestOpenPortAddRequest"/>
+					<exclude name="TestClosePortAddRequest"/>
+					<exclude name="TestVlanCommunicationAddRequest"/>
+					<exclude name="TestBandwidthAddRequest"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 

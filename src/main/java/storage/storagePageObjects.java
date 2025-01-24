@@ -15,13 +15,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class storagePageObjects {
 	public WebDriver driver;
-	private WebDriverWait wait;
-	private JavascriptExecutor js;
+	
 
 	public storagePageObjects(WebDriver driver) {
 		this.driver = driver;
-		js = (JavascriptExecutor) driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		PageFactory.initElements(driver, this);
 	}
 
@@ -67,6 +64,8 @@ public class storagePageObjects {
 	private List<WebElement> TableHeaderNames;
 	@FindBy(xpath = "//div[contains(@class,'storage_list_view')]/h1[text()='VM List']")
 	private WebElement StorageViewPage;
+	@FindBy(xpath = "//div[@id='storage_list_data_table_paginate']/ul/li[contains(@class,'next')]")
+	private WebElement NextButton;
 
 	public WebElement ResourceManagementOption() {
 		return ResourceManagement;
@@ -152,5 +151,9 @@ public class storagePageObjects {
 	public WebElement STorageViewPage()
 	{
 		return StorageViewPage;
+	}
+	public WebElement NextButton()
+	{
+		return NextButton;
 	}
 }
