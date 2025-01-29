@@ -136,7 +136,7 @@ public class CreatePageObject {
 	private WebElement decreaseButton;
 	@FindBy(id = "increase1")
 	private WebElement IncreaseButton;
-	@FindBy(xpath = "//h4[text()='VM Backup ']")
+	@FindBy(xpath = "//li[contains(@class,'vm-backup-outer-div')]/div/div/h4")
 	private WebElement VMBackUpLabel;
 	@FindBy(xpath = "//label[@for='vm_backup_interval']")
 	private WebElement BackUpfrequencyLabel;
@@ -187,6 +187,8 @@ public class CreatePageObject {
 	@FindBy(xpath = "//table[@id='virtual_machine_list_data_table'] //tr[@role='row']/th")
 	private List<WebElement> TableHeaderNames;
 	private String TableId="virtual_machine_list_data_table"; //from TableHeaderNames Xpath
+	@FindBy(xpath = "//li[@id='virtual_machine_list_data_table_next']")
+	private WebElement NextButton;
 			
 	public Select SelectLocation() {
 		wait.until(ExpectedConditions.elementToBeClickable(LocationOptions));
@@ -512,5 +514,9 @@ public class CreatePageObject {
 	public String TableId()
 	{
 		return TableId;
+	}
+	public WebElement NextButton()
+	{
+		return NextButton;
 	}
 }

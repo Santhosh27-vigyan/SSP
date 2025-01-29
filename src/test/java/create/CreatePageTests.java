@@ -492,7 +492,7 @@ public class CreatePageTests extends SetAndDown {
 		assertTrue(Integer.parseInt(DiskSizeForHorizontalScaling) <= Integer.parseInt(Max[0].replace(" ", "")),
 				"Given Value(" + DiskSizeForHorizontalScaling + ") Should be less than " + Max[0]);
 		mainloop: while (true) {
-			//System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
+			// System.out.println(DiskSizeValue.getText()+" "+value+" "+"GB");
 			if (CPO.DiskSizeValue().getText().equals(DiskSizeForHorizontalScaling + " " + "GB"))
 				break mainloop;
 			else {
@@ -944,15 +944,16 @@ public class CreatePageTests extends SetAndDown {
 					.ignoring(StaleElementReferenceException.class); // Ignore
 																		// StaleElementReferenceException
 																		// during the wait
-			Pair<Integer, List<WebElement>> VMNamesList = ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId());
-			IpAddress = IPAddress(VMNamesList.getRight(), VMNamesList.getLeft(), m,CPO.TableHeaderNames());
+			Pair<Integer, List<WebElement>> VMNamesList = ListOfVmNames(CPO.TableHeaderNames(), CPO.TableId());
+			IpAddress = GetData(VMNamesList.getRight(), VMNamesList.getLeft(), vmnames[m], CPO.TableHeaderNames(),"IP Address");
 			try {
 				int index = m;
 				// Wait until the desired status is present in the status element
 				wait3.until(new ExpectedCondition<Boolean>() {
 					public Boolean apply(WebDriver driver) {
 						try {
-							if (GetStatus(ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getRight(), ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getLeft(), index)
+							if (GetStatus(ListOfVmNames(CPO.TableHeaderNames(), CPO.TableId()).getRight(),
+									ListOfVmNames(CPO.TableHeaderNames(), CPO.TableId()).getLeft(), index)
 									.equals("Running"))
 								return true;
 							driver.navigate().refresh();
@@ -962,18 +963,22 @@ public class CreatePageTests extends SetAndDown {
 						return null;
 					}
 				});
-				System.out.println("VM Status is "
-						+ GetStatus(ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getRight(), ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getLeft(), index));
+				System.out.println(
+						"VM Status is " + GetStatus(ListOfVmNames(CPO.TableHeaderNames(), CPO.TableId()).getRight(),
+								ListOfVmNames(CPO.TableHeaderNames(), CPO.TableId()).getLeft(), index));
 			} catch (Exception e) {
-				System.out.println("VM Status is "
-						+ GetStatus(ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getRight(), ListOfVmNames(CPO.TableHeaderNames(),CPO.TableId()).getLeft(), m) + " After 15 mins");
+				System.out
+						.println("VM Status is "
+								+ GetStatus(ListOfVmNames(CPO.TableHeaderNames(), CPO.TableId()).getRight(),
+										ListOfVmNames(CPO.TableHeaderNames(), CPO.TableId()).getLeft(), m)
+								+ " After 15 mins");
 			}
 			assertTrue(TestIPPinging(IpAddress), "IP is not pinging for the vm ");
 		}
 	}
 
-	public Pair<Integer, List<WebElement>> ListOfVmNames(List<WebElement> TableHeaderNames,String TableId) {
-		
+	public Pair<Integer, List<WebElement>> ListOfVmNames(List<WebElement> TableHeaderNames, String TableId) {
+
 		int num = 0;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		List<WebElement> VMNames = null;
@@ -984,31 +989,32 @@ public class CreatePageTests extends SetAndDown {
 				wait.until(new ExpectedCondition<Boolean>() {
 					public Boolean apply(WebDriver driver) {
 						return driver
-								.findElements(By.xpath(
-										"//table[@id='"+TableId+"']/tbody/tr/td[" + index + "]"))
+								.findElements(By.xpath("//table[@id='" + TableId + "']/tbody/tr/td[" + index + "]"))
 								.size() > 0;
 					}
 				});
-				VMNames = driver.findElements(
-						By.xpath("//table[@id='"+TableId+"']/tbody/tr/td[" + num + "]"));
+				VMNames = driver.findElements(By.xpath("//table[@id='" + TableId + "']/tbody/tr/td[" + num + "]"));
 			}
 		}
 		return Pair.of(num, VMNames);
 	}
 
-	public String IPAddress(List<WebElement> VMNames, int num, int ResourceIndex,List<WebElement> tableHeaderNames) {
+	public String GetData(List<WebElement> VMNames, int num, String VMName, List<WebElement> tableHeaderNames,String HeaderName) {
 		String IpAddress = null;
-		for (int j = 0; j < tableHeaderNames.size(); j++) {
-			if (tableHeaderNames.get(j).getText().trim().equalsIgnoreCase("IP Address")) {
+		//System.out.println(tableHeaderNames.size() + " VMNames.size()2");
+		main: for (int j = 0; j < tableHeaderNames.size(); j++) {
+			//System.out.println(tableHeaderNames.get(j).getText().trim()+" header Names");
+			if (tableHeaderNames.get(j).getText().trim().equalsIgnoreCase(HeaderName)) {
 				// System.out.println(VMNames.size() + " VMNames.size()2");
 				int num1 = (j + 1) - num;
 				for (int j2 = 0; j2 < VMNames.size(); j2++) {
-					// System.out.println(VMNames.get(j2).getText().trim());
-					if (VMNames.get(j2).getText().trim().equalsIgnoreCase(vmnames[ResourceIndex])) {
-						// System.out.println(VMNames.size() + " VMNames.size()3");
+					// System.out.println(VMNames.get(j2).getText().trim()+", "+VMName);
+					if (VMNames.get(j2).getText().trim().equalsIgnoreCase(VMName)) {
+						//System.out.println(VMNames.size() + " VMNames.size()3");
 						IpAddress = VMNames.get(j2).findElement(By.xpath("./following-sibling::td[" + num1 + "]"))
 								.getText();
 						// System.out.println(IpAddress + " IpAddress");
+						break main;
 					}
 				}
 			}

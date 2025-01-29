@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="1" failed="1" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-24T15:58:52 IST" name="Suite" finished-at="2025-01-24T15:59:44 IST" duration-ms="52055">
+  <suite started-at="2025-01-29T14:35:52 IST" name="Suite" finished-at="2025-01-29T14:36:43 IST" duration-ms="51155">
     <groups>
       <group name="Utility">
-        <method signature="NetworkServicesPageTests.GetVMNamesIpAndStatusFromResourcePage()[pri:2, instance:utility.NetworkServicesPageTests@77f1baf5]" name="GetVMNamesIpAndStatusFromResourcePage" class="utility.NetworkServicesPageTests"/>
-        <method signature="NetworkServicesPageTests.TestUtilityOption()[pri:3, instance:utility.NetworkServicesPageTests@77f1baf5]" name="TestUtilityOption" class="utility.NetworkServicesPageTests"/>
-        <method signature="NetworkServicesPageTests.TestNetworkServicesOption()[pri:4, instance:utility.NetworkServicesPageTests@77f1baf5]" name="TestNetworkServicesOption" class="utility.NetworkServicesPageTests"/>
-        <method signature="NetworkServicesPageTests.TestPublicIpAddRequest(java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:utility.NetworkServicesPageTests@77f1baf5]" name="TestPublicIpAddRequest" class="utility.NetworkServicesPageTests"/>
+        <method signature="NetworkServicesPageTests.TestUtilityOption()[pri:3, instance:utility.NetworkServicesPageTests@7d20d0b]" name="TestUtilityOption" class="utility.NetworkServicesPageTests"/>
+        <method signature="NetworkServicesPageTests.TestNetworkServicesOption()[pri:4, instance:utility.NetworkServicesPageTests@7d20d0b]" name="TestNetworkServicesOption" class="utility.NetworkServicesPageTests"/>
       </group> <!-- Utility -->
       <group name="CertAndLogin">
-        <method signature="NetworkServicesPageTests.CertAndLogin()[pri:1, instance:utility.NetworkServicesPageTests@77f1baf5]" name="CertAndLogin" class="utility.NetworkServicesPageTests"/>
+        <method signature="NetworkServicesPageTests.CertAndLogin()[pri:1, instance:utility.NetworkServicesPageTests@7d20d0b]" name="CertAndLogin" class="utility.NetworkServicesPageTests"/>
       </group> <!-- CertAndLogin -->
+      <group name="TestOpenPortAddRequest">
+        <method signature="NetworkServicesPageTests.TestOpenPortAddRequest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:utility.NetworkServicesPageTests@7d20d0b]" name="TestOpenPortAddRequest" class="utility.NetworkServicesPageTests"/>
+      </group> <!-- TestOpenPortAddRequest -->
     </groups>
-    <test started-at="2025-01-24T15:58:52 IST" name="TestUrlForValidLogin" finished-at="2025-01-24T15:58:55 IST" duration-ms="3364">
+    <test started-at="2025-01-29T14:35:52 IST" name="TestUrlForValidLogin" finished-at="2025-01-29T14:36:13 IST" duration-ms="21017">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-24T15:58:52 IST" name="TestOpenLoginPage" finished-at="2025-01-24T15:58:55 IST" duration-ms="3298" status="PASS">
+        <test-method signature="TestOpenLoginPage()[pri:1, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-29T14:35:52 IST" name="TestOpenLoginPage" finished-at="2025-01-29T14:36:13 IST" duration-ms="20959" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOpenLoginPage -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
     </test> <!-- TestUrlForValidLogin -->
-    <test started-at="2025-01-24T15:58:55 IST" name="NetworkServicesTests" finished-at="2025-01-24T15:59:44 IST" duration-ms="48621">
+    <test started-at="2025-01-29T14:36:13 IST" name="NetworkServicesTests" finished-at="2025-01-29T14:36:43 IST" duration-ms="30077">
       <class name="setUpAndTearDown.SetAndDown">
-        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-24T15:58:49 IST" name="DriverIntilization" finished-at="2025-01-24T15:58:52 IST" duration-ms="2897" status="PASS">
+        <test-method is-config="true" signature="DriverIntilization(java.lang.String)[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-29T14:35:49 IST" name="DriverIntilization" finished-at="2025-01-29T14:35:52 IST" duration-ms="3342" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -35,49 +36,192 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverIntilization -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-24T15:59:44 IST" name="TearDown" finished-at="2025-01-24T15:59:44 IST" duration-ms="343" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:setUpAndTearDown.SetAndDown@292b08d6]" started-at="2025-01-29T14:36:44 IST" name="TearDown" finished-at="2025-01-29T14:36:44 IST" duration-ms="341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- setUpAndTearDown.SetAndDown -->
       <class name="utility.NetworkServicesPageTests">
-        <test-method signature="CertAndLogin()[pri:1, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:58:55 IST" name="CertAndLogin" finished-at="2025-01-24T15:58:58 IST" duration-ms="3170" status="PASS">
+        <test-method signature="CertAndLogin()[pri:1, instance:utility.NetworkServicesPageTests@7d20d0b]" started-at="2025-01-29T14:36:13 IST" name="CertAndLogin" finished-at="2025-01-29T14:36:43 IST" duration-ms="30035" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //label[@for='username']' (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //label[@for='username']' (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Login.LoginPageObjects.UsernameDisplayed(LoginPageObjects.java:64)
+at Login.LoginPageTests.TestLoginWithValidCredentails(LoginPageTests.java:51)
+at utility.NetworkServicesPageTests.CertAndLogin(NetworkServicesPageTests.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[@for='username']"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80b99639733d3651acba4a6bb03e09ea, findElement {value=//label[@for='username'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61886}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61886/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80b99639733d3651acba4a6bb03e09ea
+at jdk.internal.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CertAndLogin -->
-        <test-method signature="GetVMNamesIpAndStatusFromResourcePage()[pri:2, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:58:58 IST" name="GetVMNamesIpAndStatusFromResourcePage" finished-at="2025-01-24T15:59:13 IST" depends-on-methods="utility.NetworkServicesPageTests.CertAndLogin" duration-ms="14280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetVMNamesIpAndStatusFromResourcePage -->
-        <test-method signature="TestUtilityOption()[pri:3, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:59:13 IST" name="TestUtilityOption" finished-at="2025-01-24T15:59:13 IST" depends-on-methods="utility.NetworkServicesPageTests.CertAndLogin" duration-ms="217" status="PASS">
+        <test-method signature="TestUtilityOption()[pri:3, instance:utility.NetworkServicesPageTests@7d20d0b]" started-at="2025-01-29T14:36:43 IST" name="TestUtilityOption" finished-at="2025-01-29T14:36:43 IST" depends-on-methods="utility.NetworkServicesPageTests.CertAndLogin" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method utility.NetworkServicesPageTests.TestUtilityOption() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.CertAndLogin() on instance utility.NetworkServicesPageTests@7d20d0b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method utility.NetworkServicesPageTests.TestUtilityOption() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.CertAndLogin() on instance utility.NetworkServicesPageTests@7d20d0b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestUtilityOption -->
-        <test-method signature="TestNetworkServicesOption()[pri:4, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:59:13 IST" name="TestNetworkServicesOption" finished-at="2025-01-24T15:59:14 IST" depends-on-methods="utility.NetworkServicesPageTests.TestUtilityOption" duration-ms="1520" status="PASS">
+        <test-method signature="TestNetworkServicesOption()[pri:4, instance:utility.NetworkServicesPageTests@7d20d0b]" started-at="2025-01-29T14:36:43 IST" name="TestNetworkServicesOption" finished-at="2025-01-29T14:36:43 IST" depends-on-methods="utility.NetworkServicesPageTests.TestUtilityOption" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method utility.NetworkServicesPageTests.TestNetworkServicesOption() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.TestUtilityOption() on instance utility.NetworkServicesPageTests@7d20d0b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method utility.NetworkServicesPageTests.TestNetworkServicesOption() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.TestUtilityOption() on instance utility.NetworkServicesPageTests@7d20d0b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestNetworkServicesOption -->
-        <test-method signature="TestPublicIpAddRequest(java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:utility.NetworkServicesPageTests@77f1baf5]" started-at="2025-01-24T15:59:16 IST" name="TestPublicIpAddRequest" data-provider="dataProvider" finished-at="2025-01-24T15:59:44 IST" depends-on-methods="utility.NetworkServicesPageTests.TestNetworkServicesOption" duration-ms="27818" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[EC_Test_Win_10]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[14]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Save]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="TestOpenPortAddRequest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:utility.NetworkServicesPageTests@7d20d0b]" started-at="2025-01-29T14:36:43 IST" name="TestOpenPortAddRequest" finished-at="2025-01-29T14:36:43 IST" depends-on-methods="utility.NetworkServicesPageTests.TestNetworkServicesOption" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method utility.NetworkServicesPageTests.TestOpenPortAddRequest() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.TestNetworkServicesOption() on instance utility.NetworkServicesPageTests@7d20d0b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method utility.NetworkServicesPageTests.TestOpenPortAddRequest() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.TestNetworkServicesOption() on instance utility.NetworkServicesPageTests@7d20d0b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestPublicIpAddRequest -->
+        </test-method> <!-- TestOpenPortAddRequest -->
       </class> <!-- utility.NetworkServicesPageTests -->
     </test> <!-- NetworkServicesTests -->
   </suite> <!-- Suite -->

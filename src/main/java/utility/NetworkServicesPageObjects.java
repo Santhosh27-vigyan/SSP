@@ -90,8 +90,31 @@ public class NetworkServicesPageObjects {
 	@FindBy(xpath = "//table[@id='custom-tabs-four-publicIP-table'] //tr[@role='row']/th")
 	private List<WebElement> TableHeaderNames;
 	private String TableId="custom-tabs-four-publicIP-table"; //from TableHeaderNames Xpath
+	@FindBy(xpath = "//li[@id='custom-tabs-four-publicIP-table_next']")
+	private WebElement PublicIpNextButton;
+	@FindBy(id = "vm_name")
+	public WebElement OpenPortVMName;
+	@FindBy(id = "ip_address")
+	private WebElement OpenPortPublicIpAddress;
+	@FindBy(id = "open_port")
+	private WebElement OpenPortTextBox;
+	@FindBy(xpath = "//label[@for='open_port']")
+	private WebElement Portlabel;
+	@FindBy(xpath = "//input[@id='open_port']/following-sibling::label")
+	private List<WebElement> OpenPortTextBoxError;
+	@FindBy(id = "reason")
+	private WebElement OpenPortreason;
+	@FindBy(xpath = "//label[@for='vm-size-selector']")
+	private WebElement TypeLabel;
+	@FindBy(xpath = "//textarea[@id='reason']/following-sibling::label")
+	private List<WebElement> ReasonTextAreaError;
+	@FindBy(id = "tcp")
+	private WebElement TCPtype;
+	@FindBy(id = "udp")
+	private WebElement UDPtype;
+	@FindBy(id = "duration")
+	private WebElement OpenPortDuration;
 	
-
 	public WebElement UtilityOption() {
 		return UtilityOption;
 	}
@@ -227,5 +250,54 @@ public class NetworkServicesPageObjects {
 	{
 		return TableId;
 	}
+	public WebElement PublicIpNextButton()
+	{
+		return PublicIpNextButton;
+	}
+	public Select OpenPortVmNameDropdown()
+	{
+		return new Select(OpenPortVMName);
+	}
+	public Select OpenPortPublicIpAddressDropdown()
+	{
+		return new Select(OpenPortPublicIpAddress);
+	}
+	public WebElement OpenPortTextBox()
+	{
+		return OpenPortTextBox;
+	}
+	public WebElement Portlabel()
+	{
+		return Portlabel;
+	}
+	public List<WebElement> OpenPortTextBoxError() {
+		return OpenPortTextBoxError;
+	}
+	public WebElement OpenPortreason()
+	{
+		return OpenPortreason;
+	}
+	public WebElement TypeLabel()
+	{
+		return TypeLabel;
+	}
+	public List<WebElement> ReasonTextAreaError()
+	{
+		return ReasonTextAreaError;
+	}
+	public WebElement TCPtype()
+	{
+		return TCPtype;
+	}
+	public WebElement UDptype()
+	{
+		return UDPtype;
+	}
+	public Select OpenPortDurationDropDown()
+	{
+		return new Select(OpenPortDuration);
+	}
+	
+	 
 
 }

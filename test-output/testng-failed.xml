@@ -7,12 +7,17 @@
       <run>
         <include name="CertAndLogin"/>
         <include name="Utility"/>
+        <include name="TestOpenPortAddRequest"/>
+        <exclude name="TestPublicIpAddRequest"/>
+        <exclude name="TestClosePortAddRequest"/>
+        <exclude name="TestVlanCommunicationAddRequest"/>
+        <exclude name="TestBandwidthAddRequest"/>
       </run>
     </groups>
     <classes>
       <class name="utility.NetworkServicesPageTests">
         <methods>
-          <include name="TestPublicIpAddRequest" invocation-numbers="0"/>
+          <include name="TestOpenPortAddRequest"/>
           <include name="CertAndLogin"/>
           <include name="TestNetworkServicesOption"/>
           <include name="TestUtilityOption"/>

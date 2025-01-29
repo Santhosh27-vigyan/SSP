@@ -12,18 +12,16 @@
 			<run>
 				<include name="CertAndLogin" />
 				<include name="Utility" />
+				<exclude name="TestPublicIpAddRequest" />
+					<include name="TestOpenPortAddRequest" />
+					<exclude name="TestClosePortAddRequest" />
+					<exclude name="TestVlanCommunicationAddRequest" />
+					<exclude name="TestBandwidthAddRequest" />
 
 			</run>
 		</groups>
 		<classes>
-			<class name="utility.NetworkServicesPageTests">
-				<methods>
-					<exclude name="TestOpenPortAddRequest"/>
-					<exclude name="TestClosePortAddRequest"/>
-					<exclude name="TestVlanCommunicationAddRequest"/>
-					<exclude name="TestBandwidthAddRequest"/>
-				</methods>
-			</class>
+			<class name="utility.NetworkServicesPageTests"/>
 		</classes>
 	</test>
 </suite> 
