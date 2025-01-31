@@ -188,15 +188,16 @@ public class NetworkServicesPageTests extends SetAndDown {
 
 	@Test(priority = 7, dependsOnMethods = "TestNetworkServicesOption", alwaysRun = false, groups = {
 			"TestOpenPortAddRequest" }, dataProvider = "dataProvider")
-	public void TestOpenPortAddRequest(String VMName,String portNumber,String Reason,String Type,String duration,String CancelOrSave) {
+	public void TestOpenPortAddRequest(String VMName, String portNumber, String Reason, String Type, String duration,
+			String CancelOrSave) {
 		CreatePageTests CPT = new CreatePageTests();
 		String Status = null;
 		String FirstName = null;
 		String PublicIp = null;
 		String error = null;
 		int count = 0;
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(NSPO.OpenPort()));
 		wait.until(ExpectedConditions.visibilityOf(NSPO.PublicIp()));
 		NSPO.PublicIp().click();
@@ -257,51 +258,66 @@ public class NetworkServicesPageTests extends SetAndDown {
 				"Given Value " + VMName + " is not available in the dropdown");
 		NSPO.OpenPortVmNameDropdown().selectByVisibleText(VMName);
 		assertEquals(NSPO.OpenPortVmNameDropdown().getFirstSelectedOption().getText(), VMName);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//select[@id='ip_address']/option[1]")));
-		assertTrue(Ipmap.get(VMName).equalsIgnoreCase(NSPO.OpenPortPublicIpAddressDropdown().getFirstSelectedOption().getText()),
+		wait.until(
+				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//select[@id='ip_address']/option[1]")));
+		assertTrue(
+				Ipmap.get(VMName)
+						.equalsIgnoreCase(NSPO.OpenPortPublicIpAddressDropdown().getFirstSelectedOption().getText()),
 				"Ip is not matching with the IP presene in the public Ip Table");
 		NSPO.OpenPortTextBox().sendKeys(portNumber);
 		NSPO.Portlabel().click();
-		if(NSPO.OpenPortTextBoxError().size()>0)
-			error=NSPO.OpenPortTextBoxError().get(0).getText();
-		assertFalse(NSPO.OpenPortTextBoxError().size()>0,error);
+		if (NSPO.OpenPortTextBoxError().size() > 0)
+			error = NSPO.OpenPortTextBoxError().get(0).getText();
+		assertFalse(NSPO.OpenPortTextBoxError().size() > 0, error);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// System.out.println(NSPO.OpenPortTextBoxError2().getText());
+		if (!NSPO.OpenPortTextBoxError2().getText().equals(""))
+			error = NSPO.OpenPortTextBoxError2().getText();
+		assertFalse(!NSPO.OpenPortTextBoxError2().getText().equals(""), error);
 		NSPO.OpenPortreason().sendKeys(Reason);
 		NSPO.TypeLabel().click();
-		if(NSPO.ReasonTextAreaError().size()>0)
-			error=NSPO.ReasonTextAreaError().get(0).getText();
-		assertFalse(NSPO.ReasonTextAreaError().size()>0,error);
-		if(Type.equalsIgnoreCase("TCP"))
+		if (NSPO.ReasonTextAreaError().size() > 0)
+			error = NSPO.ReasonTextAreaError().get(0).getText();
+		assertFalse(NSPO.ReasonTextAreaError().size() > 0, error);
+		if (Type.equalsIgnoreCase("TCP"))
 			js.executeScript("arguments[0].click();", NSPO.TCPtype());
-			
-		else if(Type.equalsIgnoreCase("UDP"))
+		else if (Type.equalsIgnoreCase("UDP"))
 			js.executeScript("arguments[0].click();", NSPO.UDptype());
-			
 		else
-			assertTrue(false,"Given Type is not there to select");
+			assertTrue(false, "Given Type is not there to select");
 		assertTrue(
 				NSPO.OpenPortDurationDropDown().getOptions().stream()
 						.anyMatch(option -> option.getText().contains(duration)),
 				"Given Value " + duration + " is not available in the dropdown");
 		NSPO.OpenPortDurationDropDown().selectByVisibleText(duration);
 		assertEquals(NSPO.OpenPortDurationDropDown().getFirstSelectedOption().getText(), duration);
-		if(CancelOrSave.equalsIgnoreCase("Save"))
-		{
+		if (CancelOrSave.equalsIgnoreCase("Save")) {
 			NSPO.OpenPortSubmitButton().click();
-		}
-		else if(CancelOrSave.equalsIgnoreCase("Cancel"))
+			try {
+				wait.until(ExpectedConditions.visibilityOf(CPO.UserReatedErrorMessage()));
+			} catch (Exception e) {
+			}
+			// System.out.println(CPO.UserReatedErrorMessage().getText()+" message");
+			assertEquals(CPO.UserReatedErrorMessage().getText(), "Port Opening request has been received successfully");
+			wait.until(ExpectedConditions.invisibilityOf(CPO.UserReatedErrorMessage()));
+			NSPO.OpenPort().click();
+		} else if (CancelOrSave.equalsIgnoreCase("Cancel"))
 			NSPO.OpenPortCancelButton().click();
 		else
-			assertTrue(false,"Given Option is not there to click");
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+			assertTrue(false, "Given Option is not there to click");
 	}
 
 	@Test(priority = 8, dependsOnMethods = "TestNetworkServicesOption", alwaysRun = false, groups = {
-			"TestClosePortAddRequest" })
-	public void TestClosePortAddRequest() {
+			"TestClosePortAddRequest" }, dataProvider = "dataProvider")
+	public void TestClosePortAddRequest(String VMName, String Reason, String Type, String duration,
+			String CancelOrSave) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String error = null;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(NSPO.ClosePort()));
 		wait.until(ExpectedConditions.visibilityOf(NSPO.ClosePort()));
@@ -310,11 +326,59 @@ public class NetworkServicesPageTests extends SetAndDown {
 		wait.until(ExpectedConditions.visibilityOf(NSPO.ClosePortAddRequestButton()));
 		NSPO.ClosePortAddRequestButton().click();
 		assertTrue(NSPO.ClosePortTitle().getText().equalsIgnoreCase("Close Port"), "Wrong Page opened");
+		assertTrue(
+				NSPO.ClosePortVMNameDropDown().getOptions().stream()
+						.anyMatch(option -> option.getText().contains(VMName)),
+				"Given Value " + VMName + " is not available in the dropdown");
+		NSPO.ClosePortVMNameDropDown().selectByVisibleText(VMName);
+		assertEquals(NSPO.ClosePortVMNameDropDown().getFirstSelectedOption().getText(), VMName);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+		}
+		System.out.println(NSPO.ClosePortPortError().getText().equals(""));
+		if (!NSPO.ClosePortPortError().getText().equals(""))
+			error = NSPO.ClosePortPortError().getText();
+		assertFalse(!NSPO.ClosePortPortError().getText().equals(""), error);
+		NSPO.ClosePortReasonTextArea().sendKeys(Reason);
+		NSPO.ClosePortReasonLabel().click();
+		if (NSPO.ClosePortReasonTextAreaError().size() > 0)
+			error = NSPO.ClosePortReasonTextAreaError().get(0).getText();
+		assertFalse(NSPO.ClosePortReasonTextAreaError().size() > 0, error);
+		if (Type.equalsIgnoreCase("TCP"))
+			js.executeScript("arguments[0].click();", NSPO.ClosePortTCPtype());
+		else if (Type.equalsIgnoreCase("UDP"))
+			js.executeScript("arguments[0].click();", NSPO.ClosePortUDPtype());
+		else
+			assertTrue(false, "Given Type is not there to select");
+		assertTrue(
+				NSPO.ClosePortDurationDropDown().getOptions().stream()
+						.anyMatch(option -> option.getText().contains(duration)),
+				"Given Value " + duration + " is not available in the dropdown");
+		NSPO.ClosePortDurationDropDown().selectByVisibleText(duration);
+		assertEquals(NSPO.ClosePortDurationDropDown().getFirstSelectedOption().getText(), duration);
+		if (CancelOrSave.equalsIgnoreCase("Save")) {
+			NSPO.ClosePortSubmitButton().click();
+			try {
+				wait.until(ExpectedConditions.visibilityOf(CPO.UserReatedErrorMessage()));
+			} catch (Exception e) {
+			}
+			// System.out.println(CPO.UserReatedErrorMessage().getText()+" message");
+			assertEquals(CPO.UserReatedErrorMessage().getText(), "Port Closing request has been sent successfully");
+			wait.until(ExpectedConditions.invisibilityOf(CPO.UserReatedErrorMessage()));
+			NSPO.ClosePort().click();
+		} else if (CancelOrSave.equalsIgnoreCase("Cancel"))
+			NSPO.ClosePortCancelButton().click();
+		else
+			assertTrue(false, "Given Option is not there to click");
 	}
 
 	@Test(priority = 9, dependsOnMethods = "TestNetworkServicesOption", alwaysRun = false, groups = {
-			"TestVlanCommunicationAddRequest" })
-	public void TestVlanCommunicationAddRequest() {
+			"TestVlanCommunicationAddRequest" }, dataProvider = "dataProvider")
+	public void TestVlanCommunicationAddRequest(String FromVlan, String ToVlan, String Type, String duration,
+			String CancelOrSave) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String error = "";
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(NSPO.VlanCommunication()));
 		wait.until(ExpectedConditions.visibilityOf(NSPO.VlanCommunication()));
@@ -324,6 +388,53 @@ public class NetworkServicesPageTests extends SetAndDown {
 		NSPO.VlanCommunicationAddRequestButton().click();
 		assertTrue(NSPO.VlanCommunicationsTitle().getText().equalsIgnoreCase("Vlan Communication"),
 				"Wrong Page opened");
+		assertTrue(
+				NSPO.FromVlanDropDown().getOptions().stream().anyMatch(option -> option.getText().contains(FromVlan)),
+				"Given Value " + FromVlan + " is not available in the dropdown");
+		NSPO.FromVlanDropDown().selectByVisibleText(FromVlan);
+		assertEquals(NSPO.FromVlanDropDown().getFirstSelectedOption().getText(), FromVlan);
+		assertTrue(NSPO.ToVlanDropDown().getOptions().stream().anyMatch(option -> option.getText().contains(ToVlan)),
+				"Given Value " + ToVlan + " is not available in the dropdown");
+		NSPO.ToVlanDropDown().selectByVisibleText(ToVlan);
+		assertEquals(NSPO.ToVlanDropDown().getFirstSelectedOption().getText(), ToVlan);
+		if (Type.equalsIgnoreCase("Unidirectional"))
+			js.executeScript("arguments[0].click();", NSPO.UniDirectionalType());
+		else if (Type.equalsIgnoreCase("Bidirectional"))
+			js.executeScript("arguments[0].click();", NSPO.BiDirectionalType());
+		else
+			assertTrue(false, "Given Type is not there to select");
+		assertEquals(NSPO.VlanCommunicationDurationDropdown().getFirstSelectedOption().getText(), duration);
+		assertTrue(NSPO.VlanCommunicationDurationDropdown().getOptions().stream().anyMatch(option -> option.getText().contains(duration)),
+				"Given Value " + duration + " is not available in the dropdown");
+		NSPO.VlanCommunicationDurationDropdown().selectByVisibleText(duration);
+		assertEquals(NSPO.ToVlanDropDown().getFirstSelectedOption().getText(), duration);
+		if (CancelOrSave.equalsIgnoreCase("Save")) {
+			NSPO.VlanCommunicationSubmitButton().click();
+			
+			if(NSPO.VlanCommunicationErrors().size()>0)
+			{
+				for (int i = 0; i < NSPO.VlanCommunicationErrors().size(); i++) {
+					error +=NSPO.VlanCommunicationErrors().get(i).getText();
+				}
+			assertFalse(NSPO.VlanCommunicationErrors().size()>0,error);
+		}
+			try {
+				wait.until(ExpectedConditions.visibilityOf(CPO.UserReatedErrorMessage()));
+			} catch (Exception e) {
+			}
+			// System.out.println(CPO.UserReatedErrorMessage().getText()+" message");
+			assertEquals(CPO.UserReatedErrorMessage().getText(), "Port Closing request has been sent successfully");
+			wait.until(ExpectedConditions.invisibilityOf(CPO.UserReatedErrorMessage()));
+			NSPO.VlanCommunication().click();
+		} else if (CancelOrSave.equalsIgnoreCase("Cancel"))
+			NSPO.VlanCommunicationCancelButton().click();
+		else
+			assertTrue(false, "Given Option is not there to click");
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Test(priority = 10, dependsOnMethods = "TestNetworkServicesOption", alwaysRun = false, groups = {
@@ -361,6 +472,16 @@ public class NetworkServicesPageTests extends SetAndDown {
 			return ExcelUtils.GetExcelData(
 					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Networkservices.xlsx",
 					"OpenPortPage");
+		}
+		if (method.getName().equals("TestClosePortAddRequest")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Networkservices.xlsx",
+					"ClosePortPage");
+		}
+		if (method.getName().equals("TestVlanCommunicationAddRequest")) {
+			return ExcelUtils.GetExcelData(
+					System.getProperty("user.dir") + "\\src\\main\\java\\utilities\\Networkservices.xlsx",
+					"VlanCommunicationPage");
 		}
 		return null;
 	}

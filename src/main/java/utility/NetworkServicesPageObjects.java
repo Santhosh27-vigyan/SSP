@@ -67,11 +67,11 @@ public class NetworkServicesPageObjects {
 	private WebElement IPaddress;
 	@FindBy(id = "duration3")
 	private WebElement DurationDropdown;
-	@FindBy(xpath = "//button[@onclick='addNetwork_Service('open_port')']")
+	@FindBy(xpath = "//form[@class='form-horizontal'] //button[contains(@onclick,'open_port')]")
 	private WebElement OpenPortSubmitButton;
 	@FindBy(xpath = "//form[@class='form-horizontal'] //button[contains(@onclick,'cancel_edit_operation')]")
 	private WebElement OpenPortCancelButton;
-	@FindBy(xpath = "//button[@onclick='addNetwork_Service('close_port')']")
+	@FindBy(xpath = "//form[@class='form-horizontal-close-port'] //button[contains(@onclick,'close_port')]")
 	private WebElement ClosePortSubmitButton;
 	@FindBy(xpath = "//form[@class='form-horizontal-close-port'] //button[contains(@onclick,'cancel_edit_operation')]")
 	private WebElement ClosePortCancelButton;
@@ -102,6 +102,8 @@ public class NetworkServicesPageObjects {
 	private WebElement Portlabel;
 	@FindBy(xpath = "//input[@id='open_port']/following-sibling::label")
 	private List<WebElement> OpenPortTextBoxError;
+	@FindBy(xpath = "//input[@id='open_port']/following-sibling::small")
+	private WebElement OpenPortTextBoxError2;
 	@FindBy(id = "reason")
 	private WebElement OpenPortreason;
 	@FindBy(xpath = "//label[@for='vm-size-selector']")
@@ -114,6 +116,34 @@ public class NetworkServicesPageObjects {
 	private WebElement UDPtype;
 	@FindBy(id = "duration")
 	private WebElement OpenPortDuration;
+	@FindBy(id = "vm_name1")
+	private WebElement ClosePortVMName;
+	@FindBy(xpath = "//form[@class='form-horizontal-close-port'] //small[@id='portError1']")
+	private WebElement ClosePortPortError;
+	@FindBy(id = "reason1")
+	private WebElement ClosePortReasonTextArea;
+	@FindBy(xpath = "//textarea[@id='reason1']/following-sibling::label")
+	private List<WebElement> ClosePortReasonTextAreaError;
+	@FindBy(xpath = "//form[@class='form-horizontal-close-port'] //label[@for='reason1']")
+	private WebElement ClosePortReasonLabel;
+	@FindBy(id = "tcp1")
+	private WebElement ClosePortTCPtype;
+	@FindBy(id = "udp1")
+	private WebElement ClosePortUDPtype;
+	@FindBy(id = "duration4")
+	private WebElement ClosePortDuration;
+	@FindBy(id = "from_vlan")
+	private WebElement FromVlan;
+	@FindBy(id = "to_vlan")
+	private WebElement ToVlan;
+	@FindBy(id = "unidirectional")
+	private WebElement UniDirectionalType;
+	@FindBy(id  = "bidirectional")
+	private WebElement BiDirectionalType;
+	@FindBy(id = "duration2")
+	private WebElement VlanCommunicationDuration;
+	@FindBy(xpath = "//form[@class='form-horizontal-vlan'] //label[@class='error']")
+	private List<WebElement> VlanCommunicationErrors;
 	
 	public WebElement UtilityOption() {
 		return UtilityOption;
@@ -273,6 +303,9 @@ public class NetworkServicesPageObjects {
 	public List<WebElement> OpenPortTextBoxError() {
 		return OpenPortTextBoxError;
 	}
+	public WebElement OpenPortTextBoxError2() {
+		return OpenPortTextBoxError2;
+	}
 	public WebElement OpenPortreason()
 	{
 		return OpenPortreason;
@@ -297,7 +330,62 @@ public class NetworkServicesPageObjects {
 	{
 		return new Select(OpenPortDuration);
 	}
-	
+	public Select ClosePortVMNameDropDown()
+	{
+		return new Select(ClosePortVMName);
+	}
+	public WebElement ClosePortPortError()
+	{
+		return ClosePortPortError;
+	}
+	public WebElement ClosePortReasonTextArea()
+	{
+		return ClosePortReasonTextArea;
+	}
+	public List<WebElement> ClosePortReasonTextAreaError()
+	{
+		return ClosePortReasonTextAreaError;
+	}
+	public WebElement ClosePortReasonLabel()
+	{
+		return ClosePortReasonLabel;
+	}
+	public WebElement ClosePortTCPtype()
+	{
+		return ClosePortTCPtype;
+	}
+	public WebElement ClosePortUDPtype()
+	{
+		return ClosePortUDPtype;
+	}
+	public Select ClosePortDurationDropDown()
+	{
+		return new Select(ClosePortDuration);
+	}
+	public Select FromVlanDropDown()
+	{
+		return new Select(FromVlan);
+	}
+	public Select ToVlanDropDown()
+	{
+		return new Select(ToVlan);
+	}
+	public WebElement UniDirectionalType()
+	{
+		return UniDirectionalType;
+	}
+	public WebElement BiDirectionalType()
+	{
+		return BiDirectionalType;
+	}
+	public Select VlanCommunicationDurationDropdown()
+	{
+		return new Select(VlanCommunicationDuration);
+	}
+	public List<WebElement> VlanCommunicationErrors()
+	{
+		return VlanCommunicationErrors;
+	}
 	 
 
 }

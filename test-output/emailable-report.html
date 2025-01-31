@@ -9,14 +9,32 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">TestUrlForValidLogin</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">21,017</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">NetworkServicesTests</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">30,077</td><td>Utility, CertAndLogin, TestOpenPortAddRequest</td><td>TestVlanCommunicationAddRequest, TestBandwidthAddRequest, TestPublicIpAddRequest, TestClosePortAddRequest</td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num attn">3</th><th class="num">0</th><th class="num attn">1</th><th class="num">51,094</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">TestUrlForValidLogin</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">42,422</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">NetworkServicesTests</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">30,348</td><td>Utility, TestVlanCommunicationAddRequest, CertAndLogin</td><td>TestBandwidthAddRequest, TestPublicIpAddRequest, TestClosePortAddRequest, TestOpenPortAddRequest</td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">3</th><th class="num">0</th><th class="num attn">2</th><th class="num">72,770</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestUrlForValidLogin &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">setUpAndTearDown.SetAndDown</td><td><a href="#m0">TestOpenLoginPage</a></td><td rowspan="1">1738141552878</td><td rowspan="1">20959</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">NetworkServicesTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">utility.NetworkServicesPageTests</td><td><a href="#m1">CertAndLogin</a></td><td rowspan="1">1738141573908</td><td rowspan="1">30035</td></tr><tr><th colspan="4">NetworkServicesTests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">utility.NetworkServicesPageTests</td><td><a href="#m2">TestNetworkServicesOption</a></td><td rowspan="1">1738141603968</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">TestOpenPortAddRequest</a></td><td rowspan="1">1738141603977</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">TestUtilityOption</a></td><td rowspan="1">1738141603960</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestUrlForValidLogin &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">setUpAndTearDown.SetAndDown</td><td><a href="#m0">TestOpenLoginPage</a></td><td rowspan="1">1738310531706</td><td rowspan="1">42364</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">NetworkServicesTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">utility.NetworkServicesPageTests</td><td><a href="#m1">CertAndLogin</a></td><td rowspan="1">1738310574164</td><td rowspan="1">30306</td></tr><tr><th colspan="4">NetworkServicesTests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">utility.NetworkServicesPageTests</td><td><a href="#m2">TestNetworkServicesOption</a></td><td rowspan="1">1738310604493</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">TestUtilityOption</a></td><td rowspan="1">1738310604487</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m4">TestVlanCommunicationAddRequest</a></td><td rowspan="1">1738310604501</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>TestUrlForValidLogin</h2><h3 id="m0">setUpAndTearDown.SetAndDown#TestOpenLoginPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestUrlForValidLogin</h2><h3 id="m0">setUpAndTearDown.SetAndDown#TestOpenLoginPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_TIMED_OUT
+  (Session info: chrome=132.0.6834.160)
+Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e5f985a3b30a5bdebaeb39ac3eff86b8, get {url=https://10.150.0.249/Tesda0f1f266f372fd9653989a1ad693ff1/IPMPlusCloud/view/storages}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61188/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e5f985a3b30a5bdebaeb39ac3eff86b8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at setUpAndTearDown.SetAndDown.TestOpenLoginPage(SetAndDown.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h2>NetworkServicesTests</h2><h3 id="m1">utility.NetworkServicesPageTests#CertAndLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //label[@for=&apos;username&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
@@ -25,14 +43,14 @@
 	at utility.NetworkServicesPageTests.CertAndLogin(NetworkServicesPageTests.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[@for=&apos;username&apos;]&quot;}
-  (Session info: chrome=132.0.6834.111)
+  (Session info: chrome=132.0.6834.160)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [80b99639733d3651acba4a6bb03e09ea, findElement {value=//label[@for=&apos;username&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61886}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61886/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 80b99639733d3651acba4a6bb03e09ea
+Command: [e5f985a3b30a5bdebaeb39ac3eff86b8, findElement {using=xpath, value=//label[@for=&apos;username&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\santosh\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61188/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e5f985a3b30a5bdebaeb39ac3eff86b8
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -57,12 +75,12 @@ Session ID: 80b99639733d3651acba4a6bb03e09ea
 [utility.NetworkServicesPageTests.TestUtilityOption() on instance utility.NetworkServicesPageTests@7d20d0b]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">utility.NetworkServicesPageTests#TestOpenPortAddRequest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method utility.NetworkServicesPageTests.TestOpenPortAddRequest() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
-[utility.NetworkServicesPageTests.TestNetworkServicesOption() on instance utility.NetworkServicesPageTests@7d20d0b]
+<h3 id="m3">utility.NetworkServicesPageTests#TestUtilityOption</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method utility.NetworkServicesPageTests.TestUtilityOption() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.CertAndLogin() on instance utility.NetworkServicesPageTests@7d20d0b]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">utility.NetworkServicesPageTests#TestUtilityOption</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method utility.NetworkServicesPageTests.TestUtilityOption() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
-[utility.NetworkServicesPageTests.CertAndLogin() on instance utility.NetworkServicesPageTests@7d20d0b]
+<h3 id="m4">utility.NetworkServicesPageTests#TestVlanCommunicationAddRequest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method utility.NetworkServicesPageTests.TestVlanCommunicationAddRequest() on instance utility.NetworkServicesPageTests@7d20d0b depends on not successfully finished methods 
+[utility.NetworkServicesPageTests.TestNetworkServicesOption() on instance utility.NetworkServicesPageTests@7d20d0b]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>

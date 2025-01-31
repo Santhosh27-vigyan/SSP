@@ -13,15 +13,15 @@
 				<include name="CertAndLogin" />
 				<include name="Utility" />
 				<exclude name="TestPublicIpAddRequest" />
-					<include name="TestOpenPortAddRequest" />
-					<exclude name="TestClosePortAddRequest" />
-					<exclude name="TestVlanCommunicationAddRequest" />
-					<exclude name="TestBandwidthAddRequest" />
+				<exclude name="TestOpenPortAddRequest" />
+				<exclude name="TestClosePortAddRequest" />
+				<include name="TestVlanCommunicationAddRequest" />
+				<exclude name="TestBandwidthAddRequest" />
 
 			</run>
 		</groups>
 		<classes>
-			<class name="utility.NetworkServicesPageTests"/>
+			<class name="utility.NetworkServicesPageTests" />
 		</classes>
 	</test>
 </suite> 
